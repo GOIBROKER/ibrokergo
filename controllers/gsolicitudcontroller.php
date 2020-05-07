@@ -2,6 +2,7 @@
 session_start();
 require_once("../utils/utils.php");
 require_once("../modal/entityusers.php");
+require_once("../modal/entitynewservice.php");
 //Hardcore - Depurar - Tablas y codigos
 
 $tabla_servicios = "servicesdet";
@@ -10,7 +11,9 @@ $tabla_precios="precios";
 $campo_precios="idprecio";
 $tabla_tipservicio="tipservicio";
 $campo_tipservicio="id";
+
 // Instanciar clases
+$newservice = new entitynewservice();
 $utils = new utilsphp();
 // require_once("../modal/flags.php");
 $entityusers = new entityusersmodal();
@@ -54,6 +57,8 @@ if(!empty($_POST['requestactivateregistrar'])){
 
     foreach($entityusers -> listaruser($_SESSION['email']) as $foreachflagvalidate){
         $flagvalidate = $foreachflagvalidate['tdocumento'];
+        //Creamos una sesion con el id de usuario para utilizarlo en otras condicionales
+        $_SESSION['iduser'] = $foreachflagvalidate['iduser'];
     }
 
     if($flagvalidate == 9){
@@ -91,24 +96,38 @@ if(!empty($_POST['requestactivateregistrar'])){
         $tserviciorop = $utils->validarestados($filtrooptionservice,$tabla_tipservicio,$campo_tipservicio);
         //Enviaremos un parametro para aperturar el show de confirmación de data.
 
+        $largotxttitulo = strlen($filtrotxttitulo);
+        $largocomentario = strlen($filtrotxtareadata);
+
         if(empty($tsolicitud)){
             echo "El tipo de solicitud indicado no existe";
         }else if(empty($rangodeprecio)){
             echo "No Rango de Precio indicado no existe";
         }else if(empty($tserviciorop)){
             echo "Las opciones válidas es Remoto o Presencial";
+        }else if($utils->valdatavacia($filtrotxttitulo)=="false"){
+            echo "El titulo de la publicación no puede estar vacia";
+        }else if($utils->valdatavacia($filtrotxtareadata)=="false"){
+            echo "El detalle de la publicación no puede estar vacia";
+        }else if($utils->cajadedetitulo($largotxttitulo)<>"Correcto"){
+            echo "El titulo de tu inconveniente tiene que ser mayor a 35 letras";
+        }else if($utils->cajadedetxtarea($largocomentario)<>"Correcto"){
+            echo "El detalle de tu solicitud debe de tener entre 125 y 350 letras";
         }
         else{
+            // Si todo esta correcto , se van a generar variables de sesiones que al final serán utilizadas para la confirmación de la publicación.
+            $_SESSION['$tsolicitud'] = $filtroidcombogsolicitud;
+            $_SESSION['$filtrotxttitulo'] = $filtrotxttitulo;
+            $_SESSION['$filtrotxtareadata'] = $filtrotxtareadata;
+            $_SESSION['$rangodeprecio'] = $filtroidcmbrangoprecio;
+            $_SESSION['$tserviciorop'] = $_POST['requestoptionservice'];
             echo "2";
         }
-
-
-
-
-        
-
     }
 }
+
+// Modulo de visualición de confirmación de la publicación del trabajo.
+
 
 // Sesión que indica cuando se registro correctamente al usuario
 if(!empty($_POST['postvalidateupdateusers'])){
@@ -135,5 +154,41 @@ if(!empty($_POST['postactivadotitulo'])){
 }
 
 
+if(!empty($_POST['postpreviapublicacion'])){
+    // SELECT * FROM servicesdet WHERE idtipservicio='1'
+    foreach($utils->extraerinfo($_SESSION['$tsolicitud'],$tabla_servicios,$campo_servicios) as $foreachser){
+        $nameserv = $foreachser['name'];
+    }
 
+    foreach($utils->extraerinfo($_SESSION['$rangodeprecio'],$tabla_precios,$campo_precios) as $foreachser){
+        $rangos = $foreachser['rango'];
+    }
+
+    foreach($utils->extraerinfo($_SESSION['$tserviciorop'],$tabla_tipservicio,$campo_tipservicio) as $foreachser){
+        $tipservicio = $foreachser['name'];
+    }
+
+    echo "<ul class='nav nav-stacked' >";
+    echo "<li><a href='#'>Servicio Elegido <span class='pull-right badge bg-blue'>".$nameserv."</span></a></li>";
+    echo "<li><a href='#'>Titulo de Pedido<span class='pull-right badge bg-aqua'>".$_SESSION['$filtrotxttitulo']."</span></a></li>";
+    echo "<li><a href='#'>Precio Aproximado <span class='pull-right badge bg-green'>".$rangos."</span></a></li>";
+    echo "<li><a href='#'>Tipo de Asistencia <span class='pull-right badge bg-red'>".$tipservicio."</span></a></li>";
+    echo "</ul>";
+}
+
+if(!empty($_POST['postactivateclose'])){
+    $_SESSION['$tsolicitud'] = "";
+    $_SESSION['$filtrotxttitulo'] = "";
+    $_SESSION['$filtrotxtareadata'] = "";
+    $_SESSION['$rangodeprecio'] = "";
+    $_SESSION['$tserviciorop'] = "";
+}
+
+if(!empty($_POST['varregistrarinfo'])){
+    // Fecha actual
+    $fecharegistro = $utils->fecha();
+    // Registrar nuevo servicio
+    $newservice->registrarservicio($_SESSION['iduser'],$_SESSION['$tsolicitud'],$_SESSION['$filtrotxttitulo'],$_SESSION['$filtrotxtareadata'],$_SESSION['$rangodeprecio'],$_SESSION['$tserviciorop'],$fecharegistro);
+    echo "3";
+}
 

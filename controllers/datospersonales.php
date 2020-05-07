@@ -300,8 +300,8 @@ if (!empty($_POST['requestactivateregister'])) {
         $entityusers->Actualizarusuario($nombre, $_SESSION['ubigeo'], $direccion, $nrodoc, $celular, $tipodoc, $_SESSION['email'], $descripcion);
         //Flag que indica que fue actualizado correctamente
         $_SESSION['flagactivadorupdateusers'] = "1";
-
- 
+        
+        
          
     }
 
@@ -316,3 +316,5 @@ if (!empty($_POST['requestactivateregister'])) {
 
 
 }
+
+

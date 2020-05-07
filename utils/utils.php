@@ -152,6 +152,18 @@ class utilsphp
         }
         return $mensajes;
         mysqli_close($enlacego);
-    } 
+    }
+    // extrae datos en especificos
+    function extraerinfo($codigo2,$tabla2,$campo2){
+        require("config/conex.php");
+        $arrayextraerinfo = array();
+        $validarestado2 = mysqli_query($enlacego,"select * from $tabla2 where $campo2='$codigo2'");
+        while($rowinfo = mysqli_fetch_assoc($validarestado2)){
+            $arrayextraerinfo[] = $rowinfo;
+        }
+
+        return $arrayextraerinfo;
+        mysqli_close($enlacego);
+    }
     
 }
