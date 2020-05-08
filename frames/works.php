@@ -1,18 +1,43 @@
+
 <section id="works" class="section gray-bg">
     <div class="container">
       <div class="row">
         <div class="span12">
           <div class="headline">
-            <h3><span>Publica un Trabajo (Proyecto) - GO</span></h3>
+            <h3><span>Encuentra Trabajo o a tu Especialista</span></h3>
           </div>
         </div>
         <div class="span12">
           <div class="section-intro">
             <p>
-              Que tipo de trabajo vas a publicar (GOWORKING).
+              Un portal donde la necesidad y el especialista se encuentran.
             </p>
           </div>
         </div>
+        <section id="about" class="section">
+
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="section-intro">
+          <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+  <select class="custom-select" id="inputGroupSelect03">
+    <option selected="">Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
         <div class="span12">
           <ul class="filter">
             <li class="all active"><a href="#" class="btn btn-color">Todas las Categorías</a></li>

@@ -1,240 +1,811 @@
-<?php require_once ('../frames/header.php')?>
+<html>
+<title>IbrokerGO - Consigue Trabajo</title>
 
-  <!-- section featured -->
-  <section id="featured">
+<head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
 
-    <!-- sequence slider -->
-    <?php require_once ('../frames/slider.php')?>    
-   
-    <!-- end sequence slider -->
-  </section>
-  <!-- end featured -->
+</head>
+<script>
+  new WOW().init();
+</script>
 
-  <!-- Section about -->
-  <?php require_once ('../frames/about.php')?>    
-  <!-- end section about -->
+<body>
 
-  <!-- section services -->
-  <section id="services" class="section parallax">
+  <style>
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
+    .carousel,
+    .carousel .carousel-inner,
+    .carousel .carousel-inner .active,
+    .carousel .carousel-inner .carousel-item,
+    .view,
+    body,
+    html {
+      height: 100%
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, .2)
+    }
+
+    .page-footer,
+    .top-nav-collapse {
+      background-color: #1C2331
+    }
+
+    @media only screen and (max-width:768px) {
+      .navbar {
+        background-color: #1C2331
+      }
+    }
+  </style>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
-      <div class="row">
-        <div class="span12">
-          <div class="headline">
-            <h3><span>Gestión a tus manos</span></h3>
-          </div>
-        </div>
-        <div class="span12">
-          <div class="section-intro">
-            <p>
-              Te brindamos una plataforma de gestion TI.
-            </p>
-          </div>
-        </div>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+        <strong>IBROKERGO</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">Encontrar Especialistas</a>
+          </li>
+          <li class="nav-item">
+            <a href="register.php" class="nav-link border border-light rounded" target="_blank">
+              <i class="waves-effect mdb-icon-copy far fa-user"></i>Crear Cuenta
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
+          </li> -->
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.php" class="nav-link border border-light rounded" target="_blank">
+              <i class="waves-effect mdb-icon-copy far fa-thumbs-up"></i>Iniciar sesión
+            </a>
+          </li>
+        </ul>
+
       </div>
-      <div class="row">
-        <div class="span3">
-          <div class="well box aligncenter">
-            <i class="icon-circled active icon-48 icon-group"></i>
-            <h3>Comunidad</h3>
-            <p>
-              Especialistas GO esperando para darte apoyo.
-            </p>
-            <a href="#" class="btn btn-color">Learn more</a>
-          </div>
-        </div>
-        <div class="span3">
-          <div class="well box aligncenter">
-            <i class="icon-circled icon-48 icon-thumbs-up"></i>
-            <h3>Especialista GO.</h3>
-          Hacemos que tu experiencia en el servicio sea de tu agrado. 
-          
-            </p>
-            <a href="#" class="btn btn-color">Learn more</a>
-          </div>
-        </div>
-        <div class="span3">
-          <div class="well box aligncenter">
-            <i class="icon-circled icon-48 icon-beaker"></i>
-            <h3>Innovación</h3>
-            <p>
-              Creamos una fórmula para que tus ideas se hagan realidad.
-            </p>
-            <a href="#" class="btn btn-color">Learn more</a>
-          </div>
-        </div>
-        <div class="span3">
-          <div class="well box aligncenter">
-            <i class="icon-circled icon-48 icon-twitter"></i>
-            <h3>Social media</h3>
-            <p>
-              Visita nuestra Redes Sociales
-            </p>
-            <a href="#" class="btn btn-color">Learn more</a>
-          </div>
-        </div>
-      </div>
+
     </div>
-  </section>
-  <!-- end section services -->
+  </nav>
+  <!-- Navbar -->
 
-  <!-- section works -->
-  <?php require_once ('../frames/works.php')?>  
-  <!-- section works -->
+  <!--Carousel Wrapper-->
+  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
-  <!-- section contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-          <div class="headline">
-            <h3><span>Contactenos</span></h3>
-          </div>
-        </div>
-        <div class="span12">
-          <div class="section-intro">
-            <p>
-Empresa Peruana que surge de las cenizas de bits para brindarte apoyo         
-   </p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span6">
-          <h4><i class="icon-circled icon-32 icon-envelope"></i> Contact form</h4>
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
 
-          <!-- start contact form -->
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
 
-          <form action="" method="post" role="form" class="contactForm">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="view" style="background-image: url('welcome/img/s1.jpg'); background-repeat: no-repeat; background-size: cover;">
 
-            <ul class="contact-list">
-              <li class="form-group">
-                <input type="text" name="name" class="form_input" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                <div class="validation"></div>
-                <li class="form-group">
-                  <input type="email" class="form_input" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                  <div class="validation"></div>
-                </li>
-                <li class="form-group">
-                  <input type="text" class="form_input" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-                  <div class="validation"></div>
-                </li>
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
-                <li class="form-group">
-                  <textarea class="form_textarea" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </li>
-                <li class="last">
-                  <button class="btn btn-large btn-theme" type="submit" id="send">Send a message</button>
-                </li>
-            </ul>
-          </form>
-          <!-- end contact form -->
-
-        </div>
-        <div class="span6">
-          <h4><i class="icon-circled icon-32 icon-user"></i> Get in touch with us</h4>
-          <p>
-            Feel free to ask if you have any question regarding our services or if you just want to say Hello, we would love to hear from you.
-          </p>
-          <div class="dotted_line">
-          </div>
-          <p>
-            <span><i class="icon-phone"></i> <strong>Phone:</strong> +6221 213 22 21 or +6221 213 22 22</span>
-          </p>
-          <p>
-            <span><i class="icon-comment"></i> <strong>Skype:</strong> hello.selectro</span>
-          </p>
-          <p>
-            <span><i class="icon-envelope-alt"></i> <strong>Email:</strong> info@yourdomain.com</span>
-          </p>
-          <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end section contact -->
-
-
-  <footer>
-    <div class="verybottom">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <div class="aligncenter">
-              <div class="logo">
-                <a class="brand" href="index.html">
-								<img src="welcome/img/logo.png" alt="">
-							</a>
-              </div>
-              <p>Go Perú , una software perteneciente al Grupo SPACEIT.S.A.C</p>
-              <div class="social-links">
-                <ul class="social-links">
-                  <li><a href="#" title="Twitter"><i class="icon-circled icon-64 icon-twitter"></i></a></li>
-                  <li><a href="#" title="Facebook"><i class="icon-circled icon-64 icon-facebook"></i></a></li>
-                  <li><a href="#" title="Google plus"><i class="icon-circled icon-64 icon-google-plus"></i></a></li>
-                  <li><a href="#" title="Linkedin"><i class="icon-circled icon-64 icon-linkedin"></i></a></li>
-                  <li><a href="#" title="Pinterest"><i class="icon-circled icon-64 icon-pinterest"></i></a></li>
-                </ul>
-
-              </div>
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>Te acercamos a tu especialista o a un Servicio</strong>
+              </h1>
 
               <p>
-                &copy; Spaceit - Derechos Reservados
+                <strong>Best & free guide of responsive web design</strong>
               </p>
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Selecao
-                -->
-                SpaceIt<a href="https://bootstrapmade.com/">BootstrapMade</a>
-              </div>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
+                  written versions
+                  available. Create your own, stunning website.</strong>
+              </p>
+
+              <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
+                free tutorial
+                <i class="fas fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/47.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>Learn Bootstrap 4 with MDB</strong>
+              </h1>
+
+              <p>
+                <strong>Best & free guide of responsive web design</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
+                  written versions
+                  available. Create your own, stunning website.</strong>
+              </p>
+
+              <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
+                free tutorial
+                <i class="fas fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/79.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>Learn Bootstrap 4 with MDB</strong>
+              </h1>
+
+              <p>
+                <strong>Best & free guide of responsive web design</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
+                  written versions
+                  available. Create your own, stunning website.</strong>
+              </p>
+
+              <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
+                free tutorial
+                <i class="fas fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/Third slide-->
+
+    </div>
+    <!--/.Slides-->
+
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+          <h3 class="secondary-heading mb-4">Comienza a Buscar</h3>
+        </div>
+        <div class="row">
+          <select class="mdb-select md-form" searchable="Search here..">
+            <option value="" disabled selected>Buscar Especialistas o Servicios</option>
+            <option value="1">Especialistas</option>
+            <option value="2">Servicios</option>
+          </select>
+          <select class="mdb-select md-form" searchable="Search here..">
+            <option value="" disabled selected>Departamento</option>
+            <option value="1">Lima</option>
+            <option value="2">Trujillo</option>
+          </select>
+          <select class="mdb-select md-form" searchable="Search here..">
+            <option value="" disabled selected>Tipo de servicio</option>
+            <option value="1">Reparación de Computadoras</option>
+            <option value="2">Albañileria</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="input-group md-form form-sm form-2 pl-0">
+            <input class="form-control my-0 py-1 red-border" type="text" placeholder="Busca y comienza a Trabajar" aria-label="Search">
+            <div class="input-group-append">
+              <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
             </div>
           </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+
+
+
+      </section>
+      <!--Section: Main info-->
+
+      <hr class="my-5">
+
+      <!--Section: Main features & Quick Start-->
+      <section>
+
+        <h3 class="h3 text-center mb-5">IBROKER GO - CONECTAMOS TRABAJO</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">Mas Opciones de Filtrado</div>
+            <div class="col-md-8">Resultados:
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Indicar el número de data</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  
+                    <td>
+
+                    <div class="card">
+  <h5 class="card-header h5">Reparación de Laptop Lenovo G45</h5>
+  <div class="card-body">
+    
+    <!-- <h5 class="card-title">Calidad del Especialista</h5> -->
+    
+    
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">    Puntuación de Servicio<span id="rateMe2" class="empty-stars"><i class="py-2 px-1 rate-popover far fa-star fas twoStars" data-index="0" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Very bad"></i><i class="py-2 px-1 rate-popover far fa-star fas twoStars" data-index="1" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Poor"></i><i class="py-2 px-1 rate-popover far fa-star" data-index="2" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="OK"></i><i class="py-2 px-1 rate-popover far fa-star" data-index="3" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Good"></i><i class="py-2 px-1 rate-popover far fa-star" data-index="4" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Excellent"></i></span>
+</th>
+      <th scope="col">Fecha de Publicación .: 08/05/2020 </br> Lima- San Luis</th>
+      
+    </tr>
+  </thead>
+  
+</table>
+    <p class="card-text">Necesito reparación de laptop.</p>
+    <a href="#!" class="btn btn-primary">Ver anuncio o Especialista</a>
+  </div>
+</div>
+
+                    </td>
+
+                  </tr>
+                  <tr>
+                    
+                    <td>
+                    <div class="card">
+  <h5 class="card-header h5">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">Detalle del Servicio o Presentación del Especialista.</p>
+    <a href="#!" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+
+                    </td>
+
+                  </tr>
+                  <tr>
+                   
+                    <td>
+
+                    <div class="card">
+  <h5 class="card-header h5">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#!" class="btn btn-primary">Ver Anuncio</a>
+  </div>
+</div>
+
+
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <div class="col-md-2">Publicidad - Módulo</div>
+          </div>
+        </div>
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+
+      <hr class="my-5">
+
+      <!--Section: Not enough-->
+      <section>
+
+        <h2 class="my-5 h3 text-center">Not enough?</h2>
+
+        <!--First row-->
+        <div class="row features-small mb-5 mt-3 wow fadeIn">
+
+          <!--First column-->
+          <div class="col-md-4">
+            <!--First row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">Free for personal and commercial use</h6>
+                <p class="grey-text">Our license is user-friendly. Feel free to use MDB for both private as well as
+                  commercial projects.
+                </p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">400+ UI elements</h6>
+                <p class="grey-text">An impressive collection of flexible components allows you to develop any project.
+                </p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Second row-->
+
+            <!--Third row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">600+ icons</h6>
+                <p class="grey-text">Hundreds of useful, scalable, vector icons at your disposal.</p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Third row-->
+
+            <!--Fourth row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">Fully responsive</h6>
+                <p class="grey-text">It doesn't matter whether your project will be displayed on desktop, laptop,
+                  tablet or mobile phone. MDB
+                  looks great on each screen.</p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Fourth row-->
+          </div>
+          <!--/First column-->
+
+          <!--Second column-->
+          <div class="col-md-4 flex-center">
+            <img src="https://mdbootstrap.com/img/Others/screens.png" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
+          </div>
+          <!--/Second column-->
+
+          <!--Third column-->
+          <div class="col-md-4 mt-2">
+            <!--First row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">70+ CSS animations</h6>
+                <p class="grey-text">Neat and easy to use animations, which will increase the interactivity of your
+                  project and delight your visitors.
+                </p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">Plenty of useful templates</h6>
+                <p class="grey-text">Need inspiration? Use one of our predefined templates for free.</p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Second row-->
+
+            <!--Third row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">Easy installation</h6>
+                <p class="grey-text">5 minutes, a few clicks and... done. You will be surprised at how easy it is.
+                </p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Third row-->
+
+            <!--Fourth row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="feature-title">Easy to use and customize</h6>
+                <p class="grey-text">Using MDB is straightforward and pleasant. Components flexibility allows you deep
+                  customization. You will
+                  easily adjust each component to suit your needs.</p>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Fourth row-->
+          </div>
+          <!--/Third column-->
+
+        </div>
+        <!--/First row-->
+
+      </section>
+      <!--Section: Not enough-->
+
+      <hr class="mb-5">
+
+      <!--Section: More-->
+      <section>
+
+        <h2 class="my-5 h3 text-center">...and even more</h2>
+
+        <!--First row-->
+        <div class="row features-small mt-5 wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fab fa-firefox fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2 pl-3">
+                <h5 class="feature-title font-bold mb-1">Cross-browser compatibility</h5>
+                <p class="grey-text mt-2">Chrome, Firefox, IE, Safari, Opera, Microsoft Edge - MDB loves all browsers;
+                  all browsers love MDB.
+                </p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-level-up-alt fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">Frequent updates</h5>
+                <p class="grey-text mt-2">MDB becomes better every month. We love the project and enhance as much as
+                  possible.
+                </p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-comments fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">Active community</h5>
+                <p class="grey-text mt-2">Our society grows day by day. Visit our forum and check how it is to be a
+                  part of our family.
+                </p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">jQuery 3.x</h5>
+                <p class="grey-text mt-2">MDB is integrated with newest jQuery. Therefore you can use all the latest
+                  features which come along with
+                  it.
+                </p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/First row-->
+
+        <!--Second row-->
+        <div class="row features-small mt-4 wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-cubes fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">Modularity</h5>
+                <p class="grey-text mt-2">Material Design for Bootstrap comes with both, compiled, ready to use
+                  libraries including all features as
+                  well as modules for CSS (SASS files) and JS.</p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">Technical support</h5>
+                <p class="grey-text mt-2">We care about reliability. If you have any questions - do not hesitate to
+                  contact us.
+                </p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-th fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">Flexbox</h5>
+                <p class="grey-text mt-2">MDB fully supports Flex Box. You can forget about alignment issues.</p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-xl-3 col-lg-6">
+            <!--Grid row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="far fa-file-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+              </div>
+              <div class="col-10 mb-2">
+                <h5 class="feature-title font-bold mb-1">SASS files</h5>
+                <p class="grey-text mt-2">Arranged and well documented .scss files can't wait until you compile them.</p>
+              </div>
+            </div>
+            <!--/Grid row-->
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Second row-->
+
+      </section>
+      <!--Section: More-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">Download MDB
+        <i class="fas fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
+        free tutorial
+        <i class="fas fa-graduation-cap ml-2"></i>
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/MDBootstrap" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+
+      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+        <i class="fab fa-google-plus-g mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+        <i class="fab fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+        <i class="fab fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+        <i class="fab fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+</body>
+<!--Modal: modalCookie-->
+<div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center align-items-center">
+
+          <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+
+          <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
+          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
         </div>
       </div>
     </div>
-  </footer>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalCookie-->
 
-  <!-- Javascript Library Files -->
-  <script src="welcome/js/jquery.min.js"></script>
-  <script src="welcome/js/jquery.easing.js"></script>
-  <script src="welcome/js/bootstrap.js"></script>
-  <script src="welcome/js/jquery.lettering.js"></script>
-  <script src="welcome/js/parallax/jquery.parallax-1.1.3.js"></script>
-  <script src="welcome/js/nagging-menu.js"></script>
-  <script src="welcome/js/sequence.jquery-min.js"></script>
-  <script src="welcome/js/sequencejs-options.sliding-horizontal-parallax.js"></script>
-  <script src="welcome/js/portfolio/jquery.quicksand.js"></script>
-  <script src="welcome/js/portfolio/setting.js"></script>
-  <script src="welcome/js/jquery.scrollTo.js"></script>
-  <script src="welcome/js/jquery.nav.js"></script>
-  <script src="welcome/js/modernizr.custom.js"></script>
-  <script src="welcome/js/prettyPhoto/jquery.prettyPhoto.js"></script>
-  <script src="welcome/js/prettyPhoto/setting.js"></script>
-  <script src="welcome/js/jquery.flexslider.js"></script>
+Modal Coupon
 
-  <!-- Contact Form JavaScript File -->
-  <script src="welcome/contactform/contactform.js"></script>
-
-  <!-- Template Custom Javascript File -->
-  <script src="welcome/js/custom.js"></script>
-
-
-
-  
-</body>
-  <!-- modals de Inicio de Sesion -->
-
-
-
-
+<script>
+  $(document).ready(function() {
+    $("#modalCookie1").modal("show");
+    // Handler for .ready() called.
+  });
+</script>
 
 </html>
