@@ -108,8 +108,8 @@
               <i class="waves-effect mdb-icon-copy far fa-thumbs-up" data-toggle="modal" data-target="#modalLRForm"></i>Iniciar sesión
             </a> -->
             <a href="" class="nav-link border border-light rounded" data-toggle="modal" data-target="#modalLRForm">
-            Iniciar Sesión <i class="fas fa-eye ml-1"></i></a>
-  
+              Iniciar Sesión <i class="fas fa-eye ml-1"></i></a>
+
           </li>
           <li class="nav-item">
             <a href="register.php" class="nav-link border border-light rounded" target="_blank">
@@ -349,22 +349,22 @@
                             <h6 class="card-text"><strong>Atiende en .:</strong> Lima-Lima-San Luis</h6>
                             <h6 class="card-text">Usuario verificado : <i class="fas fa-check-circle"></i></h6>
 
-                            <p class="card-text">Calidad de Atención 
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <p class="card-text">Calidad de Atención
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
                             </p>
-                            <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Bitcoin</button>                          
-                         
+                            <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Bitcoin</button>
+
                           </div>
                         </div>
                       </th>
 
                     </tr>
                     <!-- Finalizar Bucle aqui -->
-        
+
 
                   </tbody>
                 </table>
@@ -764,10 +764,10 @@
       <div class="modal-body">
         <div class="row d-flex justify-content-center align-items-center">
 
-          <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+          <p class="pt-3 pr-2">Deseas Guardar los cookies para una mayor experiencia</p>
 
-          <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
-          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+          <a type="button" class="btn btn-primary">Leer más<i class="fas fa-book ml-1"></i></a>
+          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, Gracias</a>
         </div>
       </div>
     </div>
@@ -778,13 +778,8 @@
 
 Modal Coupon
 
-<script>
-  $(document).ready(function() {
-    $("#modalCookie1").modal("show");
-    // Handler for .ready() called.
-  });
-</script>
-<script src="filterespecialist.js"></script>
+
+
 
 
 
@@ -817,18 +812,22 @@ Modal Coupon
             <div class="modal-body mb-1">
               <div class="md-form form-sm">
                 <i class="fas fa-envelope prefix"></i>
-                <input type="text" id="form22" class="form-control">
-                <label for="form22">Ingresa tu Email</label>
+                <input type="text" id="txtemail" class="form-control">
+                <label for="txtemail">Ingresa tu Email</label>
               </div>
 
               <div class="md-form form-sm">
                 <i class="fas fa-lock prefix"></i>
-                <input type="password" id="form23" class="form-control">
-                <label for="form23">Ingresa tu contraseña</label>
+                <input type="password" id="txtpassword" class="form-control">
+                <label for="txtpassword">Ingresa tu contraseña</label>
+                <div id="alertsesion">
+    
+                </div>
               </div>
               <div class="text-center mt-2">
-                <button class="btn btn-info">Ingresar <i class="fas fa-sign-in-alt ml-1"></i></button>
+                <button class="btn btn-info" onclick="iniciarsesion()">Ingresar <i class="fas fa-sign-in-alt ml-1"></i></button>
               </div>
+
             </div>
             <!--Footer-->
             <div class="modal-footer">
@@ -851,4 +850,11 @@ Modal Coupon
   </div>
 </div>
 <!--Modal: Login / Register Form-->
+<script src="../utils/js/initialsesionintra.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#modalCookie1").modal("show");
+    // Handler for .ready() called.
+  });
+</script>
 </html>
