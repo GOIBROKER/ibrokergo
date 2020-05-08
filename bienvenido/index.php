@@ -18,7 +18,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <script>
   new WOW().init();
@@ -85,11 +85,7 @@
           <li class="nav-item">
             <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">Encontrar Especialistas</a>
           </li>
-          <li class="nav-item">
-            <a href="register.php" class="nav-link border border-light rounded" target="_blank">
-              <i class="waves-effect mdb-icon-copy far fa-user"></i>Crear Cuenta
-            </a>
-          </li>
+
           <!-- <li class="nav-item">
             <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
           </li> -->
@@ -108,8 +104,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="login.php" class="nav-link border border-light rounded" target="_blank">
-              <i class="waves-effect mdb-icon-copy far fa-thumbs-up"></i>Iniciar sesión
+            <!-- <a href="" class="nav-link border border-light rounded" target="_blank">
+              <i class="waves-effect mdb-icon-copy far fa-thumbs-up" data-toggle="modal" data-target="#modalLRForm"></i>Iniciar sesión
+            </a> -->
+            <a href="" class="nav-link border border-light rounded" data-toggle="modal" data-target="#modalLRForm">
+            Iniciar Sesión <i class="fas fa-eye ml-1"></i></a>
+  
+          </li>
+          <li class="nav-item">
+            <a href="register.php" class="nav-link border border-light rounded" target="_blank">
+              <i class="waves-effect mdb-icon-copy far fa-user"></i>Crear Cuenta
             </a>
           </li>
         </ul>
@@ -274,7 +278,7 @@
           <h3 class="secondary-heading mb-4">Comienza a Buscar</h3>
         </div>
         <div class="row">
-          <select class="mdb-select md-form" searchable="Search here..">
+          <select class="mdb-select md-form" id="idtipoespecialista" searchable="Search here..">
             <option value="" disabled selected>Buscar Especialistas o Servicios</option>
             <option value="1">Especialistas</option>
             <option value="2">Servicios</option>
@@ -315,88 +319,61 @@
 
         <h3 class="h3 text-center mb-5">IBROKER GO - CONECTAMOS TRABAJO</h3>
         <div class="container">
-          <div class="row">
-            <div class="col-md-2">Mas Opciones de Filtrado</div>
-            <div class="col-md-8">Resultados:
 
-              <table class="table">
-                <thead>
-                  <tr>
-                    
-                    <th scope="col">Indicar el número de data</th>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3>Filtrar Información</h3>
+              </div>
+              <div class="col-md-9">
+                <!-- Initial table -->
 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                  
-                    <td>
+                <table class="table">
+                  <thead>
+                    <tr>
 
-                    <div class="card">
-  <h5 class="card-header h5">Reparación de Laptop Lenovo G45</h5>
-  <div class="card-body">
-    
-    <!-- <h5 class="card-title">Calidad del Especialista</h5> -->
-    
-    
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">    Puntuación de Servicio<span id="rateMe2" class="empty-stars"><i class="py-2 px-1 rate-popover far fa-star fas twoStars" data-index="0" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Very bad"></i><i class="py-2 px-1 rate-popover far fa-star fas twoStars" data-index="1" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Poor"></i><i class="py-2 px-1 rate-popover far fa-star" data-index="2" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="OK"></i><i class="py-2 px-1 rate-popover far fa-star" data-index="3" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Good"></i><i class="py-2 px-1 rate-popover far fa-star" data-index="4" data-html="true" data-toggle="popover" data-placement="top" title="" data-original-title="Excellent"></i></span>
-</th>
-      <th scope="col">Fecha de Publicación .: 08/05/2020 </br> Lima- San Luis</th>
-      
-    </tr>
-  </thead>
-  
-</table>
-    <p class="card-text">Necesito reparación de laptop.</p>
-    <a href="#!" class="btn btn-primary">Ver anuncio o Especialista</a>
-  </div>
-</div>
+                      <th scope="col">
+                        <p><a href="#" class="text-primary">Resultado de busquedas .: 23 coincidencias</a></p>
+                      </th>
 
-                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Crear bucle aqui -->
+                    <tr>
+                      <th scope="row">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Anthony Puente</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Reparo laptops, impresoras, mouse entre otros objetos</h6>
+                            <h6 class="card-text"><strong>Atiende en .:</strong> Lima-Lima-San Luis</h6>
+                            <h6 class="card-text">Usuario verificado : <i class="fas fa-check-circle"></i></h6>
 
-                  </tr>
-                  <tr>
-                    
-                    <td>
-                    <div class="card">
-  <h5 class="card-header h5">Featured</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">Detalle del Servicio o Presentación del Especialista.</p>
-    <a href="#!" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+                            <p class="card-text">Calidad de Atención 
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            </p>
+                            <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Bitcoin</button>                          
+                         
+                          </div>
+                        </div>
+                      </th>
+
+                    </tr>
+                    <!-- Finalizar Bucle aqui -->
+        
+
+                  </tbody>
+                </table>
+                <!-- Finish table -->
 
 
 
-                    </td>
-
-                  </tr>
-                  <tr>
-                   
-                    <td>
-
-                    <div class="card">
-  <h5 class="card-header h5">Featured</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#!" class="btn btn-primary">Ver Anuncio</a>
-  </div>
-</div>
-
-
-                    </td>
-
-                  </tr>
-                </tbody>
-              </table>
-
+              </div>
             </div>
-            <div class="col-md-2">Publicidad - Módulo</div>
           </div>
         </div>
 
@@ -807,5 +784,71 @@ Modal Coupon
     // Handler for .ready() called.
   });
 </script>
+<script src="filterespecialist.js"></script>
 
+
+
+
+
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Iniciar Sesión</a>
+          </li>
+
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="text" id="form22" class="form-control">
+                <label for="form22">Ingresa tu Email</label>
+              </div>
+
+              <div class="md-form form-sm">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="form23" class="form-control">
+                <label for="form23">Ingresa tu contraseña</label>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Ingresar <i class="fas fa-sign-in-alt ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>No estas registrado? <a href="#" class="blue-text">Registrate</a></p>
+                <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
 </html>
