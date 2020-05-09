@@ -295,7 +295,9 @@
           <div class="container">
             <div class="row">
               <div class="col-md-3">
-                <strong><h3>Filtrar Información</h3></strong>
+                <strong>
+                  <h3>Filtrar Información</h3>
+                </strong>
 
                 <div class="table-responsive">
 
@@ -373,10 +375,10 @@
                   <thead>
                     <tr>
 
-                
+
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="resultable">
                     <!-- Crear bucle aqui -->
                     <th>
                       <tr>
@@ -392,81 +394,83 @@
 
                     <tr>
                       <div class="form-group">
-                       <strong> <label for="exampleFormControlSelect1">Tipo de servicio.:</label></Stong>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                          <option>Reparación de Computadoras</option>
-                          <option>Albañileria</option>
-                          <option>Electricista</option>
-                          <option>Peluqueria</option>
-                        </select>
+                        <strong> <label for="exampleFormControlSelect1">Tipo de servicio.:</label></Stong>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Reparación de Computadoras</option>
+                            <option>Albañileria</option>
+                            <option>Electricista</option>
+                            <option>Peluqueria</option>
+                          </select>
                       </div>
                     </tr>
-                    <tr>
-
-                      <th scope="row">
-                        <div class="card border-success" style="max-width: 15rem;">
-                          <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
-                          <div class="card-body text-success">
-                            <h5 class="card-title">Verificado :</h5>
-                            <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
-                            </p>
-                            <p class="card-text"> Ubicación : Lima - San Luis </p>
+                    
+                      <tr>
+                        <th scope="row">
+                          <div class="card border-success" style="max-width: 15rem;">
+                            <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
+                            <div class="card-body text-success">
+                              <h5 class="card-title">Verificado :</h5>
+                              <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
+                              </p>
+                              <p class="card-text"> Ubicación : Lima - San Luis </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
                           </div>
-                          <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        </th>
+
+                        <th scope="row">
+                          <div class="card border-success" style="max-width: 15rem;">
+                            <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
+                            <div class="card-body text-success">
+                              <h5 class="card-title">Verificado :</h5>
+                              <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
+                              </p>
+                              <p class="card-text"> Ubicación : Lima - San Luis </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
                           </div>
-                        </div>
-                      </th>
+                        </th>
 
-
-                      <th scope="row">
-                        <div class="card border-success" style="max-width: 15rem;">
-                          <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
-                          <div class="card-body text-success">
-                            <h5 class="card-title">Verificado :</h5>
-                            <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
-                            </p>
-                            <p class="card-text"> Ubicación : Lima - San Luis </p>
+                        <th scope="row">
+                          <div class="card border-success" style="max-width: 15rem;">
+                            <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
+                            <div class="card-body text-success">
+                              <h5 class="card-title">Verificado :</h5>
+                              <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
+                              </p>
+                              <p class="card-text"> Ubicación : Lima - San Luis </p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
                           </div>
-                          <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                        </div>
-                      </th>
+                        </th>
 
+                      </tr>
 
-
-                      <th scope="row">
-                        <div class="card border-success" style="max-width: 15rem;">
-                          <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
-                          <div class="card-body text-success">
-                            <h5 class="card-title">Verificado :</h5>
-                            <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
-                            </p>
-                            <p class="card-text"> Ubicación : Lima - San Luis </p>
-                          </div>
-                          <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                        </div>
-                      </th>
-                    </tr>
-
-
-
-                    <!-- Finalizar Bucle aqui -->
-
-
+                      <!-- Finalizar Bucle aqui -->
+                      
+                    </div>
                   </tbody>
+                  <tr>
+                        <th>
+                          <center><button onclick="addtable()" type="button" class="btn btn-unique waves-effect waves-light"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button>
+                        </th>
+                        </center>
+                      </tr>
                 </table>
                 <!-- Finish table -->
 
@@ -956,6 +960,16 @@ Modal Coupon
     $("#modalCookie1").modal("show");
     // Handler for .ready() called.
   });
+
+  function addtable(){
+    var activatetable = "Activate";
+    $.post("../controllers/frontcontrollers/resultableespecialista.php",{
+      postactivatetable:activatetable
+    },function(responseactivatetable){
+      $("#resultable").append(responseactivatetable);
+    });
+    
+  }
 </script>
 
 </html>
