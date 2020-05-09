@@ -177,7 +177,7 @@
 
       <!--Second slide-->
       <div class="carousel-item">
-        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/47.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view" style="background-image: url('welcome/img/s2.jpg'); background-repeat: no-repeat; background-size: cover;">
 
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -214,7 +214,7 @@
 
       <!--Third slide-->
       <div class="carousel-item">
-        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/79.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view" style="background-image: url('welcome/img/s3.jpg'); background-repeat: no-repeat; background-size: cover;">
 
           <!-- Mask & flexbox options-->
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -222,17 +222,15 @@
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Learn Bootstrap 4 with MDB</strong>
+                <strong>Conecta con un especialista o busca trabajo</strong>
               </h1>
 
               <p>
-                <strong>Best & free guide of responsive web design</strong>
+                <strong>Encuentra Publicaciones</strong>
               </p>
 
               <p class="mb-4 d-none d-md-block">
-                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
-                  written versions
-                  available. Create your own, stunning website.</strong>
+                <strong>Varios Clientes esperando que atiendas sus publicaciones de servicios.</strong>
               </p>
 
               <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
@@ -274,36 +272,10 @@
       <section class="mt-5 wow fadeIn">
 
         <!--Grid row-->
-        <div class="row">
-          <h3 class="secondary-heading mb-4">Comienza a Buscar</h3>
-        </div>
-        <div class="row">
-          <select class="mdb-select md-form" id="idtipoespecialista" searchable="Search here..">
-            <option value="" disabled selected>Buscar Especialistas o Servicios</option>
-            <option value="1">Especialistas</option>
-            <option value="2">Servicios</option>
-          </select>
-          <select class="mdb-select md-form" searchable="Search here..">
-            <option value="" disabled selected>Departamento</option>
-            <option value="1">Lima</option>
-            <option value="2">Trujillo</option>
-          </select>
-          <select class="mdb-select md-form" searchable="Search here..">
-            <option value="" disabled selected>Tipo de servicio</option>
-            <option value="1">Reparación de Computadoras</option>
-            <option value="2">Albañileria</option>
-          </select>
-        </div>
-        <div class="row">
-          <div class="input-group md-form form-sm form-2 pl-0">
-            <input class="form-control my-0 py-1 red-border" type="text" placeholder="Busca y comienza a Trabajar" aria-label="Search">
-            <div class="input-group-append">
-              <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
-            </div>
-          </div>
-          <!--Grid column-->
 
-        </div>
+        <!--Grid column-->
+
+
         <!--Grid row-->
 
 
@@ -323,7 +295,76 @@
           <div class="container">
             <div class="row">
               <div class="col-md-3">
-                <h3>Filtrar Información</h3>
+                <strong><h3>Filtrar Información</h3></strong>
+
+                <div class="table-responsive">
+
+                  <!--Table-->
+                  <table class="table">
+
+                    <!--Table head-->
+                    <thead>
+                      <tr>
+
+                        <th class="th-sm"></th>
+
+                      </tr>
+                    </thead>
+                    <!--Table head-->
+
+                    <!--Table body-->
+                    <tbody>
+                      <tr>
+
+                        <td colspan="2">
+                          <!--Blue select-->
+                          <div class="form-group">
+                            <strong><label for="exampleFormControlSelect1">¿Que buscas?</label></strong>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Especialistas</option>
+                              <option>Publicación de Trabajos</option>
+
+                            </select>
+                          </div>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <!--Blue select-->
+                          <div class="form-group">
+                            <strong><label for="exampleFormControlSelect1">Departamento.:</label></strong>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Lima</option>
+                              <option>Trujillo</option>
+                              <option>Piura</option>
+                              <option>Loreto</option>
+                            </select>
+                          </div>
+                        </td>
+
+                        <td>
+
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>
+
+                        </td>
+
+                      </tr>
+                    </tbody>
+                    <!--Table body-->
+
+                  </table>
+                  <!--Table-->
+
+                </div>
+
+
+
               </div>
               <div class="col-md-9">
                 <!-- Initial table -->
@@ -332,37 +373,96 @@
                   <thead>
                     <tr>
 
-                      <th scope="col">
-                        <p><a href="#" class="text-primary">Resultado de busquedas .: 23 coincidencias</a></p>
-                      </th>
-
+                
                     </tr>
                   </thead>
                   <tbody>
                     <!-- Crear bucle aqui -->
+                    <th>
+                      <tr>
+                        <div class="input-group md-form form-sm form-2 pl-0">
+                          <input class="form-control my-0 py-1 red-border" type="text" placeholder="Busca y comienza a Trabajar" aria-label="Search">
+                          <div class="input-group-append">
+                            <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                          </div>
+                        </div>
+
+                      </tr>
+                    </th>
+
                     <tr>
+                      <div class="form-group">
+                       <strong> <label for="exampleFormControlSelect1">Tipo de servicio.:</label></Stong>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Reparación de Computadoras</option>
+                          <option>Albañileria</option>
+                          <option>Electricista</option>
+                          <option>Peluqueria</option>
+                        </select>
+                      </div>
+                    </tr>
+                    <tr>
+
                       <th scope="row">
-                        <div class="card">
-                          <div class="card-body">
-                            <h5 class="card-title">Anthony Puente</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Reparo laptops, impresoras, mouse entre otros objetos</h6>
-                            <h6 class="card-text"><strong>Atiende en .:</strong> Lima-Lima-San Luis</h6>
-                            <h6 class="card-text">Usuario verificado : <i class="fas fa-check-circle"></i></h6>
-
-                            <p class="card-text">Calidad de Atención
-                              <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                        <div class="card border-success" style="max-width: 15rem;">
+                          <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
+                          <div class="card-body text-success">
+                            <h5 class="card-title">Verificado :</h5>
+                            <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
                             </p>
-                            <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Bitcoin</button>
-
+                            <p class="card-text"> Ubicación : Lima - San Luis </p>
+                          </div>
+                          <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                           </div>
                         </div>
                       </th>
 
+
+                      <th scope="row">
+                        <div class="card border-success" style="max-width: 15rem;">
+                          <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
+                          <div class="card-body text-success">
+                            <h5 class="card-title">Verificado :</h5>
+                            <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
+                            </p>
+                            <p class="card-text"> Ubicación : Lima - San Luis </p>
+                          </div>
+                          <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </th>
+
+
+
+                      <th scope="row">
+                        <div class="card border-success" style="max-width: 15rem;">
+                          <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
+                          <div class="card-body text-success">
+                            <h5 class="card-title">Verificado :</h5>
+                            <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
+                            </p>
+                            <p class="card-text"> Ubicación : Lima - San Luis </p>
+                          </div>
+                          <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </th>
                     </tr>
+
+
+
                     <!-- Finalizar Bucle aqui -->
 
 
@@ -821,7 +921,7 @@ Modal Coupon
                 <input type="password" id="txtpassword" class="form-control">
                 <label for="txtpassword">Ingresa tu contraseña</label>
                 <div id="alertsesion">
-    
+
                 </div>
               </div>
               <div class="text-center mt-2">
@@ -857,4 +957,5 @@ Modal Coupon
     // Handler for .ready() called.
   });
 </script>
+
 </html>
