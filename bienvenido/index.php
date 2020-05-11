@@ -943,22 +943,21 @@ Modal Coupon
   </div>
 </div>
 <!--Modal: Login / Register Form-->
-<script src="../utils/js/initialsesionintra.js"></script>
+<script src="../utils/js/verifysesiones.js"></script>
 <script>
   $(document).ready(function() {
     $("#modalCookie1").modal("show");
     // Handler for .ready() called.
+    borrarsesiones();
+    // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
+
   });
+  </script>
+<script src="../utils/js/initialsesionintra.js"></script>
+<script src="../utils/js/frontbusqueda.js"></script>
 
-  function addtable() {
-    var activatetable = "Activate";
-    $.post("../controllers/frontcontrollers/resultableespecialista.php", {
-      postactivatetable: activatetable
-    }, function(responseactivatetable) {
-      $("#resultable").append(responseactivatetable);
-    });
 
-  }
-</script>
+
+
 
 </html>

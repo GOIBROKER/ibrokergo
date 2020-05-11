@@ -40,6 +40,19 @@ class entityusersmodal{
        
     }
 
+
+    // Listar usuarios por limite
+    // Funcion usada en el front del sistema - no del intranet
+    function listaruserxlimit($inicio, $fin)
+    {
+        // En duro - llevar a un sistema como parametro Listar cada 10 resultado Variable $fin
+        require("../../utils/config/conex.php");
+        $querylistarxlimit = mysqli_query($enlacego, "SELECT * FROM gouser WHERE tipouser ='1' LIMIT $inicio,$fin");
+        $arrayxlimit = array();
+        while ($filaresult = mysqli_fetch_assoc($querylistarxlimit)) {
+            $arrayxlimit[] = $filaresult;
+        }
+        return $arrayxlimit;
+        mysqli_close($enlacego);
     }
-
-
+}
