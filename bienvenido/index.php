@@ -368,110 +368,99 @@
 
 
               </div>
+
+
               <div class="col-md-9">
                 <!-- Initial table -->
+                <div class="card">
+                  <ul class="list-group list-group-flush" id="resultable">
 
-                <table class="table">
-                  <thead>
-                    <tr>
+                    <li class="list-group-item">Filtrar por tipo de Servicio.:</li>
+                    <li class="list-group-item">
+
+                      <select class="browser-default custom-select">
+                        <option selected>Escoger.:</option>
+                        <option value="1">Reparación de Computadoras</option>
+                        <option value="2">Electricista</option>
+                        <option value="3">Reparación de televisores</option>
+                        <option value="3">Corte de Cabello</option>
+                      </select>
+
+                    </li>
+                    <li class="list-group-item">
+                      <div class="card">
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                          <form class="d-flex justify-content-center" method="GET" action="/snippets/?top=all">
+                            <!-- Default input -->
+                            <input type="search" name="search" placeholder="Busquedas de Especialistas y Trabajo" aria-label="Search" class="form-control" value="">
+                            <input type="top" name="top" value="all" style="display: none;">
+                            <button class="btn btn-unique btn-rounded btn-sm my-0 p waves-effect waves-light" type="submit">
+                              <i class="fas fa-search"></i>
+                            </button>
+
+                          </form>
+
+                        </div>
+
+                      </div>
+
+                    </li>
+
+                    <li class="list-group-item">
+                      <div class="card border-success mb-3">
+                        <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-muted">Nombre.: Anthony Puente - Lima, San Luis</h6>
+                          Hola.: Soy especialista de Jaime , espero les guste mi trabajo
+                          <!-- <span class="badge badge-primary badge-pill">
+
+                          
+                          </span> -->
+                          <div>
+                            <button type="button" class="btn btn-outline-primary waves-effect"><i class="fas fa-sun pr-2" aria-hidden="true"></i>Contactar</button>
+                          </div>
+
+                        </div>
+
+                        <div class="card-footer text-muted">
+                          Recomendación .:
+                          <i class='far fa-star'></i>
+                          <i class='far fa-star'></i>
+                          <i class='fas fa-star'></i>
+                          <i class='fas fa-star'></i>
+                          <i class='fas fa-star'></i>
+                        </div>
+                      </div>
+                    </li>
 
 
-                    </tr>
-                  </thead>
-                  <tbody id="resultable">
-                    <!-- Crear bucle aqui -->
-                    <th>
-                      <tr>
-                        <div class="input-group md-form form-sm form-2 pl-0">
-                          <input class="form-control my-0 py-1 red-border" type="text" placeholder="Busca y comienza a Trabajar" aria-label="Search">
-                          <div class="input-group-append">
-                            <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                    <li class="list-group-item">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="card-subtitle mb-2 text-muted">Nombre.: Anthony Puente - Lima, San Luis</h6>
+                          Hola.: Soy especialista de Jaime , espero les guste mi trabajo
+                          <div>
+                            <button type="button" class="btn btn-outline-primary waves-effect"><i class="fas fa-sun pr-2" aria-hidden="true"></i>Contactar</button>
                           </div>
                         </div>
 
-                      </tr>
-                    </th>
-
-                    <tr>
-                      <div class="form-group">
-                        <strong> <label for="exampleFormControlSelect1">Tipo de servicio.:</label></Stong>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Reparación de Computadoras</option>
-                            <option>Albañileria</option>
-                            <option>Electricista</option>
-                            <option>Peluqueria</option>
-                          </select>
+                        <div class="card-footer text-muted">
+                          Recomendación .:
+                          <i class='far fa-star'></i>
+                          <i class='far fa-star'></i>
+                          <i class='fas fa-star'></i>
+                          <i class='fas fa-star'></i>
+                          <i class='fas fa-star'></i>
+                        </div>
                       </div>
-                    </tr>
-                    
-                      <tr>
-                        <th scope="row">
-                          <div class="card border-success" style="max-width: 15rem;">
-                            <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
-                            <div class="card-body text-success">
-                              <h5 class="card-title">Verificado :</h5>
-                              <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
-                              </p>
-                              <p class="card-text"> Ubicación : Lima - San Luis </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                          </div>
-                        </th>
+                    </li>
 
-                        <th scope="row">
-                          <div class="card border-success" style="max-width: 15rem;">
-                            <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
-                            <div class="card-body text-success">
-                              <h5 class="card-title">Verificado :</h5>
-                              <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
-                              </p>
-                              <p class="card-text"> Ubicación : Lima - San Luis </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                          </div>
-                        </th>
 
-                        <th scope="row">
-                          <div class="card border-success" style="max-width: 15rem;">
-                            <div class="card-header bg-transparent border-success">Anthony Alexandre Puente Olano</div>
-                            <div class="card-body text-success">
-                              <h5 class="card-title">Verificado :</h5>
-                              <p class="card-text"> <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light"><i class="fab fa-bitcoin pr-2" aria-hidden="true"></i>Contactar</button>
-                              </p>
-                              <p class="card-text"> Ubicación : Lima - San Luis </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">Calidad.: <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                          </div>
-                        </th>
-
-                      </tr>
-
-                      <!-- Finalizar Bucle aqui -->
-                      
-                    </div>
-                  </tbody>
-                  <tr>
-                        <th>
-                          <center><button onclick="addtable()" type="button" class="btn btn-unique waves-effect waves-light"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button>
-                        </th>
-                        </center>
-                      </tr>
-                </table>
+                  </ul>
+                  <button type="button" class="btn btn-unique waves-effect waves-light" onclick="addtable()"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button>
+                </div>
                 <!-- Finish table -->
 
 
@@ -961,14 +950,14 @@ Modal Coupon
     // Handler for .ready() called.
   });
 
-  function addtable(){
+  function addtable() {
     var activatetable = "Activate";
-    $.post("../controllers/frontcontrollers/resultableespecialista.php",{
-      postactivatetable:activatetable
-    },function(responseactivatetable){
+    $.post("../controllers/frontcontrollers/resultableespecialista.php", {
+      postactivatetable: activatetable
+    }, function(responseactivatetable) {
       $("#resultable").append(responseactivatetable);
     });
-    
+
   }
 </script>
 
