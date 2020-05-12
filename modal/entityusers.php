@@ -30,8 +30,6 @@ class entityusersmodal{
             $arraryselectuuser[] = $filas;
         }
         return $arraryselectuuser;
-        
-
         }
         // Función que realizará la primera actualización del Especialista GO o Cliente GO
     function Actualizarusuario($nameandlastname,$ubigeo,$direccion,$nrodoc,$celular,$tipodoc,$email,$presentacion,$especialidad){
@@ -55,4 +53,6 @@ class entityusersmodal{
         return $arrayxlimit;
         mysqli_close($enlacego);
     }
+
+    
 }

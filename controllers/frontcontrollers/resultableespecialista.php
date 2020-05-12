@@ -7,8 +7,10 @@ $utilsfront = new utilsphp();
 session_start();
 if (!empty($_POST['postactivatetable'])) {
 // Muestra el resultado de 10 busquedas de usuarios ( HARDCODE)
-$flagregistrosview = 3  ;
+$flagregistrosview = 12  ;
 //
+
+
     if(empty($_SESSION['acumulaquery'])){
         $_SESSION['acumulaquery'] = 0;
     }
@@ -28,7 +30,7 @@ $flagregistrosview = 3  ;
         echo "<div class='card-body'>";
         echo "<h4 class='card-title'>Mi trabajo.: </h4>";
         echo "<p class='card-text'> Hola .: ".$utilsfront->cortartexto($foreachuserlimit['present'])."</p>";
-        echo "<a class='btn btn-success btn-sm waves-effect waves-light'>Contactar</a>";
+        echo "<a class='btn btn-success btn-sm waves-effect waves-light' onclick='verifyuser(".$foreachuserlimit['iduser'].")' >Contactar</a>";
         echo "</div>";
         echo "<div class='card-footer text-muted success-color white-text'>";
         echo "<p class='mb-0'>Atención.:";
@@ -42,7 +44,7 @@ $flagregistrosview = 3  ;
         echo "</div>";
         echo "</div>";
         echo "</div>";
-
+        
         
     }
     echo "</div>";

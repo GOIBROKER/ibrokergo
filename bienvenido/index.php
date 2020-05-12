@@ -316,17 +316,29 @@
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option>¿Buscas un .: ?</option>
+                  <option>1.- ¿Buscas un .: ?</option>
                   <option value='1'>Especialista</option>
                   <option value='2'>Trabajo</option>
                 </select>
               </div>
+              
+            </div>
+            <div class="col-sm">
+              <div class="form-group">
+                <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>2.- ¿De.: ?</option>
+                  <option value='1'>Gasfitería</option>
+                  <option value='2'>Servicios Informáticos</option>
+                </select>
+              </div>
+              
             </div>
             <div class="col-sm">
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">¿En que Ubicación?</label> -->
                 <select class="form-control" id="selectubicacion">
-                  <option>¿En que Departamento?</option>
+                  <option>3.- ¿En que Departamento?</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
@@ -344,7 +356,7 @@
         <div class="container" id="resultable">
 
 
-          
+
         </div>
 
         <div class="container">
