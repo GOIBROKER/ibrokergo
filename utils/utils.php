@@ -181,14 +181,18 @@ class utilsphp
         }
         return $devolver;
     }
-
+// Funcion que corta un texto - Según criterio hasta 82 carácteres como máximo
     function cortartexto($textocort){
+        $mensajep = ", me gusta la plataforma ya que me pueden encontrar facilmente en cualquier ubicación ; me encanta.";
         $totletras = strlen($textocort);
         if($totletras > 82){
             $cortadoletter = substr($textocort, 0, 82)." ...";
 
         }else if($totletras <= 82){
-            $cortadoletter=$textocort;
+           
+            $cortadoletter1=$textocort.$mensajep;
+            $cortadoletter = substr($cortadoletter1, 0, 82)." ...";
+
         }
         return $cortadoletter;
     }
