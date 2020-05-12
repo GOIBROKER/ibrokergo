@@ -165,5 +165,21 @@ class utilsphp
         return $arrayextraerinfo;
         mysqli_close($enlacego);
     }
+    // Validar tipo de usuario ,especialidad
+    function tipouser($tipouser,$idespecialidad,$sdettable,$cdettable){
+
+        if($tipouser == "1"){
+            $devolver="";
+        }else if($tipouser == "2"){
+            $funcutils = new utilsphp();
+            if($funcutils->valdatavacia($idespecialidad) === "false"){
+                $devolver = "Escoger especialidad";
+            }else if(empty($funcutils->validarestados($idespecialidad,$sdettable,$cdettable))){
+                $devolver = "Escoger especialidad";
+            }
+            $devolver="";
+        }
+        return $devolver;
+    }
     
 }

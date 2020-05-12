@@ -4,7 +4,7 @@ class entityusersmodal{
 
     function registrarusers($tipouser,$datetime,$email,$password,$contrato,$nombrescompletos){
         require("../utils/config/conex.php");
-        $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 'default', 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default')");
+        $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 'default', 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default','99')");
         mysqli_close($enlacego); 
     }
     // Buscar usuario por Email y devolver la cantidad de filas
@@ -34,10 +34,10 @@ class entityusersmodal{
 
         }
         // Función que realizará la primera actualización del Especialista GO o Cliente GO
-    function Actualizarusuario($nameandlastname,$ubigeo,$direccion,$nrodoc,$celular,$tipodoc,$email,$presentacion){
+    function Actualizarusuario($nameandlastname,$ubigeo,$direccion,$nrodoc,$celular,$tipodoc,$email,$presentacion,$especialidad){
         require("../utils/config/conex.php");
-        $updatequery = mysqli_query($enlacego,"UPDATE gouser SET nameandlast = '$nameandlastname',ubigeo = '$ubigeo',direccion = '$direccion',nrodoc = '$nrodoc',celular = '$celular',tdocumento = '$tipodoc' ,present = '$presentacion' WHERE email = '$email'");
-       
+        $updatequery = mysqli_query($enlacego,"UPDATE gouser SET nameandlast = '$nameandlastname',ubigeo = '$ubigeo',direccion = '$direccion',nrodoc = '$nrodoc',celular = '$celular',tdocumento = '$tipodoc' ,present = '$presentacion' ,idtipservicio = '$especialidad' WHERE email = '$email'");
+         mysqli_close($enlacego);
     }
 
 
@@ -47,7 +47,7 @@ class entityusersmodal{
     {
         // En duro - llevar a un sistema como parametro Listar cada 10 resultado Variable $fin
         require("../../utils/config/conex.php");
-        $querylistarxlimit = mysqli_query($enlacego, "SELECT * FROM gouser WHERE tipouser ='1' LIMIT $inicio,$fin");
+        $querylistarxlimit = mysqli_query($enlacego, "SELECT * FROM gouser WHERE tipouser ='2' LIMIT $inicio,$fin");
         $arrayxlimit = array();
         while ($filaresult = mysqli_fetch_assoc($querylistarxlimit)) {
             $arrayxlimit[] = $filaresult;

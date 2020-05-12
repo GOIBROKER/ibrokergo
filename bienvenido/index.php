@@ -410,52 +410,10 @@
                     </li>
 
                     <li class="list-group-item">
-                      <div class="card border-success mb-3">
-                        <div class="card-body">
-                          <h6 class="card-subtitle mb-2 text-muted">Nombre.: Anthony Puente - Lima, San Luis</h6>
-                          Hola.: Soy especialista de Jaime , espero les guste mi trabajo
-                          <!-- <span class="badge badge-primary badge-pill">
-
-                          
-                          </span> -->
-                          <div>
-                            <button type="button" class="btn btn-outline-primary waves-effect"><i class="fas fa-sun pr-2" aria-hidden="true"></i>Contactar</button>
-                          </div>
-
-                        </div>
-
-                        <div class="card-footer text-muted">
-                          Recomendación .:
-                          <i class='far fa-star'></i>
-                          <i class='far fa-star'></i>
-                          <i class='fas fa-star'></i>
-                          <i class='fas fa-star'></i>
-                          <i class='fas fa-star'></i>
-                        </div>
-                      </div>
+                        Cargar los primeros 10 registros según resultado
                     </li>
 
-
-                    <li class="list-group-item">
-                      <div class="card">
-                        <div class="card-body">
-                          <h6 class="card-subtitle mb-2 text-muted">Nombre.: Anthony Puente - Lima, San Luis</h6>
-                          Hola.: Soy especialista de Jaime , espero les guste mi trabajo
-                          <div>
-                            <button type="button" class="btn btn-outline-primary waves-effect"><i class="fas fa-sun pr-2" aria-hidden="true"></i>Contactar</button>
-                          </div>
-                        </div>
-
-                        <div class="card-footer text-muted">
-                          Recomendación .:
-                          <i class='far fa-star'></i>
-                          <i class='far fa-star'></i>
-                          <i class='fas fa-star'></i>
-                          <i class='fas fa-star'></i>
-                          <i class='fas fa-star'></i>
-                        </div>
-                      </div>
-                    </li>
+ 
 
 
                   </ul>

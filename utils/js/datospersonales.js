@@ -42,7 +42,7 @@ function registrar() {
     var txtubicacion = $("#txtubicacion").val();
     // smserrordatospersonales
     var activateregister = "activate";
-
+    var sespecialidad = $("#selectespecialidad").val();
     $.post("../controllers/datospersonales.php", {
         requestactivateregister: activateregister,
         requesttxtname: txtname,
@@ -51,7 +51,8 @@ function registrar() {
         requesttxtcel: txtcel,
         requesttxtnrodoc: txtnrodoc,
         requestselectedtipodoc: selectedtipodoc,
-        requesttxtubicacion: txtubicacion
+        requesttxtubicacion: txtubicacion,
+        requestsespecialidad:sespecialidad
     }, function (responseregister) {
         $("#smserrordatospersonales").html(responseregister);
         var validateupdateusers = "Activate";
