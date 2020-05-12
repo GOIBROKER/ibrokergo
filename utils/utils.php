@@ -181,5 +181,16 @@ class utilsphp
         }
         return $devolver;
     }
+
+    function cortartexto($textocort){
+        $totletras = strlen($textocort);
+        if($totletras > 82){
+            $cortadoletter = substr($textocort, 0, 82)." ...";
+
+        }else if($totletras <= 82){
+            $cortadoletter=$textocort;
+        }
+        return $cortadoletter;
+    }
     
 }

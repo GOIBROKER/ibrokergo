@@ -288,147 +288,81 @@
 
       <!--Section: Main features & Quick Start-->
       <section>
-
         <h3 class="h3 text-center mb-5">IBROKER GO - CONECTAMOS TRABAJO</h3>
         <div class="container">
+          <div class="row">
+            <h5>Comienza tu busqueda .:</h5>
+            <div class="col-sm">
+              <form class="d-flex justify-content-center" method="GET" action="/snippets/?top=all">
+                <!-- Default input -->
+                <input type="search" name="search" placeholder="Busquedas de Especialistas y Trabajo" aria-label="Search" class="form-control" value="">
+                <input type="top" name="top" value="all" style="display: none;">
+                <button class="btn btn-unique btn-rounded btn-sm my-0 p waves-effect waves-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <strong>
-                  <h3>Filtrar Información</h3>
-                </strong>
+              </form>
+            </div>
 
-                <div class="table-responsive">
+          </div>
+        </div>
 
-                  <!--Table-->
-                  <table class="table">
-
-                    <!--Table head-->
-                    <thead>
-                      <tr>
-
-                        <th class="th-sm"></th>
-
-                      </tr>
-                    </thead>
-                    <!--Table head-->
-
-                    <!--Table body-->
-                    <tbody>
-                      <tr>
-
-                        <td colspan="2">
-                          <!--Blue select-->
-                          <div class="form-group">
-                            <strong><label for="exampleFormControlSelect1">¿Que buscas?</label></strong>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Especialistas</option>
-                              <option>Publicación de Trabajos</option>
-
-                            </select>
-                          </div>
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <td colspan="2">
-                          <!--Blue select-->
-                          <div class="form-group">
-                            <strong><label for="exampleFormControlSelect1">Departamento.:</label></strong>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Lima</option>
-                              <option>Trujillo</option>
-                              <option>Piura</option>
-                              <option>Loreto</option>
-                            </select>
-                          </div>
-                        </td>
-
-                        <td>
-
-                        </td>
-
-                      </tr>
-                      <tr>
-                        <th scope="row"></th>
-                        <td>
-
-                        </td>
-
-                      </tr>
-                    </tbody>
-                    <!--Table body-->
-
-                  </table>
-                  <!--Table-->
-
-                </div>
-
-
-
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h3 class="h4 text-center mb-4">Filtrar por.:</h3>
+            </div>
+            <div class="col-sm">
+              <div class="form-group">
+                <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>¿Buscas un .: ?</option>
+                  <option value='1'>Especialista</option>
+                  <option value='2'>Trabajo</option>
+                </select>
               </div>
-
-
-              <div class="col-md-9">
-                <!-- Initial table -->
-                <div class="card">
-                  <ul class="list-group list-group-flush" id="resultable">
-
-                    <li class="list-group-item">Filtrar por tipo de Servicio.:</li>
-                    <li class="list-group-item">
-
-                      <select class="browser-default custom-select">
-                        <option selected>Escoger.:</option>
-                        <option value="1">Reparación de Computadoras</option>
-                        <option value="2">Electricista</option>
-                        <option value="3">Reparación de televisores</option>
-                        <option value="3">Corte de Cabello</option>
-                      </select>
-
-                    </li>
-                    <li class="list-group-item">
-                      <div class="card">
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                          <form class="d-flex justify-content-center" method="GET" action="/snippets/?top=all">
-                            <!-- Default input -->
-                            <input type="search" name="search" placeholder="Busquedas de Especialistas y Trabajo" aria-label="Search" class="form-control" value="">
-                            <input type="top" name="top" value="all" style="display: none;">
-                            <button class="btn btn-unique btn-rounded btn-sm my-0 p waves-effect waves-light" type="submit">
-                              <i class="fas fa-search"></i>
-                            </button>
-
-                          </form>
-
-                        </div>
-
-                      </div>
-
-                    </li>
-
-                    <li class="list-group-item">
-                        Cargar los primeros 10 registros según resultado
-                    </li>
-
- 
-
-
-                  </ul>
-                  <button type="button" class="btn btn-unique waves-effect waves-light" onclick="addtable()"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button>
-                </div>
-                <!-- Finish table -->
-
-
-
+            </div>
+            <div class="col-sm">
+              <div class="form-group">
+                <!-- <label for="exampleFormControlSelect1">¿En que Ubicación?</label> -->
+                <select class="form-control" id="selectubicacion">
+                  <option>¿En que Departamento?</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <hr class="my-5">
+      <section>
+        <h3 class="h4 text-center mb-4">Resultado de Busqueda.:</h3>
+        <div class="container" id="resultable">
+
+
+          
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <center><button type="button" class="btn btn-unique waves-effect waves-light" onclick="addtable()"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button></center>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
 
       </section>
+
       <!--Section: Main features & Quick Start-->
 
       <hr class="my-5">
@@ -910,7 +844,7 @@ Modal Coupon
     // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
 
   });
-  </script>
+</script>
 <script src="../utils/js/initialsesionintra.js"></script>
 <script src="../utils/js/frontbusqueda.js"></script>
 
