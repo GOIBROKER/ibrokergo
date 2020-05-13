@@ -26,8 +26,7 @@ function buscardepbusq(valor){
     
 }
 function buscarserv(){
-  
-   
+  // Envia dos parametros el activador y la cabecera inicial del componente select para buscar servicios
         var busqserv = "activate";
         var cabecerainicial = "2.- ¿De.: ?";
         $.post("../controllers/utilsfront.php",{
@@ -37,8 +36,16 @@ function buscarserv(){
            
             $("#resutcomboserv").html(responsebusqserv3);
         });
-    
-    
-    
+
+}
+
+function loadinitialespec(){
+    var actespec = "activate";
+    $.post("../controllers/resultableespecialista.php",{
+        postactespec:actespec
+    },function(responseactespec){
+        
+        $("#resultable").html(responseactespec);
+    });
 }
 

@@ -851,6 +851,7 @@ Modal Coupon
   $(document).ready(function() {
     $("#modalCookie1").modal("show");
     // Handler for .ready() called.
+    loadinitialespec();
     buscarserv();
     borrarsesiones();
     buscardep();

@@ -53,6 +53,16 @@ class entityusersmodal{
         return $arrayxlimit;
         mysqli_close($enlacego);
     }
+    function listaruserxtip($tipuser,$cantregistros){
+        require("../utils/config/conex.php");
+        $querytouser = mysqli_query($enlacego,"select * from gouser where tipouser ='$tipuser' limit $cantregistros");
+        $arraytouser = array();
+        while($rowtouser = mysqli_fetch_assoc($querytouser)){
+            $arraytouser[] = $rowtouser;
+        }
+        return $arraytouser;
+        mysqli_close($enlacego);
+    }
 
     
 }
