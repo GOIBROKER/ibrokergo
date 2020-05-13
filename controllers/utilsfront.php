@@ -1,6 +1,8 @@
 <?php
 require_once("../modal/entityubicacion.php");
+require_once("../modal/serviciosmodal.php");
 $entityubi = new modalubicacion();
+$entityserv = new serviciosmodal();
 session_start();
 // Busqueda de Departamento Utils
 if(!empty($_POST['requescmb'])){
@@ -34,9 +36,17 @@ if(!empty($_POST['responsebusqdep'])){
 
    }
 
-   if(!empty($_POST['responsebusqserv'])){
-      
+if (!empty($_POST['responsebusqserv'])) {
+   $postcabecerainicial = $_POST['postcabecerainicial'];
+   echo "<select class='form-control' id='exampleFormControlSelect1'>";
+   echo "<option>" . $postcabecerainicial . "</option>";
+
+   foreach ($entityserv->listarservicios() as $fresulserv) {
+      echo "<option value='" . $fresulserv['idtipservicio'] . "'>" . $fresulserv['name'] . "</option>";
    }
+
+   echo "</select>";
+}
 
   
 // Fin de Busqueda de Departamento Utils

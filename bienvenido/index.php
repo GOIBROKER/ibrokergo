@@ -328,11 +328,11 @@
             <div class="col-sm">
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>2.- ¿De.: ?</option>
-                  <div id="resutcomboserv">
-                  </div>
-                </select>
+
+                <div id="resutcomboserv">
+                </div>
+
+
               </div>
               
             </div>
@@ -851,6 +851,7 @@ Modal Coupon
   $(document).ready(function() {
     $("#modalCookie1").modal("show");
     // Handler for .ready() called.
+    buscarserv();
     borrarsesiones();
     buscardep();
     // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.

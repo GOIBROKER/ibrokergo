@@ -25,15 +25,17 @@ function buscardepbusq(valor){
     
     
 }
-function buscarbuscarserv(){
-    
+function buscarserv(){
+  
    
         var busqserv = "activate";
+        var cabecerainicial = "2.- ¿De.: ?";
         $.post("../controllers/utilsfront.php",{
             responsebusqserv:busqserv,
-        },function(responsebusqserv){
+            postcabecerainicial:cabecerainicial
+        },function(responsebusqserv3){
            
-            $("#resutcomboserv").html(responsebusqserv);
+            $("#resutcomboserv").html(responsebusqserv3);
         });
     
     
