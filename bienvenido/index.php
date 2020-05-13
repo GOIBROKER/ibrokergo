@@ -291,23 +291,7 @@
       <!--Section: Main features & Quick Start-->
       <section>
         <h3 class="h3 text-center mb-5">IBROKER GO - CONECTAMOS TRABAJO</h3>
-        <div class="container">
-          <div class="row">
-            <h5>Comienza tu busqueda .:</h5>
-            <div class="col-sm">
-              <form class="d-flex justify-content-center" method="GET" action="/snippets/?top=all">
-                <!-- Default input -->
-                <input type="search" name="search" placeholder="Busquedas de Especialistas y Trabajo" aria-label="Search" class="form-control" value="">
-                <input type="top" name="top" value="all" style="display: none;">
-                <button class="btn btn-unique btn-rounded btn-sm my-0 p waves-effect waves-light" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-
-              </form>
-            </div>
-
-          </div>
-        </div>
+        
 
         <div class="container">
           <div class="row">
@@ -344,6 +328,24 @@
                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <h5>Comienza tu busqueda .:</h5>
+            <div class="col-sm">
+              <form class="d-flex justify-content-center" method="GET" action="/snippets/?top=all">
+                <!-- Default input -->
+                <input type="search" name="search" placeholder="Busquedas de Especialistas y Trabajo" aria-label="Search" class="form-control" value="">
+                <input type="top" name="top" value="all" style="display: none;">
+                <button class="btn btn-unique btn-rounded btn-sm my-0 p waves-effect waves-light" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+
+              </form>
+            </div>
+
           </div>
         </div>
       </section>

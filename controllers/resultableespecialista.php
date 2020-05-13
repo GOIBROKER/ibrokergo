@@ -7,7 +7,7 @@ $utilsfront = new utilsphp();
 session_start();
 if (!empty($_POST['postactivatetable'])) {
 // Muestra el resultado de 10 busquedas de usuarios ( HARDCODE)
-$flagregistrosview = 3  ;
+$flagregistrosview = 12  ;
 //
 
 
@@ -61,7 +61,7 @@ if(!empty($_POST['postactespec'])){
     // Tipo de usuario 2 = Especialista - 1 = Clientes
     $tipuser ='2';
     // Cantidad de registros los que se mostraran en el inicio - En producción colocarlo en 12
-    $Cantregi = '3';
+    $Cantregi = '12';
     echo "<div class='row'>";
     foreach($entityusers->listaruserxtip($tipuser,$Cantregi) as $fcantregistros){
         echo "<div class='col-md-4'>";
