@@ -19,6 +19,8 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 <script>
   new WOW().init();
@@ -328,8 +330,8 @@
                 <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>2.- ¿De.: ?</option>
-                  <option value='1'>Gasfitería</option>
-                  <option value='2'>Servicios Informáticos</option>
+                  <div id="resutcomboserv">
+                  </div>
                 </select>
               </div>
               
@@ -337,13 +339,9 @@
             <div class="col-sm">
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">¿En que Ubicación?</label> -->
-                <select class="form-control" id="selectubicacion">
-                  <option>3.- ¿En que Departamento?</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
+                <div id="resutcombo">
+                
+               </div>
               </div>
             </div>
           </div>
@@ -848,12 +846,19 @@ Modal Coupon
 </div>
 <!--Modal: Login / Register Form-->
 <script src="../utils/js/verifysesiones.js"></script>
+<script src="../utils/js/utils.js"></script>
 <script>
   $(document).ready(function() {
     $("#modalCookie1").modal("show");
     // Handler for .ready() called.
     borrarsesiones();
+    buscardep();
     // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
+    //Carga Inicial de combo
+    
+    
+   
+    
 
   });
 </script>

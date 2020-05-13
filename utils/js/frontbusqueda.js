@@ -1,6 +1,6 @@
 function addtable() {
     var activatetable = "Activate";
-    $.post("../controllers/frontcontrollers/resultableespecialista.php", {
+    $.post("../controllers/resultableespecialista.php", {
       postactivatetable: activatetable
     }, function(responseactivatetable) {
       $("#resultable").append(responseactivatetable);

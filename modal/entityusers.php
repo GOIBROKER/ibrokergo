@@ -44,7 +44,7 @@ class entityusersmodal{
     function listaruserxlimit($inicio, $fin)
     {
         // En duro - llevar a un sistema como parametro Listar cada 10 resultado Variable $fin
-        require("../../utils/config/conex.php");
+        require("../utils/config/conex.php");
         $querylistarxlimit = mysqli_query($enlacego, "SELECT * FROM gouser WHERE tipouser ='2' LIMIT $inicio,$fin");
         $arrayxlimit = array();
         while ($filaresult = mysqli_fetch_assoc($querylistarxlimit)) {

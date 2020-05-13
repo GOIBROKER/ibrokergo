@@ -1,6 +1,6 @@
 <?php
-require_once("../../modal/entityusers.php");
-require_once("../../utils/utils.php");
+require_once("../modal/entityusers.php");
+require_once("../utils/utils.php");
 
 $entityusers = new entityusersmodal();
 $utilsfront = new utilsphp();
