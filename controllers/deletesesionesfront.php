@@ -5,6 +5,7 @@ session_start();
         $_SESSION['acumulaquery'] ="";
         $_SESSION['suma']="";
         //--------------------------------------
-        
+        //Sesion de ubigeo destruida
+        $_SESSION['ubigeofron']="";
     }
 ?>

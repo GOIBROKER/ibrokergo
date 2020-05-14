@@ -9,7 +9,6 @@ class modalubicacion{
         while($rowubicacion = mysqli_fetch_assoc($queryubicacion)){
             $arrayubicacion[] = $rowubicacion;
         }
-      
         return $arrayubicacion;
        
     }
@@ -31,9 +30,17 @@ class modalubicacion{
             while($rowubicacion = mysqli_fetch_assoc($queryubicacion)){
                 $arrayubicacion[] = $rowubicacion;
             }
-          
             return $arrayubicacion;
-           
+        }
+        function mnameubic($codubic2){
+            require("../utils/config/conex.php");
+            
+            $querymnameubic = mysqli_query($enlacego,"SELECT * FROM ubigeo WHERE idubigeo = '$codubic2'");
+            while($rowmnameubic = mysqli_fetch_assoc($querymnameubic)){
+                $lugar = $rowmnameubic['unido'];
+            }
+            return $lugar;
+            mysqli_close($enlacego);
         }
 }
 

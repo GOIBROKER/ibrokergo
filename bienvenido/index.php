@@ -289,9 +289,9 @@
       <hr class="my-5">
 
       <!--Section: Main features & Quick Start-->
-      <section>
+      <section style="background: #eff6ea">
         <h3 class="h3 text-center mb-5">IBROKER GO - CONECTAMOS TRABAJO</h3>
-        
+
 
         <div class="container">
           <div class="row">
@@ -301,13 +301,13 @@
             <div class="col-sm">
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1.- ¿Buscas un .: ?</option>
+                <select class="form-control" id="tuser">
+                  <option value="">1.- ¿Buscas un .: ?</option>
                   <option value='1'>Especialista</option>
                   <option value='2'>Trabajo</option>
                 </select>
               </div>
-              
+
             </div>
             <div class="col-sm">
               <div class="form-group">
@@ -318,14 +318,14 @@
 
 
               </div>
-              
+
             </div>
             <div class="col-sm">
               <div class="form-group">
                 <!-- <label for="exampleFormControlSelect1">¿En que Ubicación?</label> -->
                 <div id="resutcombo">
-                
-               </div>
+
+                </div>
               </div>
             </div>
           </div>
@@ -333,17 +333,27 @@
 
         <div class="container">
           <div class="row">
-            <h5>Comienza tu busqueda .:</h5>
-            <div class="col-sm">
-              <form class="d-flex justify-content-center" method="GET" action="/snippets/?top=all">
-                <!-- Default input -->
-                <input type="search" name="search" placeholder="Busquedas de Especialistas y Trabajo" aria-label="Search" class="form-control" value="">
-                <input type="top" name="top" value="all" style="display: none;">
-                <button class="btn btn-unique btn-rounded btn-sm my-0 p waves-effect waves-light" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
 
-              </form>
+            <div class="col-sm">
+
+              <div class="card border-dark">
+                <div class="card-body">
+                  <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                      <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <!--end of col-->
+                    <div class="col">
+                      <input class="form-control form-control-lg form-control-borderless" id="txtsearchbar" type="search" placeholder="Especialidad o nombre de especialista">
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto">
+                      <button class="btn btn-lg btn-success" onclick="searchfront()">Buscar!</button>
+                    </div>
+                    <!--end of col-->
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -352,24 +362,53 @@
 
       <hr class="my-5">
       <section>
+
         <h3 class="h4 text-center mb-4">Resultado de Busqueda.:</h3>
-        <div class="container" id="resultable">
-
-
-
-        </div>
 
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <center><button type="button" class="btn btn-unique waves-effect waves-light" onclick="addtable()"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button></center>
-                </li>
-              </ul>
+            <div class="col-md-9">
+
+              <div class="list-group" id="resultable">
+                <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
+
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h6 class="mb-1">
+                      <p class="text-dark"><strong>Especialista .: Anthony Puente Olano</strong></p>
+                    </h6>
+                    </br>
+                    <small>Lima - San Luis.</small>
+                  </div>
+                  <p class="mb-1">Me dedico a la Reparación de laptops , impresoras , escanner.</p>
+                  <p class="text-warning"><small><strong>Calidad de Atención.:</strong>
+                      <i class='far fa-star'></i>
+                      <i class='far fa-star'></i>
+                      <i class='far fa-star'></i>
+                      <i class='fas fa-star'></i>
+                      <i class='fas fa-star'></i>
+                    </small></p>
+                  <strong><small>35 usuarios lo recomiendan</small></strong>
+                  </br>
+                  <button type="button" class="btn btn-primary">Contactar</button>
+                </a>
+
+              </div>
+              <button type="button" class="btn btn-danger btn-lg btn-block" onclick="addtable()"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button>
+            </div>
+
+
+
+            <div class="col-md-3">
+
+
+              .Patrocinadores
+
+
             </div>
           </div>
         </div>
+
 
 
 
@@ -859,16 +898,16 @@ Modal Coupon
     buscardep();
     // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
     //Carga Inicial de combo
-    
-    
-   
-    
+
+
+
+
 
   });
 </script>
 <script src="../utils/js/initialsesionintra.js"></script>
 <script src="../utils/js/frontbusqueda.js"></script>
-
+<script src="../utils/js/seachfront.js"></script>
 
 
 

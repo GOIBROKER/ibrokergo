@@ -21,8 +21,9 @@ if(!empty($_POST['responsebusqdep'])){
 
    $valorsearch = $_POST['responsevalinput'];
 
+
    foreach ($entityubi->buscarxcodubicfront($valorsearch) as $fresultubic){
-     
+      
    }
    if(!empty($fresultubic['unido'])){
       $_SESSION['ubigeofron'] = $fresultubic['idubigeo'];
@@ -38,8 +39,8 @@ if(!empty($_POST['responsebusqdep'])){
 
 if (!empty($_POST['responsebusqserv'])) {
    $postcabecerainicial = $_POST['postcabecerainicial'];
-   echo "<select class='form-control' id='exampleFormControlSelect1'>";
-   echo "<option>" . $postcabecerainicial . "</option>";
+   echo "<select class='form-control' id='identipservicio'>";
+   echo "<option value=''>" . $postcabecerainicial . "</option>";
 
    foreach ($entityserv->listarservicios() as $fresulserv) {
       echo "<option value='" . $fresulserv['idtipservicio'] . "'>" . $fresulserv['name'] . "</option>";

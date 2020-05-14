@@ -63,6 +63,18 @@ class entityusersmodal{
         return $arraytouser;
         mysqli_close($enlacego);
     }
+    // Funcion que se utiliza en el search de la web
+    function filtrobusqfront($idtipservicio, $idtipouser, $present, $ubigeo)
+    {
+        require("../utils/config/conex.php");
+        $querysearch = mysqli_query($enlacego, "SELECT * FROM gouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND ubigeo LIKE '%$ubigeo%' limit 12");
+        $arraysearch = array();
+        while ($rowsearch = mysqli_fetch_assoc($querysearch)) {
+            $arraysearch[] = $rowsearch;
+        }
+        return $arraysearch;
+        mysqli_close($enlacego);
+    }
 
     
 }
