@@ -121,7 +121,7 @@ if (!empty($_POST['postactivatesearch'])) {
     $_SESSION['acumulaquery'] = $_SESSION['acumulaquery'] + $_SESSION['suma'];
     //---------------------
 
-    echo $_SESSION['acumulaquery'] . " - " . $_SESSION['suma'] . " - " . $_SESSION['ubigeofron'] ." -" .$_SESSION['tempservicio'];
+    echo $_SESSION['acumulaquery'] . " - " . $_SESSION['suma'] . " - " . $_SESSION['ubigeofron'] ;
     foreach ($entityusers->filtrobusqfront($_POST['postidentipservicio'], $tipouser, $_POST['posttxtsearchbar'], $_SESSION['ubigeofron'], $_SESSION['acumulaquery'], $flagregistrosview) as $fquereseach) {
 
         echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
