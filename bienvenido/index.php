@@ -404,7 +404,7 @@
             <div class="col-md-3">
 
 
-              .Patrocinadores
+              .Columna para patrocinadores o Publicad Premium
 
 
             </div>

@@ -3,7 +3,8 @@ function addtable() {
     $.post("../controllers/resultableespecialista.php", {
       postactivatetable: activatetable
     }, function(responseactivatetable) {
-      $("#resultable").append(responseactivatetable);
+      // $("#resultable").append(responseactivatetable);
+      alert(responseactivatetable);
     });
 
   }
