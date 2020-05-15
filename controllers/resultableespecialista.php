@@ -89,45 +89,26 @@ if (!empty($_POST['postactivatesearch'])) {
     if (empty($_POST['postvalidateubic'])) {
         $_SESSION['ubigeofron'] = "";
     }
-
     if (empty($_SESSION['ubigeofron'])) {
         $_SESSION['ubigeofron'] = "";
-    }else{
-        $_SESSION['ubigeofronlast'] = $_SESSION['ubigeofron'];
     }
 
-
-    if (!empty($_POST['posttuser'])) {
-        $posttuser = $_POST['posttuser'];
-    } else {
-        $posttuser = "";
+    if (empty($_POST['posttuser'])) {
+        $_POST['posttuser'] = "";
     }
 
-    if (!empty($_POST['postidentipservicio'])) {
-        $postidentipservicio = $_POST['postidentipservicio'];
-        $_SESSION['tempservicio'] = $_POST['postidentipservicio'];
-
-    } else {
-        $postidentipservicio = "";
+    if (empty($_POST['postidentipservicio'])) {
+        $_POST['postidentipservicio'] = "";
     }
 
-    if (!empty($_POST['posttxtsearchbar'])) {
-        $posttxtsearchbar = $_POST['posttxtsearchbar'];
-    } else {
-        $posttxtsearchbar = "";
+    if (empty($_POST['posttxtsearchbar'])) {
+        $_POST['posttxtsearchbar'] = "";
     }
-
-
-    
-
 
     $tipouser = '2'; // Tipo de usuario especialista , no aplica para cliente , solo para trabajos
-
-
     //--------------------------------------
     // Muestra el resultado de 10 busquedas de usuarios ( HARDCODE)
     $flagregistrosview = 5;
-
     //----------------------
 
     if (empty($_SESSION['acumulaquery'])) {
@@ -141,7 +122,7 @@ if (!empty($_POST['postactivatesearch'])) {
     //---------------------
 
     echo $_SESSION['acumulaquery'] . " - " . $_SESSION['suma'] . " - " . $_SESSION['ubigeofron'] ." -" .$_SESSION['tempservicio'];
-    foreach ($entityusers->filtrobusqfront($postidentipservicio, $tipouser, $posttxtsearchbar, $_SESSION['ubigeofron'], $_SESSION['acumulaquery'], $flagregistrosview) as $fquereseach) {
+    foreach ($entityusers->filtrobusqfront($_POST['postidentipservicio'], $tipouser, $_POST['posttxtsearchbar'], $_SESSION['ubigeofron'], $_SESSION['acumulaquery'], $flagregistrosview) as $fquereseach) {
 
         echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
         echo "<div class='d-flex w-100 justify-content-between'>";
@@ -161,8 +142,6 @@ if (!empty($_POST['postactivatesearch'])) {
         echo "</br>";
         echo "<button type='button' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
-
-
     }
 
     $_SESSION['suma'] = $flagregistrosview;
