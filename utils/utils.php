@@ -185,13 +185,13 @@ class utilsphp
     function cortartexto($textocort){
         $mensajep = ", me gusta la plataforma ya que me pueden encontrar facilmente en cualquier ubicación ; me encanta.";
         $totletras = strlen($textocort);
-        if($totletras > 82){
-            $cortadoletter = substr($textocort, 0, 82)." ...";
+        if($totletras > 110){
+            $cortadoletter = substr($textocort, 0, 110)." ...";
 
-        }else if($totletras <= 82){
+        }else if($totletras <= 110){
            
             $cortadoletter1=$textocort.$mensajep;
-            $cortadoletter = substr($cortadoletter1, 0, 82)." ...";
+            $cortadoletter = substr($cortadoletter1, 0, 110)." ...";
 
         }
         return $cortadoletter;

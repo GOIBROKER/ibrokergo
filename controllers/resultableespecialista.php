@@ -7,48 +7,48 @@ $entityusers = new entityusersmodal();
 $utilsfront = new utilsphp();
 $entityubic = new modalubicacion();
 session_start();
-if (!empty($_POST['postactivatetable'])) {
-// Muestra el resultado de 10 busquedas de usuarios ( HARDCODE)
-$flagregistrosview = 12  ;
-//
+// if (!empty($_POST['postactivatetable'])) {
+// // Muestra el resultado de 10 busquedas de usuarios ( HARDCODE)
+// $flagregistrosview = 12  ;
+// //
 
 
-    if(empty($_SESSION['acumulaquery'])){
-        // Este flag se debe de cambiar , si la presentacion principal es 12 aqui se debe colocar 12
-        $_SESSION['acumulaquery'] = 3;
-    }
-    if(empty($_SESSION['suma'])){
-        $_SESSION['suma'] = 0;
-    }
-    $_SESSION['acumulaquery'] = $_SESSION['acumulaquery'] + $_SESSION['suma'];
+//     if(empty($_SESSION['acumulaquery'])){
+//         // Este flag se debe de cambiar , si la presentacion principal es 12 aqui se debe colocar 12
+//         $_SESSION['acumulaquery'] = 3;
+//     }
+//     if(empty($_SESSION['suma'])){
+//         $_SESSION['suma'] = 0;
+//     }
+//     $_SESSION['acumulaquery'] = $_SESSION['acumulaquery'] + $_SESSION['suma'];
 
-    foreach ($entityusers->listaruserxlimit($_SESSION['acumulaquery'],$flagregistrosview) as $foreachuserlimit){
-        echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
-        echo "<div class='d-flex w-100 justify-content-between'>";
-        echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: ".$foreachuserlimit['nameandlast']."</strong></p></h6>";
-        echo "</br>";
-        echo "<small>".$entityubic->mnameubic($foreachuserlimit['ubigeo'])."</small>";
-        echo "</div>";
-        echo "<p class='mb-1'>".$utilsfront->cortartexto($foreachuserlimit['present'])."</p>";
-        echo "<p class='text-warning'><small><strong>Calidad de Atención.:</strong>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "</small></p>";
-        echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
-        echo "</br>";
-        echo "<button type='button' class='btn btn-primary' onclick='verifyuser(".$foreachuserlimit['iduser'].")'>Contactar</button>";
-        echo "</a>";     
-    }
+//     foreach ($entityusers->listaruserxlimit($_SESSION['acumulaquery'],$flagregistrosview) as $foreachuserlimit){
+//         echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
+//         echo "<div class='d-flex w-100 justify-content-between'>";
+//         echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: ".$foreachuserlimit['nameandlast']."</strong></p></h6>";
+//         echo "</br>";
+//         echo "<small>".$entityubic->mnameubic($foreachuserlimit['ubigeo'])."</small>";
+//         echo "</div>";
+//         echo "<p class='mb-1'>".$utilsfront->cortartexto($foreachuserlimit['present'])."</p>";
+//         echo "<p class='text-warning'><small><strong>Calidad de Atención.:</strong>";
+//         echo "<i class='far fa-star'></i>";
+//         echo "<i class='far fa-star'></i>";
+//         echo "<i class='far fa-star'></i>";
+//         echo "<i class='fas fa-star'></i>";
+//         echo "<i class='fas fa-star'></i>";
+//         echo "</small></p>";
+//         echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
+//         echo "</br>";
+//         echo "<button type='button' class='btn btn-primary' onclick='verifyuser(".$foreachuserlimit['iduser'].")'>Contactar</button>";
+//         echo "</a>";     
+//     }
     
   
-    $_SESSION['suma'] = $flagregistrosview;
+//     $_SESSION['suma'] = $flagregistrosview;
 
-    // Valor que indica la iteración
+//     // Valor que indica la iteración
    
-}
+// }
 
 if(!empty($_POST['postactespec'])){
     
@@ -83,49 +83,73 @@ if(!empty($_POST['postactespec'])){
 }
 
 if (!empty($_POST['postactivatesearch'])) {
-    
-
-
     // Validar vacios - Valor por defecto
-    if(empty($_POST['postvalidateubic'])){
+
+
+    if (empty($_POST['postvalidateubic'])) {
         $_SESSION['ubigeofron'] = "";
     }
 
-    if(!empty($_SESSION['ubigeofron'])){
-        $ubigeofron = $_SESSION['ubigeofron'];
+    if (empty($_SESSION['ubigeofron'])) {
+        $_SESSION['ubigeofron'] = "";
     }else{
-        $ubigeofron = "";
+        $_SESSION['ubigeofronlast'] = $_SESSION['ubigeofron'];
     }
 
-    if(!empty($_POST['posttuser'])){
+
+    if (!empty($_POST['posttuser'])) {
         $posttuser = $_POST['posttuser'];
-    }else{
-        $posttuser ="";
+    } else {
+        $posttuser = "";
     }
 
-    if(!empty($_POST['postidentipservicio'])){
+    if (!empty($_POST['postidentipservicio'])) {
         $postidentipservicio = $_POST['postidentipservicio'];
-    }else{
+        $_SESSION['tempservicio'] = $_POST['postidentipservicio'];
+
+    } else {
         $postidentipservicio = "";
     }
 
-    if(!empty($_POST['posttxtsearchbar'])){
+    if (!empty($_POST['posttxtsearchbar'])) {
         $posttxtsearchbar = $_POST['posttxtsearchbar'];
-    }else{
+    } else {
         $posttxtsearchbar = "";
     }
 
-    $tipouser ='2';// Tipo de usuario especialista , no aplica para cliente , solo para trabajos
-    echo $ubigeofron;
-    foreach($entityusers->filtrobusqfront($postidentipservicio,$tipouser,$posttxtsearchbar,$ubigeofron) as $fquereseach){
-        
+
+    
+
+
+    $tipouser = '2'; // Tipo de usuario especialista , no aplica para cliente , solo para trabajos
+
+
+    //--------------------------------------
+    // Muestra el resultado de 10 busquedas de usuarios ( HARDCODE)
+    $flagregistrosview = 5;
+
+    //----------------------
+
+    if (empty($_SESSION['acumulaquery'])) {
+        // Este flag se debe de cambiar , si la presentacion principal es 12 aqui se debe colocar 12
+        $_SESSION['acumulaquery'] = 0;
+    }
+    if (empty($_SESSION['suma'])) {
+        $_SESSION['suma'] = 0;
+    }
+    $_SESSION['acumulaquery'] = $_SESSION['acumulaquery'] + $_SESSION['suma'];
+    //---------------------
+
+    echo $_SESSION['acumulaquery'] . " - " . $_SESSION['suma'] . " - " . $_SESSION['ubigeofron'] ." -" .$_SESSION['tempservicio'];
+    foreach ($entityusers->filtrobusqfront($postidentipservicio, $tipouser, $posttxtsearchbar, $_SESSION['ubigeofron'], $_SESSION['acumulaquery'], $flagregistrosview) as $fquereseach) {
+
         echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
         echo "<div class='d-flex w-100 justify-content-between'>";
-        echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: ".$fquereseach['nameandlast']."</strong></p></h6>";
+        echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: " . $fquereseach['nameandlast'] . "</strong></p></h6>";
         echo "</br>";
-        echo "<small>".$entityubic->mnameubic($fquereseach['ubigeo'])."</small>";
+        echo "<small>" . $entityubic->mnameubic($fquereseach['ubigeo']) . "</small>";
         echo "</div>";
-        echo "<p class='mb-1'>".$utilsfront->cortartexto($fquereseach['present'])."</p>";
+        echo "<p class='mb-1'>" . $utilsfront->cortartexto($fquereseach['present']) . "</p>";
         echo "<p class='text-warning'><small><strong>Calidad de Atención.:</strong>";
         echo "<i class='far fa-star'></i>";
         echo "<i class='far fa-star'></i>";
@@ -137,6 +161,18 @@ if (!empty($_POST['postactivatesearch'])) {
         echo "</br>";
         echo "<button type='button' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
+
+
     }
 
+    $_SESSION['suma'] = $flagregistrosview;
+
+    // Cuando no se encuentren resultados, volvera a cero
+    if(!empty($fquereseach['nameandlast'])){
+        // echo "El número de resultados es .:";
+    }else{
+        echo $_SESSION['suma'] = "";
+        echo $_SESSION['acumulaquery'] = "";
+        echo "No existe mas resultados de Busqueda";
+    }
 }

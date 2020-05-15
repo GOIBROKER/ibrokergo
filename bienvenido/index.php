@@ -394,7 +394,9 @@
                 </a>
 
               </div>
-              <button type="button" class="btn btn-danger btn-lg btn-block" onclick="addtable()"><i class="fas fa-wifi pr-2" aria-hidden="true"></i>Cargar más resultados</button>
+            
+              <div id="buttonbusq"></div>
+            
             </div>
 
 
