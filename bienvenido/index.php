@@ -870,7 +870,7 @@ Modal Coupon
             <!--Footer-->
             <div class="modal-footer">
               <div class="options text-center text-md-right mt-1">
-                <p>No estas registrado? <a href="#" class="blue-text">Registrate</a></p>
+                <p>No estas registrado? <a href="register.php" class="blue-text">Registrate</a></p>
                 <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
               </div>
               <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
@@ -888,6 +888,57 @@ Modal Coupon
   </div>
 </div>
 <!--Modal: Login / Register Form-->
+
+<!-- Modal Warning -->
+<div class="modal fade" id="centralModalWarningDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-warning" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <p class="heading">Hola! - Tienes que Iniciar Sesión para continuar</p>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">×</span>
+            </button>
+          </div>
+
+          <!--Body-->
+          <div class="modal-body">
+
+            <div class="row">
+              <div class="col-3 text-center">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
+                <div style="height: 10px"></div>
+                <p class="title mb-0">VISITANTE</p>
+                <p class="text-muted " style="font-size: 13px">Ibrokergo</p>
+              </div>
+
+              <div class="col-9">
+                <p>Estas a punto de contactar al especialista, favor de Iniciar sesión o Registrate!.</p>
+                <p class="card-text">
+                  <strong>Gracias por tu compresión</strong>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!--Footer-->
+          <div class="modal-footer justify-content-center">
+            <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
+              <i class="far fa-gem ml-1 text-white"></i>
+            </a>
+            <a href="register.php" class="btn btn-outline-warning waves-effect">Registrate</a>
+          
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+<!-- Modal Warning FIN-->
+
 <script src="../utils/js/verifysesiones.js"></script>
 <script src="../utils/js/utils.js"></script>
 <script>

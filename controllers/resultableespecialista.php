@@ -61,7 +61,7 @@ if (!empty($_POST['postactivatetable'])) {
         echo "</small></p>";
         echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
         echo "</br>";
-        echo "<button type='button' class='btn btn-primary'>Contactar</button>";
+        echo "<button type='button' id='".$lastfquereseach['iduser']."' class='btn btn-primary' data-toggle='modal' data-target='#centralModalWarningDemo'>Contactar</button>";
         echo "</a>";
     }
 
@@ -94,7 +94,7 @@ if(!empty($_POST['postactespec'])){
         echo "</small></p>";
         echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
         echo "</br>";
-        echo "<button type='button' class='btn btn-primary'>Contactar</button>";
+        echo "<button type='button' id='".$fcantregistros['iduser']."' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
         
         
@@ -164,7 +164,7 @@ if (!empty($_POST['postactivatesearch'])) {
         echo "</small></p>";
         echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
         echo "</br>";
-        echo "<button type='button' class='btn btn-primary'>Contactar</button>";
+        echo "<button type='button' id='".$fquereseach['iduser']."' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
     }
 
