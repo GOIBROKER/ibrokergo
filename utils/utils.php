@@ -142,7 +142,6 @@ class utilsphp
     */
     function validarestados($codigo,$tabla,$campo){
         require("config/conex.php");
-        
         $validarestado = mysqli_query($enlacego,"select * from $tabla where $campo='$codigo'");
         $flagvalidate = mysqli_num_rows($validarestado);
         if($flagvalidate>0){
