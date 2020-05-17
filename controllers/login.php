@@ -29,7 +29,15 @@ if(!empty($_POST['requestactivatelogin'])){
                  $selectuser = new entityusersmodal();
                  // Variable para extraer el Alias
                  $tipouser = new tipouser();
-                
+                // Si existe sesiones activas se van a destruir - Esto es para que no realicen dos inicios de sesiones en un mismo navegador
+                if(!empty($_SESSION['email'])){
+                    $_SESSION['nameandlast'] = "";
+                    $_SESSION['email'] = "";
+                    $_SESSION['tipouser'] = "";
+                    $_SESSION['aliastipouser'] = "";
+                    $_SESSION['fechaderegistro'] = "";
+                }
+                //--------------------------------------------
                 foreach($selectuser->listaruser($email) as $foreachresultselect){
                     $_SESSION['nameandlast'] = $foreachresultselect['nameandlast'];
                     $_SESSION['email'] = $email;

@@ -45,7 +45,7 @@ class entityusersmodal{
     {
         // En duro - llevar a un sistema como parametro Listar cada 10 resultado Variable $fin
         require("../utils/config/conex.php");
-        $querylistarxlimit = mysqli_query($enlacego, "SELECT * FROM gouser WHERE tipouser ='2' LIMIT $inicio,$fin");
+        $querylistarxlimit = mysqli_query($enlacego, "SELECT * FROM gouser WHERE tipouser ='2' AND tdocumento<>9 LIMIT $inicio,$fin");
         $arrayxlimit = array();
         while ($filaresult = mysqli_fetch_assoc($querylistarxlimit)) {
             $arrayxlimit[] = $filaresult;
@@ -67,7 +67,7 @@ class entityusersmodal{
     function filtrobusqfront($idtipservicio, $idtipouser, $present, $ubigeo,$inicio2,$fin2)
     {
         require("../utils/config/conex.php");
-        $querysearch = mysqli_query($enlacego, "SELECT * FROM gouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND ubigeo LIKE '%$ubigeo%' limit $inicio2,$fin2");
+        $querysearch = mysqli_query($enlacego, "SELECT * FROM gouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND ubigeo LIKE '%$ubigeo%' AND tdocumento<>9 limit $inicio2,$fin2");
         $arraysearch = array();
         while ($rowsearch = mysqli_fetch_assoc($querysearch)) {
             $arraysearch[] = $rowsearch;

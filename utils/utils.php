@@ -195,5 +195,17 @@ class utilsphp
         }
         return $cortadoletter;
     }
+
+    // funcion para validar si la sesión esta activa o no.
+
+    function validatesesion($sessionval){
+        // Si la sesión esta activa devolvera un 1 , caso contrario un 0
+        if(!empty($sessionval)){
+            $valsesion = "1";
+        }else{
+            $valsesion = "0";
+        }
+        return $valsesion;
+    }
     
 }

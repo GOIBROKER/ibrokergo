@@ -19,7 +19,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  
 
 </head>
 <script>
@@ -78,7 +78,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" >
           <li class="nav-item active">
             <a class="nav-link" href="#">Inicio
               <span class="sr-only">(current)</span>
@@ -94,7 +94,7 @@
         </ul>
 
         <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
+        <ul class="navbar-nav nav-flex-icons" id="buttonsapert">
           <li class="nav-item">
             <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
               <i class="fab fa-facebook-f"></i>
@@ -105,19 +105,7 @@
               <i class="fab fa-twitter"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <!-- <a href="" class="nav-link border border-light rounded" target="_blank">
-              <i class="waves-effect mdb-icon-copy far fa-thumbs-up" data-toggle="modal" data-target="#modalLRForm"></i>Iniciar sesión
-            </a> -->
-            <a href="" class="nav-link border border-light rounded" data-toggle="modal" data-target="#modalLRForm">
-              Iniciar Sesión <i class="fas fa-eye ml-1"></i></a>
-
-          </li>
-          <li class="nav-item">
-            <a href="register.php" class="nav-link border border-light rounded" target="_blank">
-              <i class="waves-effect mdb-icon-copy far fa-user"></i>Crear Cuenta
-            </a>
-          </li>
+   
         </ul>
 
       </div>
@@ -394,9 +382,9 @@
                 </a>
 
               </div>
-            
+
               <div id="buttonbusq"></div>
-            
+
             </div>
 
 
@@ -891,77 +879,145 @@ Modal Coupon
 
 <!-- Modal Warning -->
 <div class="modal fade" id="centralModalWarningDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-warning" role="document">
-        <!--Content-->
-        <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-            <p class="heading">Hola! - Tienes que Iniciar Sesión para continuar</p>
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading">Hola! - Tienes que Iniciar Sesión para continuar</p>
 
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" class="white-text">×</span>
-            </button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-3 text-center">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
+            <div style="height: 10px"></div>
+            <p class="title mb-0">VISITANTE</p>
+            <p class="text-muted " style="font-size: 13px">Ibrokergo</p>
           </div>
 
-          <!--Body-->
-          <div class="modal-body">
-
-            <div class="row">
-              <div class="col-3 text-center">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
-                <div style="height: 10px"></div>
-                <p class="title mb-0">VISITANTE</p>
-                <p class="text-muted " style="font-size: 13px">Ibrokergo</p>
-              </div>
-
-              <div class="col-9">
-                <p>Estas a punto de contactar al especialista, favor de Iniciar sesión o Registrate!.</p>
-                <p class="card-text">
-                  <strong>Gracias por tu compresión</strong>
-                </p>
-              </div>
-            </div>
-
-
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-            <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
-              <i class="far fa-gem ml-1 text-white"></i>
-            </a>
-            <a href="register.php" class="btn btn-outline-warning waves-effect">Registrate</a>
-          
+          <div class="col-9">
+            <p>Estas a punto de contactar al especialista, favor de Iniciar sesión o Registrate!.</p>
+            <p class="card-text">
+              <strong>Gracias por tu compresión</strong>
+            </p>
           </div>
         </div>
-        <!--/.Content-->
+
+
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
+          <i class="far fa-gem ml-1 text-white"></i>
+        </a>
+        <a href="register.php" class="btn btn-outline-warning waves-effect">Registrate</a>
+
       </div>
     </div>
+    <!--/.Content-->
+  </div>
+</div>
 <!-- Modal Warning FIN-->
 
+
+<!-- Modal de contactar espe -->
+<div class="modal fade" id="modalcontacespe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Hola me llamo Anthony Puente Olano</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="container">
+        <div class="w-100"></div>
+          <div class="col col-example">
+            <div class="card">
+              <div class="card-body">
+              <p class="text-body">Mi Presentación.:</p>
+              <center><p class="text-primary">Mi servicio es sobre .: Gasfitería</p></center>
+              Somos una empresa que se dedica a los show , fiesta , hora loca , tambien realizamos canto para varios distritos,espero les guste.
+              </div>
+            </div>
+          </div>
+          <div class="row">   
+            <div class="col col-example">
+              <div class="md-form">
+                <input type="text" id="form1" class="form-control">
+                <label for="form1">Título para el trabajo</label>
+              </div>
+            </div>
+            <div class="col col-example">
+              <div class="md-form mb-4 pink-textarea active-pink-textarea-2">
+                <i class="fas fa-angle-double-right prefix"></i>
+                <textarea id="form23" class="md-textarea form-control" rows="3"></textarea>
+                <label for="form23">Dar más detalle</label>
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col col-example">
+              <select class="browser-default custom-select">
+                <option selected>Precio referencial de tu servicio</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Final Modal-->
+      
+
+      <!--Footer-->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-info waves-effect waves-light">Solicitar Servicio
+          <i class="far fa-gem ml-1"></i>
+        </a>
+        <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">No ,Continuar</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Fin de modal -->
+
+<script src="../utils/js/loadcomponentsfront.js"></script>
 <script src="../utils/js/verifysesiones.js"></script>
 <script src="../utils/js/utils.js"></script>
 <script>
   $(document).ready(function() {
     $("#modalCookie1").modal("show");
     // Handler for .ready() called.
+    loadbuttons();
     loadinitialespec();
     buscarserv();
     borrarsesiones();
     buscardep();
     // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
     //Carga Inicial de combo
-
-
-
-
-
   });
 </script>
+
 <script src="../utils/js/initialsesionintra.js"></script>
 <script src="../utils/js/frontbusqueda.js"></script>
 <script src="../utils/js/seachfront.js"></script>
-
+<script src="../utils/js/validatesessionfront.js"></script>
 
 
 
