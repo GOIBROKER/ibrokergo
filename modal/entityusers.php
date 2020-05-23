@@ -24,7 +24,7 @@ class entityusersmodal{
     }
     function listaruser($codemail){
         require("../utils/config/conex.php");
-        $queryselect =mysqli_query($enlacego,"select * from gouser where email='$codemail'");
+        $queryselect = mysqli_query($enlacego,"select * from gouser where email='$codemail'");
         $arraryselectuuser = array();
         while($filas = mysqli_fetch_assoc($queryselect)){
             $arraryselectuuser[] = $filas;
@@ -75,6 +75,19 @@ class entityusersmodal{
         return $arraysearch;
         mysqli_close($enlacego);
     }
+
+    // Funcion que te devuelve solo la lista de especialistas que esten registrados complemtanete y sean de tipo 2 (Especialista)
+        function listarxiduser($iduser){
+            require("../utils/config/conex.php");
+            $querylistarxiduser= mysqli_query($enlacego,"SELECT * FROM gouser where iduser ='$iduser' and tipouser='2' and tdocumento <> 9");
+            $arraylistarxiduser = array();
+            while($rowlistarxiduser = mysqli_fetch_assoc($querylistarxiduser)){
+                $arraylistarxiduser[] = $rowlistarxiduser;
+            }
+            return $arraylistarxiduser;
+            mysqli_close($enlacego);
+        }
+        
 
     
 }

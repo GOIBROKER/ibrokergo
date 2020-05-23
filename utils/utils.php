@@ -49,9 +49,10 @@ class utilsphp
 
     function valnrotelefono($nrocasacel)
     {
+        $flagnrcel = "9";
         $charactercel = strlen($nrocasacel);
-        if ($charactercel <= 7) {
-            $mensaje = "El nro. de contacto tiene que ser más de 7 Dígitos";
+        if ($charactercel <> $flagnrcel) {
+            $mensaje = "El nro. de contacto tiene que ser de 9 Dígitos";
         } else if (empty($nrocasacel)) {
             $mensaje = "El campo no puede ser vacio";
         } else if (!is_numeric($nrocasacel)) {
@@ -83,14 +84,14 @@ class utilsphp
     // Validar total de letras
     function cajadedetxtarea($numtota)
     {
-        if ($numtota < 125) {
-            $smsvaltxtarea = "Debe contener como mínimo 125 carácteres | Total .: " . $numtota;
+        if ($numtota < 56) {
+            $smsvaltxtarea = "Debe contener como mínimo 56 carácteres | Total .: " . $numtota;
         } else if ($numtota > 350) {
             $smsvaltxtarea = "No debe de superar los 350 carácteres .: " . $numtota;
-        } else if ($numtota >= 125 && $numtota <= 350) {
-            $smsvaltxtarea = "Correcto";
+        } else if ($numtota >= 56 && $numtota <= 350) {
+            $smsvaltxtarea = "";
         }else{
-            
+           
         }
         return $smsvaltxtarea;
     }
@@ -207,5 +208,58 @@ class utilsphp
         }
         return $valsesion;
     }
+    // Funcion que filtra la información - Vacios , caracteres especiales y largo de las cajas de texto Y/o otros.
+
+    function depurateinfor($tamano,$informacion,$tdcaja){
+        
+        // Primera letra en mayúscula y sin caracteres especiales
+        $textodep = ucfirst(preg_replace('([^A-Za-z0-9 ,ñÑáéíóúÁÉÍÓÚ])', '', $informacion));
+        $largo = strlen($textodep);
+        if(empty($textodep)){
+            $sms = "El " . $tdcaja . " no puede estar vacia";
+        }else if($largo < $tamano){
+            $sms = "La opción " . $tdcaja . " debe de tener al menos ".$tamano." carácteres";
+        }else{
+            $sms = "";
+        }
+        
+        return $sms;
+    }
+    //Validar si el usuario ya registro su información
+    function vregisteruser($codemail){
+        require("config/conex.php");
+        $queryve = mysqli_query($enlacego,"select * from gouser where email = '$codemail'");
+        while($rowqry = mysqli_fetch_assoc($queryve)){
+            $tdocumento = $rowqry['tdocumento'];
+        }
+            if($tdocumento <> 9){
+                // YA se registro
+                $rest = 1;
+            }else{
+                // No se registro
+                $rest = 0;
+            }
+            return $rest;
+    }
+
+    function depurateinfocavioalfa($informacion,$tdcaja){
+        
+        // Primera letra en mayúscula y sin caracteres especiales
+        $textodep = ucfirst(preg_replace('([^A-Za-z0-9 ,ñÑáéíóúÁÉÍÓÚ])', '', $informacion));
+        if(empty($textodep)){
+            $sms = "El " . $tdcaja . " no puede estar vacia";
+        }else{
+            $sms = "";
+        }
+        
+        return $sms;
+    }
+ // Herramienta que busca los ubigeos y lo muestra en el view
+    function buscarubigeo(){
+
+    }
+   
+
+
     
 }

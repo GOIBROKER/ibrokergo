@@ -111,8 +111,8 @@ if(!empty($_POST['requestactivateregistrar'])){
             echo "El detalle de la publicación no puede estar vacia";
         }else if($utils->cajadedetitulo($largotxttitulo)<>"Correcto"){
             echo "El titulo de tu inconveniente tiene que ser mayor a 35 letras";
-        }else if($utils->cajadedetxtarea($largocomentario)<>"Correcto"){
-            echo "El detalle de tu solicitud debe de tener entre 125 y 350 letras";
+        }else if(!empty($utils->cajadedetxtarea($largocomentario))){
+            echo "El detalle de tu solicitud debe de tener entre 56 y 350 letras";
         }
         else{
             // Si todo esta correcto , se van a generar variables de sesiones que al final serán utilizadas para la confirmación de la publicación.
@@ -188,7 +188,11 @@ if(!empty($_POST['varregistrarinfo'])){
     // Fecha actual
     $fecharegistro = $utils->fecha();
     // Registrar nuevo servicio
-    $newservice->registrarservicio($_SESSION['iduser'],$_SESSION['$tsolicitud'],$_SESSION['$filtrotxttitulo'],$_SESSION['$filtrotxtareadata'],$_SESSION['$rangodeprecio'],$_SESSION['$tserviciorop'],$fecharegistro);
+    //SA = SIN ASIGNACIÓN - S = SUBASTA - D = DIRECTO
+    
+    $newservice->registrarservicio($_SESSION['iduser'],$_SESSION['$tsolicitud'],$_SESSION['$filtrotxttitulo'],$_SESSION['$filtrotxtareadata'],$_SESSION['$rangodeprecio'],$_SESSION['$tserviciorop'],$fecharegistro,"SA",'0');
+    
+    
     echo "3";
 }
 

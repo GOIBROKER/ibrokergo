@@ -6,5 +6,11 @@ class flags{
     // flag se usa en resultableespecialista.php
     public $flagviewregister = 2;
 
+    // Flag que controla los tamaños de las caja de texto y los nombres
+    // Caja de titulo
+    public $tamanotitulos = 20;
+    // Caja de descripcion
+    public $tamanodescripcion = 56;
+
 }
 ?>

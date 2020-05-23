@@ -327,7 +327,7 @@ if (!empty($_POST['requestactivateregister'])) {
         $mensaje = "El campo Celular no puede estar vacia";
     } else if ($utils->valnrotelefono($celular) != 1) {
         $mensaje = $utils->valnrotelefono($celular);
-    } else if ($utils->cajadedetxtarea($numdescripción) != "Correcto") {
+    } else if (!empty($utils->cajadedetxtarea($numdescripción))) {
         $mensaje = "Error en el campo presentación";
     } else if (!empty($utils->validaciontipodoc($nrodoc, $tipodoc))) {
         $mensaje = $utils->validaciontipodoc($nrodoc, $tipodoc);

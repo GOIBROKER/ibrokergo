@@ -30,5 +30,21 @@ class serviciosmodal
         return $respuesta;
      
     }
+    function listarserviciosxcodfull($codigo){
+
+        // Funcion de IntranetServices - Exclusivo
+        /*
+        páginas que lo usan:
+        1.- generarsolicitud.php
+        */
+        require("../utils/config/conex.php");
+        $querylistarserviciosxcodfull = mysqli_query($enlacego, "Select * from servicesdet where idtipservicio='$codigo'");
+        $arraylistser = array();
+        while($rowlistarserviciosxcodfull=mysqli_fetch_assoc($querylistarserviciosxcodfull)){
+            $arraylistser[] = $rowlistarserviciosxcodfull;
+        }
+        return $arraylistser;
+        mysqli_close($enlacego);
+    }
 
 }

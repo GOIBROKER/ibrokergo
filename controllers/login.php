@@ -36,11 +36,13 @@ if(!empty($_POST['requestactivatelogin'])){
                     $_SESSION['tipouser'] = "";
                     $_SESSION['aliastipouser'] = "";
                     $_SESSION['fechaderegistro'] = "";
+                    $_SESSION['iduser'] = "";
                 }
                 //--------------------------------------------
                 foreach($selectuser->listaruser($email) as $foreachresultselect){
                     $_SESSION['nameandlast'] = $foreachresultselect['nameandlast'];
                     $_SESSION['email'] = $email;
+                    $_SESSION['iduser'] = $foreachresultselect['iduser'];
                     $_SESSION['tipouser'] =$foreachresultselect['tipouser'];
                     $_SESSION['aliastipouser'] =$tipouser->buscartipuser($foreachresultselect['tipouser']);
                     $_SESSION['fechaderegistro'] =$foreachresultselect['fechaderegistro'];
