@@ -17,6 +17,17 @@ class entitynewservice{
 
     }
 
+    function buscarservxcodcliente($codcli){
+        require("../utils/config/conex.php");
+        // Busca el ultimo registro del usuario realizado por el front de tipo contratación directa para realizar el envio de mensaje por whatsapp
+        $querysearch = mysqli_query($enlacego,"SELECT * FROM newservice WHERE iduser ='$codcli' AND tcontratacion='D' ORDER BY idhistorico DESC LIMIT 1");
+        $arraybus = array();
+        while($rowmen = mysqli_fetch_assoc($querysearch)){
+            $arraybus[]=$rowmen;
+        }
+        return $arraybus;
+    }
+
 }
 ?>
 

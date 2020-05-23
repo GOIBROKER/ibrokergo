@@ -19,6 +19,13 @@ function registerservice(){
 }
 
 function contactarwha(){
-    
+    var activatewha = "activate";
+    $.post("../controllers/modules.php",{
+        postactivatewha:activatewha
+    },function(responseactivatewha){
+        $(location).attr('href',responseactivatewha);
+        
+    });
+
 
 }

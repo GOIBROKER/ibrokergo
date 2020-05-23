@@ -1,5 +1,5 @@
 <html>
-<title>IbrokerGO - Consigue Trabajo</title>
+<title>Servicioseguro - Consigue Trabajo</title>
 
 <head>
   <!-- Font Awesome -->
@@ -66,7 +66,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-        <strong>IBROKERGO</strong>
+        <strong>Servicioseguro</strong>
       </a>
 
       <!-- Collapse -->
@@ -85,7 +85,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">Encontrar Especialistas</a>
+            <a class="nav-link" href="index.php" target="_blank">Encuentra un Especialista</a>
           </li>
 
           <!-- <li class="nav-item">
@@ -141,7 +141,7 @@
                 <strong>Te acercamos a tu especialista o a un Servicio</strong>
               </h1>
 
-              <p>
+              <!-- <p>
                 <strong>Best & free guide of responsive web design</strong>
               </p>
 
@@ -149,10 +149,10 @@
                 <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
                   written versions
                   available. Create your own, stunning website.</strong>
-              </p>
+              </p> -->
 
-              <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-                free tutorial
+              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Comienza - 
+                Crea Tu Usuario
                 <i class="fas fa-graduation-cap ml-2"></i>
               </a>
             </div>
@@ -175,21 +175,21 @@
             <!-- Content -->
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Learn Bootstrap 4 with MDB</strong>
+                <strong>Encuentra tu especialista</strong>
               </h1>
 
               <p>
-                <strong>Best & free guide of responsive web design</strong>
+                <strong>Encuentra al ideal , dependiendo tus necesidades</strong>
               </p>
 
-              <p class="mb-4 d-none d-md-block">
+              <!-- <p class="mb-4 d-none d-md-block">
                 <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
                   written versions
                   available. Create your own, stunning website.</strong>
-              </p>
+              </p> -->
 
-              <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-                free tutorial
+              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Comienza - 
+                Crea tu Usuario
                 <i class="fas fa-graduation-cap ml-2"></i>
               </a>
             </div>
@@ -223,8 +223,7 @@
                 <strong>Varios Clientes esperando que atiendas sus publicaciones de servicios.</strong>
               </p>
 
-              <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-                free tutorial
+              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Crea tu Usuario
                 <i class="fas fa-graduation-cap ml-2"></i>
               </a>
             </div>
@@ -278,7 +277,7 @@
 
       <!--Section: Main features & Quick Start-->
       <section style="background: #eff6ea">
-        <h3 class="h3 text-center mb-5">IBROKER GO - CONECTAMOS TRABAJO</h3>
+        <h3 class="h3 text-center mb-5">SERVICIOSEGURO - CONECTAMOS TRABAJO</h3>
 
 
         <div class="container">
@@ -899,7 +898,7 @@ Modal Coupon
             <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
             <div style="height: 10px"></div>
             <p class="title mb-0">VISITANTE</p>
-            <p class="text-muted " style="font-size: 13px">Ibrokergo</p>
+            <p class="text-muted " style="font-size: 13px">Servicioseguro</p>
           </div>
 
           <div class="col-9">
@@ -1036,7 +1035,7 @@ Modal Coupon
             <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
             <div style="height: 10px"></div>
             <p class="title mb-0">Administrador</p>
-            <p class="text-muted " style="font-size: 13px">Ibrokergo</p>
+            <p class="text-muted " style="font-size: 13px">Servicioseguro</p>
           </div>
 
           <div class="col-9">

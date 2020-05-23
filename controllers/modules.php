@@ -7,10 +7,12 @@ require_once("../modal/serviciosmodal.php");
 require_once("../modal/entitytdocumento.php");
 require_once("../utils/utils.php");
 require_once("../modal/entityusers.php");
+require_once("../modal/entitynewservice.php");
 $entityusers = new entityusersmodal();
 $serviciosmodal = new serviciosmodal();
 $entitytdoc = new entitytdoc();
 $utilsphp = new utilsphp();
+$entitynewservice = new entitynewservice();
 if(!empty($_POST['registeruser'])){
 // Los componentes de tipo de servicio o descripción se van a mostrar, dependiendo si se trata de un especialista o un cliente
     
@@ -151,4 +153,19 @@ if(!empty($_POST['pactdetalle'])){
         $_SESSION['validatecajadet']="";
     }
 }
+
+// Módulo para enviar mensajes al whatsapp
+
+    if(!empty($_POST['postactivatewha'])){
+            
+// Buscar el ultimo servicio realizado por el usuario
+            foreach($entitynewservice->buscarservxcodcliente($_SESSION['iduser']) as $fresulser){
+
+            }
+            
+            foreach($entityusers->listarxiduser($fresulser['idespeclient']) as $fbusq){
+                
+            }
+            $utilsphp->enviarwhatsapp($_SESSION['nameandlast'],$fresulser['temaservicio'],$fresulser['detalleservicio'],$fbusq['celular']);
+    }
 ?>

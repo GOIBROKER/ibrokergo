@@ -15,7 +15,7 @@ if (!empty($_POST['requestactivateformfirst'])) {
     //Validación si Existe el Flag que restringe la edición del Campo DNI y Nombres
     if (!empty($_SESSION['flagmostrardata'])) {
         $Titulo = "Editar tu data - Tu DNI y Nombres estan en validación";
-        $subTitulo = "Podrás editar esa información luego de 1 mes. <br>o mandar un correo a tusdatos@ibrokergo.com.pe";
+        $subTitulo = "Podrás editar esa información luego de 1 mes. <br>o mandar un correo a tusdatos@Servicioseguro.com.pe";
         $propiedadblocked = "disabled = 'true'";
         //traemos el DNI y los nombres como datos por defecto.
         foreach ($entityusers->listaruser($_SESSION['email']) as $foreachresultval) {
@@ -151,7 +151,7 @@ if (!empty($_POST['requestmostrar'])) {
         // es 0 cuando se encuentra sin registrar
         echo "<div class='alert alert-info alert-dismissible'>";
         echo "<h4><i class='icon fa fa-info'></i> Gracias por Registrarte!</h4>";
-        echo "<p>Hola " . $_SESSION['nameandlast'] . "  y bienvenido a IBROKERGO para comenzar a usar la plataforma tienes que registrar tus datos para Inicializar tu plataforma , Vamos! .</p>";
+        echo "<p>Hola " . $_SESSION['nameandlast'] . "  y bienvenido a Servicioseguro para comenzar a usar la plataforma tienes que registrar tus datos para Inicializar tu plataforma , Vamos! .</p>";
         echo "</div>";
 
         echo "<button type='button' onclick='mostrarformfirst()' class='btn btn-block btn-primary btn-lg'>Comienza a Editar</button>";
@@ -210,7 +210,7 @@ if (!empty($_POST['requestmostrar'])) {
         echo "<blockquote>";
         echo "<textarea class='form-control' disabled='true' value='" . $foreachusers['present'] . "' maxlength='350'  placeholder='" . $foreachusers['present'] . "' required></textarea>";
 
-        echo "<small>Tu presentación de Trabajo <cite title='IbrokerGO'>IbrokerGO</cite></small>";
+        echo "<small>Tu presentación de Trabajo <cite title='Servicioseguro'>Servicioseguro</cite></small>";
         echo "</blockquote>";
         echo "</div>";
         echo "</div>";

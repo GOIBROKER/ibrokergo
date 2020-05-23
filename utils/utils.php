@@ -254,9 +254,24 @@ class utilsphp
         
         return $sms;
     }
- // Herramienta que busca los ubigeos y lo muestra en el view
-    function buscarubigeo(){
 
+    function convertircawhat($dato){
+        $caracterbusc=" ";
+        $changecaracter="%20";
+        $datane =str_replace($caracterbusc,$changecaracter,$dato);
+        return $datane;
+    }
+ // Herramienta que sirve para contactar whatsapp
+    function enviarwhatsapp($nombrescom,$servicio,$detalleserv,$cel){
+        $flagwhatsapp = "https://api.whatsapp.com/send?phone=051";
+        $bienvenida=",vengo de la pagina Servicioseguro ";
+        $converd = new utilsphp();
+        $converd->convertircawhat($bienvenida);
+        $data2 = ",necesito preguntarte sobre tu servicio de .:";
+        $data3 = ",Detalle .: ";
+        echo $link=$flagwhatsapp.$cel."&text=Hola,soy%20".$converd->convertircawhat($nombrescom).$converd->convertircawhat($bienvenida).$converd->convertircawhat($data2).$converd->convertircawhat($servicio).$converd->convertircawhat($data3).$converd->convertircawhat($detalleserv);
+        
+        
     }
    
 

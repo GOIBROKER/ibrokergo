@@ -25,10 +25,9 @@
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.18
+        <b>Version</b> 1.0.1
       </div>
-      <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
-      reserved.
+      <strong>Copyright &copy; 2020-2020 <a href="https://www.servicioseguro.com.pe">Servicio Seguro</a>.</strong> Derechos Reservadps.
     </footer>
 
     <!-- Control Sidebar -->
