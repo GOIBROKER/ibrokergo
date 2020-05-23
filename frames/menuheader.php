@@ -12,7 +12,7 @@
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Navegación</span>
       </a>
 
       <div class="navbar-custom-menu">
@@ -21,14 +21,14 @@
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
+              <span class="label label-success">0</span>
             </a>
             <ul class="dropdown-menu">
               <li class="header">Mensajes</li>
               <li>
-                <!-- inner menu: contains the actual data -->
+              
                 <ul class="menu">
-                  <li><!-- start message -->
+                  <!-- <li>
                     <a href="#">
                       <div class="pull-left">
                         <img src="../librerias/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
@@ -41,7 +41,7 @@
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
-                  <!-- end message -->
+                 
                   <li>
                     <a href="#">
                       <div class="pull-left">
@@ -65,8 +65,8 @@
                       </h4>
                       <p>Why not buy a new awesome theme?</p>
                     </a>
-                  </li>
-                  <li>
+                  </li> -->
+                  <!-- <li>
                     <a href="#">
                       <div class="pull-left">
                         <img src="../librerias/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
@@ -89,7 +89,7 @@
                       </h4>
                       <p>Why not buy a new awesome theme?</p>
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
               <li class="footer"><a href="#">See All Messages</a></li>
@@ -99,14 +99,14 @@
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
+              <span class="label label-warning">0</span>
             </a>
             <ul class="dropdown-menu">
               <li class="header">Alertas</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li>
+                  <!-- <li>
                     <a href="#">
                       <i class="fa fa-users text-aqua"></i> 5 new members joined today
                     </a>
@@ -131,7 +131,7 @@
                     <a href="#">
                       <i class="fa fa-user text-red"></i> You changed your username
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
               <li class="footer"><a href="#">View all</a></li>
@@ -141,14 +141,14 @@
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
+              <span class="label label-danger">0</span>
             </a>
             <ul class="dropdown-menu">
               <li class="header">Pendientes</li>
               <li>
-                <!-- inner menu: contains the actual data -->
+            
                 <ul class="menu">
-                  <li><!-- Task item -->
+                  <!-- <li>
                     <a href="#">
                       <h3>
                         Design some buttons
@@ -162,8 +162,8 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
+              
+                  <li>
                     <a href="#">
                       <h3>
                         Create a nice theme
@@ -177,8 +177,8 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
+                  
+                  <li>
                     <a href="#">
                       <h3>
                         Some task I need to do
@@ -192,9 +192,9 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
+                  -->
+                  <li>
+                    <!-- <a href="#">
                       <h3>
                         Make beautiful transitions
                         <small class="pull-right">80%</small>
@@ -205,9 +205,9 @@
                           <span class="sr-only">80% Complete</span>
                         </div>
                       </div>
-                    </a>
+                    </a> -->
                   </li>
-                  <!-- end task item -->
+                
                 </ul>
               </li>
               <li class="footer">
@@ -233,7 +233,7 @@
               </li>
               <!-- Menu Body -->
               <li class="user-body">
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
                   </div>
@@ -243,7 +243,7 @@
                   <div class="col-xs-4 text-center">
                     <a href="#">Friends</a>
                   </div>
-                </div>
+                </div> -->
                 <!-- /.row -->
               </li>
               <!-- Menu Footer-->
@@ -258,9 +258,9 @@
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
+          <!-- <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
