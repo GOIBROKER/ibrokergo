@@ -87,6 +87,8 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "<input type='text' class='form-control' id='txtdireccion' placeholder='Indica donde estas ubicado' required>";
     echo "</div>";
     echo "</div>";
+
+ if($_SESSION['tipouser'] == "2"){
     echo "<div class='form-group'>";
     echo "<label for='inputExperience' class='col-sm-2 control-label'>Presentación</label>";
     echo "<div id='smspresentacion'></div>";
@@ -94,6 +96,8 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "<textarea class='form-control' maxlength='350' id='txtdescripcion' onkeyup='valdescripcion()' placeholder='Describe un poco lo que sabes hacer...' required></textarea>";
     echo "</div>";
     echo "</div>";
+ }
+
     echo "<div class='form-group'>";
     echo "<label for='inputSkills' class='col-sm-2 control-label'><i class='fa fa-whatsapp fa-2' aria-hidden='true'></i> Whatsapp</label>";
     echo "<div class='col-sm-10'>";
@@ -102,10 +106,8 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "</div>";
 
     //Select de busqueda de trabajo Solo si se tratase de especialista - Condicional
-    foreach($entityusers->listaruser($_SESSION['email']) as $resulttipo){
-        
-    }
-    if($resulttipo['tipouser'] == "2"){
+
+    if($_SESSION['tipouser'] == "2"){
         echo "<div class='form-group'>";
         echo "<label for='inputSkills' class='col-sm-2 control-label'> Te dedicas a ?</label>";
         echo "<div class='col-sm-10'>";
@@ -197,29 +199,43 @@ if (!empty($_POST['requestmostrar'])) {
         }
         echo "</div>";
         echo "</div>";
+
+
         echo "<div class='form-group'>";
         echo "<label for='inputName' class='col-sm-2 control-label'>Dirección</label>";
         echo "<div class='col-sm-10'>";
         echo $foreachusers['direccion'];
         echo "</div>";
         echo "</div>";
-        echo "<div class='form-group'>";
-        echo "<label for='inputExperience' class='col-sm-2 control-label'>Presentación</label>";
-        echo "<div id='smspresentacion'></div>";
-        echo "<div class='col-sm-10'>";
-        echo "<blockquote>";
-        echo "<textarea class='form-control' disabled='true' value='" . $foreachusers['present'] . "' maxlength='350'  placeholder='" . $foreachusers['present'] . "' required></textarea>";
+        if ($_SESSION['tipouser'] == "2") {
+            // Mostrar la información de presentación si el tipo de usuario es de Tipo especialista 2
+            echo "<div class='form-group'>";
+            echo "<label for='inputExperience' class='col-sm-2 control-label'>Presentación</label>";
+            echo "<div id='smspresentacion'></div>";
+            echo "<div class='col-sm-10'>";
+            echo "<blockquote>";
+            echo "<textarea class='form-control' disabled='true' value='" . $foreachusers['present'] . "' maxlength='350'  placeholder='" . $foreachusers['present'] . "' required></textarea>";
+            echo "<small>Tu presentación de Trabajo <cite title='Servicioseguro'>Servicioseguro</cite></small>";
+            echo "</blockquote>";
+            echo "</div>";
+            echo "</div>";
+        }
 
-        echo "<small>Tu presentación de Trabajo <cite title='Servicioseguro'>Servicioseguro</cite></small>";
-        echo "</blockquote>";
-        echo "</div>";
-        echo "</div>";
         echo "<div class='form-group'>";
         echo "<label for='inputSkills' class='col-sm-2 control-label'><i class='fa fa-whatsapp fa-2' aria-hidden='true'></i> Whatsapp</label>";
         echo "<div class='col-sm-10'>";
         echo $foreachusers['celular'];
         echo "</div>";
         echo "</div>";
+        if ($_SESSION['tipouser'] == "2") {
+        echo "<div class='form-group'>";
+        echo "<label for='inputSkills' class='col-sm-2 control-label'><i class='fa fa-whatsapp fa-2' aria-hidden='true'></i>Tu servicio.:</label>";
+        echo "<div class='col-sm-10'>";
+        echo $listservice->listarserviciosxcod($foreachusers['idtipservicio']);
+        echo "</div>";
+        echo "</div>";
+
+        }
         echo "<div class='form-group'>";
         echo "</div>";
         echo "<div id='smserrordatospersonales'></div>";
@@ -274,10 +290,14 @@ if (!empty($_POST['requestactivatedescripcion'])) {
 
 if (!empty($_POST['requestactivateregister'])) {
     // Destruir la sesión para que no sale la validación !! importante
-    $_SESSION['flagactivadorupdateusers'] = "";
+   
     
     //
     // Filtrado de informacion front end
+    if($_SESSION['tipouser'] == "1"){
+        // Si es tipo cliente no debe de llenar información en la presentación
+        $_POST['requesttxtdescripcion']="defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente";
+    }
     $nombre =  $utils->ucwordsletter($utils->characterespecialubicacion($_POST['requesttxtname']));
     $direccion = $utils->ucwordsletter($utils->characterespecialubicacion($_POST['requesttxtdireccion']));
     $descripcion = $utils->firtsletterup($utils->characterespecialubicacion($_POST['requesttxtdescripcion']));
@@ -339,14 +359,12 @@ if (!empty($_POST['requestactivateregister'])) {
         $mensaje = $utils->tipouser($resulttip,$requestsespecialidad,$sdettable,$cdettable);
     } else {
         // Funcionalidad "Publicar un trabajo"
-       
-
-
         //Cambia la variable si ya existe la sesión de tdoc,nombre y nro doc
-
         $entityusers->Actualizarusuario($nombre, $_SESSION['ubigeo'], $direccion, $nrodoc, $celular, $tipodoc, $_SESSION['email'], $descripcion,$requestsespecialidad);
         //Flag que indica que fue actualizado correctamente
         $_SESSION['flagactivadorupdateusers'] = "1";
+        
+        
     }
 
     if (!empty($mensaje)) {

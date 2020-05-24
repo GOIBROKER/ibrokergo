@@ -132,13 +132,21 @@ if(!empty($_POST['requestactivateregistrar'])){
 // Sesión que indica cuando se registro correctamente al usuario
 if(!empty($_POST['postvalidateupdateusers'])){
    
-        if(!empty($_SESSION['flagactivadorupdateusers'])){
-            echo "1";
-            // Luego destruir la sesión
-            // $_SESSION['flagactivadorupdateusers']="";
-        }else{
-            echo "";
-        }
+    echo $utils->vregisteruser($_SESSION['email']);
+
+    // if(!empty($_SESSION['flagactivadorupdateusers']) && $_SESSION['flagactivadorupdateusers'] =="1"){
+    //     echo "1";
+    // }else{
+    //     echo "0";
+    // }
+    
+    //     // if(!empty($_SESSION['flagactivadorupdateusers'])){
+    //     //     echo "1";
+    //     //     // Luego destruir la sesión
+    //     //     // $_SESSION['flagactivadorupdateusers']="";
+    //     // }else{
+    //     //     echo "";
+    //     // }
     }
 
     

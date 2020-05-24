@@ -100,7 +100,7 @@
                   </div>
                 </div>
                 <div class="panel box box-success">
-                  <div class="box-header with-border">
+                  <!-- <div class="box-header with-border">
                     <h4 class="box-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                         ¿Remoto o Presencial?
@@ -108,8 +108,8 @@
 
                       </a>
                     </h4>
-                  </div>
-                  <div id="collapseThree" class="panel-collapse collapse">
+                  </div> -->
+                  <!-- <div id="collapseThree" class="panel-collapse collapse">
                     <div class="box-body">
                       <strong>Remota .:</strong> Si tiene confianza con su Especialista , solicite una asistencia remota , una atención no presencial.
                       <br>
@@ -126,7 +126,7 @@
                       </div>
 
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

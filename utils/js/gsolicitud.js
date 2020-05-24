@@ -83,17 +83,33 @@ function registrardata() {
     $.post("../controllers/gsolicitudcontroller.php", {
         postvalidateupdateusers: activateflagactivador
     }, function (responseflagactivador) {
-        alert(responseflagactivador);
+        if(responseflagactivador == 0){
+            var activate ="data";
+            $.post("../controllers/gsolicitudcontroller.php", {
+                postvalidateupdateusers: activate
+            },function(response){
+                if(response == 1){
+                    alert("Información actualizada correctamente , termina tu solicitud");
+                    $("#modalnotexistdata").modal("hide");
+                }
+                if(response == 0){
+                    alert("Hubo un error al Grabar");
 
-        if (responseflagactivador == 1) {
-            // Condicional si parece 1 en la respuesta , significa que grabo correctamente , se debe cerrar formulario 
-            // y proceder con el registro de la solicitud de PC
-            $("#modalnotexistdata").modal("hide");
-            // generarsolicitud();
-        } else if (responseflagactivador == 0) {
-            // Si aparece cero , se debe mantener el form de registro abierto
-            alert("Grabado Incorrectamente");
+                }
+            });
         }
+        // alert(responseflagactivador);
+        
+        // if (responseflagactivador.trim() == "1") {
+        //     alert("Entro a cerrar moda");
+        //     // Condicional si parece 1 en la respuesta , significa que grabo correctamente , se debe cerrar formulario 
+        //     // y proceder con el registro de la solicitud de PC
+        //     // $("#modalnotexistdata").modal("hide");
+        //     // generarsolicitud();
+        // } else if (responseflagactivador.trim() == "0") {
+        //     // Si aparece cero , se debe mantener el form de registro abierto
+        //     alert("Grabado Incorrectamente");
+        // }
 
 
     });
