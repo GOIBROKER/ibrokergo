@@ -36,7 +36,7 @@
           <ul class="treeview-menu">
             <!-- <li class="active"><a id="newwork" href="#" ><i class="fa fa-circle-o"></i>Publica un Trabajo</a></li> -->
             <li><a href="" id="newespecialista" ><i class="fa fa-circle-o"></i>Mi Panel</a></li>
-            <!-- <li class="active"><a id="newwork" href="#" ><i class="fa fa-circle-o"></i>Publica un Trabajo</a></li> -->
+            <li class="active"><a id="newwork" href="#" ><i class="fa fa-circle-o"></i>Publica un Trabajo</a></li>
             <li><a href="index.php" id="" ><i class="fa fa-circle-o"></i>Encontrar Especialistas</a></li>
           </ul>
         </li>
