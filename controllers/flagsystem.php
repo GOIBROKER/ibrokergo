@@ -11,6 +11,17 @@ class flags{
     public $tamanotitulos = 20;
     // Caja de descripcion
     public $tamanodescripcion = 56;
+    // Flags estados tickets
+    public $flagestaabierto = 1;
+    public $flagestacerrado = 2;
+    public $flagestanotconcluido = 3;
+    //FIN Flags estados tickets
+    // Tipo e contratacion si es directo o Subasta D = Directo / S=SUBASTA
+    public $flagdirecto="D";
+    public $flagsubasta="S";
 
+    // Tipo de usuarios 1 = Cliente | 2 = Especialista
+    public $flaguserclie = "1";
+    public $flaguserespe = "2";
 }
 ?>

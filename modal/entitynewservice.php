@@ -27,6 +27,29 @@ class entitynewservice{
         }
         return $arraybus;
     }
+    // Buscar tickets generados por el cliente y que esten abiertos (1:Abierto,2:Cerrado,3 No concluido) y de tipo Directo =D
+    function mostrarticket($iduser,$estadosol,$tcontratacion){
+        require("../utils/config/conex.php");
+        $querybusq = mysqli_query($enlacego,"select * from newservice where iduser='$iduser' and estadosol='$estadosol' and tcontratacion='$tcontratacion' ORDER BY idhistorico DESC");
+        $arraybusq = array();
+        while($rowbusq = mysqli_fetch_assoc($querybusq)){
+            $arraybusq[] = $rowbusq;
+        }
+        return $arraybusq;
+        mysqli_close($enlacego);
+    }
+
+     // Buscar tickets que fueron asignado a mi persona y de tipo abierto (1:Abierto,2:Cerrado,3 No concluido) y de tipo Directo =D
+     function mticketasignados($idespeclient,$estadosol,$tcontratacion){
+        require("../utils/config/conex.php");
+        $querybusq2 = mysqli_query($enlacego,"select * from newservice where idespeclient='$idespeclient' and estadosol='$estadosol' and tcontratacion='$tcontratacion' ORDER BY idhistorico DESC");
+        $arraybusq2 = array();
+        while($rowbusq2 = mysqli_fetch_assoc($querybusq2)){
+            $arraybusq2[] = $rowbusq2;
+        }
+        return $arraybusq2;
+        mysqli_close($enlacego);
+    }
 
 }
 ?>

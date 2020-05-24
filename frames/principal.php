@@ -1,3 +1,40 @@
+  <!-- Estilo de botones -->
+
+  <style>
+    .btn-group button {
+      background-color: #4CAF50;
+      /* Green background */
+      border: 1px solid green;
+      /* Green border */
+      color: white;
+      /* White text */
+      padding: 10px 24px;
+      /* Some padding */
+      cursor: pointer;
+      /* Pointer/hand icon */
+      float: left;
+      /* Float the buttons side by side */
+    }
+
+    .btn-group button:not(:last-child) {
+      border-right: none;
+      /* Prevent double borders */
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -80,7 +117,11 @@
           <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">Mis Solicitudes</h3>
+              <div class="btn-group">
 
+                <button onclick='loadtickets()'>Mis Trabajos</button>
+                <button onclick='loadticketsasginados()'>Mis Solicitudes</button>
+              </div>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
@@ -100,11 +141,35 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              
+              <div class="box">
+                <div class="box-header with-border">
+                  
+
+                  <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+                      <i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+                      <i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="box-body" id="contenttickets">
+
+
+
+
+
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                  Footer
+                </div>
+                <!-- /.box-footer-->
+              </div>
+
             </div>
             <!-- ./box-body -->
             <div class="box-footer">
-              
+
             </div>
             <!-- /.box-footer -->
           </div>
@@ -115,4 +180,10 @@
       <!-- /.row -->
 
       <!-- Main row -->
-      
+      <script>
+        $(document).ready(function() {
+
+          loadtickets();
+        })
+      </script>
+      <script src="../utils/js/loadmypanel.js"></script>

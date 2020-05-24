@@ -88,6 +88,7 @@ class entityusersmodal{
             mysqli_close($enlacego);
         }
         
+        
 
     
 }
