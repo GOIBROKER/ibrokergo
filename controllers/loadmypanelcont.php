@@ -41,7 +41,7 @@ if(!empty($_POST['postloadticket'])){
     foreach($preciosaprox->idprecios($fticket['idprecioaprox']) as $fprecios){
 
     }
-    echo "<code>Precio Aproximado que indicastes .: ".$fprecios['rango'];
+    echo "<code>Precio Aproximado que indicastes .: ".$fprecios['rango']."</code>";
     echo "</div>";
     echo "<div class='timeline-footer'>";
 
@@ -77,7 +77,7 @@ if(!empty($_POST['postloadticket2'])){
     echo "<strong>Detalle .:</strong>".$fticket2['detalleservicio'];
     echo "</br>";
     
-    foreach($entityusersmodal->listarxiduser($fticket2['iduser']) as $fusers2){
+    foreach($entityusersmodal->listarxiduser2($fticket2['iduser']) as $fusers2){
         
     }
 

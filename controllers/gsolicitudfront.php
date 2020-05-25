@@ -19,6 +19,8 @@ if(!empty($_POST['postactivaterse'])){
         echo "<p class='text-danger'>".$descripre."</p>";
     }else if(empty($postselect)){
         echo "<p class='text-danger'> El Precio indicado no existe</p>";
+    }else if($_SESSION['iduser'] == $_SESSION['idespeci']){
+        echo "<p class='text-danger'> No puedes generar solicitudes para tu mismo usuario ;)</p>";
     }else{
         $entitynewservice->registrarservicio($_SESSION['iduser'],$_SESSION['idtservicioespe'],$_POST['posttitulo'],$_POST['postdetalle'],$_POST['postselect'],'1',$utilsphpregister->fecha(),'D',$_SESSION['idespeci']);
         echo "1";

@@ -21,7 +21,7 @@ class flags{
     public $flagsubasta="S";
 
     // Tipo de usuarios 1 = Cliente | 2 = Especialista
-    public $flaguserclie = "1";
-    public $flaguserespe = "2";
+    public $flaguserclie = 1;
+    public $flaguserespe = 2;
 }
 ?>

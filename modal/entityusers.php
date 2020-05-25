@@ -87,6 +87,17 @@ class entityusersmodal{
             return $arraylistarxiduser;
             mysqli_close($enlacego);
         }
+
+        function listarxiduser2($iduser2){
+            require("../utils/config/conex.php");
+            $querylistarxiduser2= mysqli_query($enlacego,"SELECT * FROM gouser where iduser ='$iduser2'  and tdocumento <> 9");
+            $arraylistarxiduser2 = array();
+            while($rowlistarxiduser2 = mysqli_fetch_assoc($querylistarxiduser2)){
+                $arraylistarxiduser2[] = $rowlistarxiduser2;
+            }
+            return $arraylistarxiduser2;
+            mysqli_close($enlacego);
+        }
         
         
 

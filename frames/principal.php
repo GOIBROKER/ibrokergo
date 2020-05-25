@@ -1,5 +1,7 @@
   <!-- Estilo de botones -->
-
+  <?php session_start(); 
+ 
+  ?>
   <style>
     .btn-group button {
       background-color: #4CAF50;
@@ -118,9 +120,18 @@
             <div class="box-header with-border">
               <h3 class="box-title">Mis Solicitudes</h3>
               <div class="btn-group">
+                <?php
+                 require("../controllers/flagsystem.php");
+                 $flags = new flags();
+                 
+                if ($_SESSION['tipouser'] == $flags->flaguserespe) {
+                  echo "<button onclick='loadtickets()'>Mis Trabajos</button>";
+                  echo "<button onclick='loadticketsasginados()'>Mis Solicitudes</button>";
+                } else if ($_SESSION['tipouser'] == $flags->flaguserclie) {
+                  echo "<button onclick='loadtickets()'>Mis Trabajos</button>";
+                }
+                ?>
 
-                <button onclick='loadtickets()'>Mis Trabajos</button>
-                <button onclick='loadticketsasginados()'>Mis Solicitudes</button>
               </div>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -143,7 +154,7 @@
             <div class="box-body">
               <div class="box">
                 <div class="box-header with-border">
-                  
+
 
                   <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
