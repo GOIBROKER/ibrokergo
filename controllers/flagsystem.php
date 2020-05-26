@@ -29,6 +29,6 @@ class flags{
     public $puntaje = 0;
 
     // Flag de tipo de error de servicio no concluido
-    public $flagnoconcluido = 9; // Por defecto 
+    public $flagnoconcluido = 99; // Por defecto 
 }
 ?>

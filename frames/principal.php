@@ -1,5 +1,5 @@
   <!-- Estilo de botones -->
- 
+
 
   <style>
     .btn-group button {
@@ -120,16 +120,19 @@
               <h3 class="box-title">Mis Solicitudes</h3>
               <div class="btn-group">
                 <?php
-                 require("../controllers/flagsystem.php");
-                 $flags = new flags();
-                 
-                if ($_SESSION['tipouser'] == $flags->flaguserespe) {
-                  echo "<button onclick='loadtickets()'>He generado trabajo</button>";
-                  echo "<button onclick='loadticketsasginados()'>Me han generado trabajo</button>";
-                  echo "<button onclick='finalizartrabajo()'>Finaliza tu Trabajo</button>";
+                require("../controllers/flagsystem.php");
+                $flags = new flags();
+                if (!empty($_SESSION['tipouser'])) {
 
-                } else if ($_SESSION['tipouser'] == $flags->flaguserclie) {
-                  echo "<button onclick='loadtickets()'>He generado trabajo</button>";
+
+
+                  if ($_SESSION['tipouser'] == $flags->flaguserespe) {
+                    echo "<button onclick='loadtickets()'>He generado trabajo</button>";
+                    echo "<button onclick='loadticketsasginados()'>Me han generado trabajo</button>";
+                    echo "<button onclick='finalizartrabajo()'>Finaliza tu Trabajo</button>";
+                  } else if ($_SESSION['tipouser'] == $flags->flaguserclie) {
+                    echo "<button onclick='loadtickets()'>He generado trabajo</button>";
+                  }
                 }
                 ?>
 
@@ -199,42 +202,42 @@
         })
       </script>
       <!-- Modal Quality row -->
-        <!-- Modal -->
-<!-- Modal -->
-<div class="modal fade" id="idregister" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+      <!-- Modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="idregister" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
 
-      <div class="modal-body">
-        <div id="datalleno">
-          
+            <div class="modal-body">
+              <div id="datalleno">
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
       <!-- Main row -->
 
-              <!-- Modal concluir servicio especialista -->
-<!-- Modal -->
-<div class="modal fade" id="idconcluirserv" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+      <!-- Modal concluir servicio especialista -->
+      <!-- Modal -->
+      <div class="modal fade" id="idconcluirserv" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
 
-      <div class="modal-body">
-        <div id="dataconcluirserv">
-          
+            <div class="modal-body">
+              <div id="dataconcluirserv">
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+
+            </div>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-  
-      </div>
-    </div>
-  </div>
-</div>
       <!-- Main row -->
       <script src="../utils/js/loadmypanel.js"></script>
