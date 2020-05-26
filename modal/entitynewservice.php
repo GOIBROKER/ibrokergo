@@ -7,7 +7,7 @@ class entitynewservice{
     function registrarservicio($iduser,$idserv,$tmaserv,$detalleserv,$idpaprox,$idtipserv,$fecharegistro,$estadoserv,$idespeasignado){
         require("../utils/config/conex.php");
         $estadosol='1';
-        $insertdata = mysqli_query($enlacego,"INSERT INTO newservice VALUES (NULL, '$iduser', '$idserv', '$tmaserv', '$detalleserv', '$idpaprox', '$idtipserv', '$fecharegistro', NULL, NULL, '$estadosol','$idespeasignado','$estadoserv')");
+        $insertdata = mysqli_query($enlacego,"INSERT INTO newservice VALUES (NULL, '$iduser', '$idserv', '$tmaserv', '$detalleserv', '$idpaprox', '$idtipserv', '$fecharegistro', NULL, NULL, '$estadosol','$idespeasignado','$estadoserv',NULL)");
         mysqli_close($enlacego);
 
     //    if($insertdata == false){
@@ -48,6 +48,18 @@ class entitynewservice{
             $arraybusq2[] = $rowbusq2;
         }
         return $arraybusq2;
+        mysqli_close($enlacego);
+    }
+    // Funcion que sirve para actualizar el estado de la solicitud y registrar la fecha de termino del especialista
+    function finishticket($hidhist,$estadosol,$fdterminodesol){
+        require("../utils/config/conex.php");
+        $updateticket = mysqli_query($enlacego,"UPDATE newservice SET estadosol='$estadosol',fdterminoespec='$fdterminodesol' where idhistorico='$hidhist'");
+        if($updateticket == false){
+            $mensaje =  0; // Cero error en insercción
+        }else{
+            $mensaje =  1; // 1 OK
+        }
+        return $mensaje;
         mysqli_close($enlacego);
     }
 

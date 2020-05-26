@@ -14,7 +14,8 @@ class flags{
     // Flags estados tickets
     public $flagestaabierto = 1;
     public $flagestacerrado = 2;
-    public $flagestanotconcluido = 3;
+    public $flagestintermedio = 3;
+    public $flagestanotconcluido=4;
     //FIN Flags estados tickets
     // Tipo e contratacion si es directo o Subasta D = Directo / S=SUBASTA
     public $flagdirecto="D";
@@ -23,5 +24,11 @@ class flags{
     // Tipo de usuarios 1 = Cliente | 2 = Especialista
     public $flaguserclie = 1;
     public $flaguserespe = 2;
+
+    // nropuntadefecto si esque no fue concluido el servicio por x razones
+    public $puntaje = 0;
+
+    // Flag de tipo de error de servicio no concluido
+    public $flagnoconcluido = 9; // Por defecto 
 }
 ?>
