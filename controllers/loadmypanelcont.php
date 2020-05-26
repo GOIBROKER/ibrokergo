@@ -9,6 +9,7 @@ require_once("../modal/entityprecios.php");
 require_once("../modal/entitytblerrorserv.php");
 require_once("../utils/utils.php");
 require_once("../modal/entityqualityser.php");
+require_once("../modal/entityubicacion.php");
 
 $tblerrorserv = new tblerrorserv();
 $newserviceload = new entitynewservice();
@@ -17,6 +18,7 @@ $entityusersmodal = new entityusersmodal();
 $preciosaprox = new preciosaprox();
 $utilsphp2 = new utilsphp();
 $entityquality = new entityquality();
+$modalubicacion = new modalubicacion();
 // se uitliza para la carga inicial de tickets
 
 if(!empty($_POST['postloadticket'])){
@@ -45,7 +47,7 @@ if(!empty($_POST['postloadticket'])){
         
     }
     echo "<strong>Asignado al especialista .:</strong> ".$fespecialista['nameandlast'];
-    echo " | <strong>Celular Whatsapp .:</strong> ".$fespecialista['celular'];
+    echo " | <strong>Celular Whatsapp .:</strong> ".$fespecialista['celular']."| <strong>Ubicación .: </strong>".$modalubicacion->mnameubic($fespecialista['ubigeo']);
     echo "</br>";
     foreach($preciosaprox->idprecios($fticket['idprecioaprox']) as $fprecios){
 
@@ -91,7 +93,7 @@ if(!empty($_POST['postloadticket2'])){
     }
 
     echo "<strong>Tu cliente es .:</strong> ".$fusers2['nameandlast'];
-    echo " | <strong>Celular Whatsapp .:</strong>".$fusers2['celular'];
+    echo " | <strong>Celular Whatsapp .:</strong>".$fusers2['celular']."| <strong>Ubicación .: </strong>".$modalubicacion->mnameubic($fusers2['ubigeo']);
     echo "</br>";
     foreach($preciosaprox->idprecios($fticket2['idprecioaprox']) as $fprecioaprox2){
         
@@ -225,7 +227,7 @@ if(!empty($_POST['postloadticket3'])){
     }
 
     echo "<strong>Tu cliente es .:</strong> ".$fusers2['nameandlast'];
-    echo " | <strong>Celular Whatsapp .:</strong>".$fusers2['celular'];
+    echo " | <strong>Celular Whatsapp .:</strong>".$fusers2['celular']."| <strong>Ubicación .: </strong>".$modalubicacion->mnameubic($fusers2['ubigeo']);
     echo "</br>";
     foreach($preciosaprox->idprecios($fticket2['idprecioaprox']) as $fprecioaprox2){
         

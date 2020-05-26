@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<style>
+<!-- <style>
 form{ width:250px; margin:0 auto; padding:10px; border: 1px solid #d9d9d9;}
 form p, form input[type = "submit"]{text-align:center; font-size:20px;}
 input[type = "radio"]{ display:none;/*position: absolute;top: -1000em;*/}
@@ -12,7 +12,7 @@ direction: rtl;
 label:hover,
 label:hover ~ label{color:orange;}
 input[type = "radio"]:checked ~ label{color:orange;}
-</style>
+</style> -->
 <!-- Importando el head -->
 <?php require_once("../frames/head.php"); ?>
 
@@ -39,7 +39,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
       <div class="pull-right hidden-xs">
         <b>Version</b> 1.0.1
       </div>
-      <strong>Copyright &copy; 2020-2020 <a href="https://www.servicioseguro.com.pe">Servicio Seguro</a>.</strong> Derechos Reservadps.
+      <strong>Copyright &copy; 2020-2020 <a href="https://www.brokergo.com.pe">Broker Go</a>.</strong> Derechos Reservadps.
     </footer>
 
     <!-- Control Sidebar -->

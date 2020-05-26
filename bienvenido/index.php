@@ -1,5 +1,5 @@
 <html>
-<title>Servicioseguro - Consigue Trabajo</title>
+<title>BrokerGo - Consigue Trabajo</title>
 
 <head>
   <!-- Font Awesome -->
@@ -66,7 +66,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-        <strong>Servicioseguro</strong>
+        <strong>BrokerGo</strong>
       </a>
 
       <!-- Collapse -->
@@ -277,7 +277,7 @@
 
       <!--Section: Main features & Quick Start-->
       <section style="background: #eff6ea">
-        <h3 class="h3 text-center mb-5">SERVICIOSEGURO - CONECTAMOS TRABAJO</h3>
+        <h3 class="h3 text-center mb-5">BrokerGo - CONECTAMOS TRABAJO</h3>
 
 
         <div class="container">
@@ -898,7 +898,7 @@ Modal Coupon
             <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
             <div style="height: 10px"></div>
             <p class="title mb-0">VISITANTE</p>
-            <p class="text-muted " style="font-size: 13px">Servicioseguro</p>
+            <p class="text-muted " style="font-size: 13px">Broker Go</p>
           </div>
 
           <div class="col-9">
@@ -1035,7 +1035,7 @@ Modal Coupon
             <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
             <div style="height: 10px"></div>
             <p class="title mb-0">Administrador</p>
-            <p class="text-muted " style="font-size: 13px">Servicioseguro</p>
+            <p class="text-muted " style="font-size: 13px">Broker Go</p>
           </div>
 
           <div class="col-9">

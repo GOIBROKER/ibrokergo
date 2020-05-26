@@ -264,7 +264,7 @@ class utilsphp
  // Herramienta que sirve para contactar whatsapp
     function enviarwhatsapp($nombrescom,$servicio,$detalleserv,$cel){
         $flagwhatsapp = "https://api.whatsapp.com/send?phone=051";
-        $bienvenida=",vengo de la pagina Servicioseguro ";
+        $bienvenida=",vengo de la pagina BrokerGo! ";
         $converd = new utilsphp();
         $converd->convertircawhat($bienvenida);
         $data2 = ",necesito preguntarte sobre tu servicio de .:";
