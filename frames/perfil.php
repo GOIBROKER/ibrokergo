@@ -11,9 +11,9 @@ session_start();
       Tu Perfil
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Examples</a></li>
-      <li class="active">User profile</li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> Panel</a></li>
+      <li><a href="#">Tu Perfil</a></li>
+      <li class="active">Datos Personales</li>
     </ol>
   </section>
 

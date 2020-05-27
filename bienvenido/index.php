@@ -85,8 +85,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php" target="_blank">Encuentra un Especialista</a>
-          </li>
+          <a class="nav-link" href="index.php" target="_blank">Encuentra un Especialista</a>
+            </li>
 
           <!-- <li class="nav-item">
             <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
@@ -151,7 +151,7 @@
                   available. Create your own, stunning website.</strong>
               </p> -->
 
-              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Comienza - 
+              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Comienza -
                 Crea Tu Usuario
                 <i class="fas fa-graduation-cap ml-2"></i>
               </a>
@@ -188,7 +188,7 @@
                   available. Create your own, stunning website.</strong>
               </p> -->
 
-              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Comienza - 
+              <a target="_blank" href="register.php" class="btn btn-outline-white btn-lg">Comienza -
                 Crea tu Usuario
                 <i class="fas fa-graduation-cap ml-2"></i>
               </a>
@@ -405,311 +405,17 @@
 
       <!--Section: Main features & Quick Start-->
 
+  
       <hr class="my-5">
-
       <!--Section: Not enough-->
       <section>
 
-        <h2 class="my-5 h3 text-center">Not enough?</h2>
 
-        <!--First row-->
-        <div class="row features-small mb-5 mt-3 wow fadeIn">
-
-          <!--First column-->
-          <div class="col-md-4">
-            <!--First row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Free for personal and commercial use</h6>
-                <p class="grey-text">Our license is user-friendly. Feel free to use MDB for both private as well as
-                  commercial projects.
-                </p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/First row-->
-
-            <!--Second row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">400+ UI elements</h6>
-                <p class="grey-text">An impressive collection of flexible components allows you to develop any project.
-                </p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Second row-->
-
-            <!--Third row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">600+ icons</h6>
-                <p class="grey-text">Hundreds of useful, scalable, vector icons at your disposal.</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Third row-->
-
-            <!--Fourth row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Fully responsive</h6>
-                <p class="grey-text">It doesn't matter whether your project will be displayed on desktop, laptop,
-                  tablet or mobile phone. MDB
-                  looks great on each screen.</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Fourth row-->
-          </div>
-          <!--/First column-->
-
-          <!--Second column-->
-          <div class="col-md-4 flex-center">
-            <img src="https://mdbootstrap.com/img/Others/screens.png" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
-          </div>
-          <!--/Second column-->
-
-          <!--Third column-->
-          <div class="col-md-4 mt-2">
-            <!--First row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">70+ CSS animations</h6>
-                <p class="grey-text">Neat and easy to use animations, which will increase the interactivity of your
-                  project and delight your visitors.
-                </p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/First row-->
-
-            <!--Second row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Plenty of useful templates</h6>
-                <p class="grey-text">Need inspiration? Use one of our predefined templates for free.</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Second row-->
-
-            <!--Third row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Easy installation</h6>
-                <p class="grey-text">5 minutes, a few clicks and... done. You will be surprised at how easy it is.
-                </p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Third row-->
-
-            <!--Fourth row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Easy to use and customize</h6>
-                <p class="grey-text">Using MDB is straightforward and pleasant. Components flexibility allows you deep
-                  customization. You will
-                  easily adjust each component to suit your needs.</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Fourth row-->
-          </div>
-          <!--/Third column-->
-
-        </div>
-        <!--/First row-->
 
       </section>
       <!--Section: Not enough-->
 
-      <hr class="mb-5">
 
-      <!--Section: More-->
-      <section>
-
-        <h2 class="my-5 h3 text-center">...and even more</h2>
-
-        <!--First row-->
-        <div class="row features-small mt-5 wow fadeIn">
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fab fa-firefox fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2 pl-3">
-                <h5 class="feature-title font-bold mb-1">Cross-browser compatibility</h5>
-                <p class="grey-text mt-2">Chrome, Firefox, IE, Safari, Opera, Microsoft Edge - MDB loves all browsers;
-                  all browsers love MDB.
-                </p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-level-up-alt fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">Frequent updates</h5>
-                <p class="grey-text mt-2">MDB becomes better every month. We love the project and enhance as much as
-                  possible.
-                </p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-comments fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">Active community</h5>
-                <p class="grey-text mt-2">Our society grows day by day. Visit our forum and check how it is to be a
-                  part of our family.
-                </p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">jQuery 3.x</h5>
-                <p class="grey-text mt-2">MDB is integrated with newest jQuery. Therefore you can use all the latest
-                  features which come along with
-                  it.
-                </p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-        </div>
-        <!--/First row-->
-
-        <!--Second row-->
-        <div class="row features-small mt-4 wow fadeIn">
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-cubes fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">Modularity</h5>
-                <p class="grey-text mt-2">Material Design for Bootstrap comes with both, compiled, ready to use
-                  libraries including all features as
-                  well as modules for CSS (SASS files) and JS.</p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">Technical support</h5>
-                <p class="grey-text mt-2">We care about reliability. If you have any questions - do not hesitate to
-                  contact us.
-                </p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-th fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">Flexbox</h5>
-                <p class="grey-text mt-2">MDB fully supports Flex Box. You can forget about alignment issues.</p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="far fa-file-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">SASS files</h5>
-                <p class="grey-text mt-2">Arranged and well documented .scss files can't wait until you compile them.</p>
-              </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
-
-        </div>
-        <!--/Second row-->
-
-      </section>
       <!--Section: More-->
 
     </div>
@@ -721,11 +427,7 @@
 
     <!--Call to action-->
     <div class="pt-4">
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">Download MDB
-        <i class="fas fa-download ml-2"></i>
-      </a>
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
-        free tutorial
+      <a class="btn btn-outline-white" href="" target="_blank" role="button">Ver tutorial
         <i class="fas fa-graduation-cap ml-2"></i>
       </a>
     </div>
@@ -734,7 +436,7 @@
     <hr class="my-4">
 
     <!-- Social icons -->
-    <div class="pb-4">
+    <!-- <div class="pb-4">
       <a href="https://www.facebook.com/mdbootstrap" target="_blank">
         <i class="fab fa-facebook-f mr-3"></i>
       </a>
@@ -766,13 +468,13 @@
       <a href="http://codepen.io/mdbootstrap/" target="_blank">
         <i class="fab fa-codepen mr-3"></i>
       </a>
-    </div>
+    </div> -->
     <!-- Social icons -->
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2018 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+      © 2020 Copyright:
+      <a href="https://www.brokergo.com.oe" target="_blank"> Brokergo.com.pe</a>
     </div>
     <!--/.Copyright-->
 
@@ -1000,7 +702,7 @@ Modal Coupon
           <!--/.Panel 7-->
 
           <!--Panel 18-->
-        
+
           <!--/.Panel 8-->
         </div>
 
@@ -1064,39 +766,38 @@ Modal Coupon
 
 <!--Modal de whatsa!-->
 
- <!-- Central Modal Medium Success -->
- <div class="modal fade" id="modalwhatsapp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-   aria-hidden="true">
-   <div class="modal-dialog modal-notify modal-success" role="document">
-     <!--Content-->
-     <div class="modal-content">
-       <!--Header-->
-       <div class="modal-header">
-         <p class="heading lead">Registro exitoso</p>
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="modalwhatsapp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Registro exitoso</p>
 
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true" class="white-text">&times;</span>
-         </button>
-       </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
 
-       <!--Body-->
-       <div class="modal-body">
-         <div class="text-center">
-           <i class="fab fa-whatsapp fa-4x mb-3 animated rotateIn"></i>
-           <p>Dar en contactar , para <strong>enviar un mensaje al whatsapp del especialista</strong></br><strong>Recuerda que debes de tener activado tu whatsapp Web si estuvieras en una Computadora de Escritorio.</strong></br>Si deseas hacerlo más tarde puedes encontrar tus solicitudes pendientes en tu Panel</p>
-         </div>
-       </div>
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fab fa-whatsapp fa-4x mb-3 animated rotateIn"></i>
+          <p>Dar en contactar , para <strong>enviar un mensaje al whatsapp del especialista</strong></br><strong>Recuerda que debes de tener activado tu whatsapp Web si estuvieras en una Computadora de Escritorio.</strong></br>Si deseas hacerlo más tarde puedes encontrar tus solicitudes pendientes en tu Panel</p>
+        </div>
+      </div>
 
-       <!--Footer-->
-       <div class="modal-footer justify-content-center">
-         <a type="button" onclick="contactarwha()" class="btn btn-success">Contactar<i class="far fa-gem ml-1 text-white"></i></a>
-         <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, Gracias</a>
-       </div>
-     </div>
-     <!--/.Content-->
-   </div>
- </div>
- <!-- Central Modal Medium Success-->
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" onclick="contactarwha()" class="btn btn-success">Contactar<i class="far fa-gem ml-1 text-white"></i></a>
+        <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, Gracias</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Central Modal Medium Success-->
 
 <script src="../utils/js/loadcomponentsfront.js"></script>
 <script src="../utils/js/verifysesiones.js"></script>
