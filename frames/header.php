@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>GO-FPS</title>
+  <title>BrokerGO!</title>
+  <link rel=”shortcut icon” href=”../bienvenido/welcome/img/favicon.ico” mce_href=”favicon.ico” type=”image/x-icon” />
+
+  <link rel="icon" type="image/png" href="../bienvenido/welcome/img/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">

@@ -16,7 +16,7 @@
     <!------ Include the above in your HEAD tag ---------->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="welcome/img/especialidad/icono.png" alt="Logo" style="width:40px;">
+        <img src="welcome/img/logo.png" alt="Logo" style="width:40px;">
         </a>
 
     </nav>

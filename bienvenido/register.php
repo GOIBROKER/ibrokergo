@@ -1,3 +1,6 @@
+<link rel=”shortcut icon” href=”/ibrokergo/bienvenido/welcome/img/favicon.ico” mce_href=”favicon.ico” type=”image/x-icon” />
+
+<link rel="icon" type="image/png" href="/ibrokergo/bienvenido/welcome/img/logo.png" />
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -6,7 +9,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
    <a class="navbar-brand" href="#">
-    <img src="welcome/img/especialidad/icono.png" alt="Logo" style="width:40px;">
+    <img src="welcome/img/logo.png" alt="Logo" style="width:40px;">
   </a>
 
 </nav>

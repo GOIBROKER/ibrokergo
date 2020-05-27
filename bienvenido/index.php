@@ -2,6 +2,11 @@
 <title>BrokerGo - Consigue Trabajo</title>
 
 <head>
+  <!-- Colcoar Icono Font Awesome -->
+  <link rel=”shortcut icon” href=”/ibrokergo/bienvenido/welcome/img/favicon.ico” mce_href=”favicon.ico” type=”image/x-icon” />
+
+  <link rel="icon" type="image/png" href="/ibrokergo/bienvenido/welcome/img/logo.png" />
+  <!-- Font en la barra de direcciones -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Google Fonts -->
@@ -821,7 +826,6 @@ Modal Coupon
 <script src="../utils/js/seachfront.js"></script>
 <script src="../utils/js/validatesessionfront.js"></script>
 <script src="../utils/js/registerservicefront.js"></script>
-<script src="../utils/js/registercont.js"></script>
 <script src="../utils/js/datospersonales.js"></script>
 
 </html>

@@ -2,6 +2,9 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Broker | Go!</title>
+  <link rel=”shortcut icon” href=”../bienvenido/welcome/img/favicon.ico” mce_href=”favicon.ico” type=”image/x-icon” />
+
+  <link rel="icon" type="image/png" href="../bienvenido/welcome/img/logo.png" />
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
