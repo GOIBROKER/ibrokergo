@@ -63,59 +63,104 @@ CREATE TABLE `gouser` (
   `present` varchar(420) DEFAULT NULL,
   `idtipservicio` int(4) DEFAULT NULL COMMENT 'valor : 99 / user cliente Deafault',
   PRIMARY KEY (`iduser`),
-  KEY `iduser` (`iduser`)
-) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8mb4;
+  KEY `iduser` (`iduser`),
+  KEY `tipser` (`idtipservicio`)
+) ENGINE=InnoDB AUTO_INCREMENT=196 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `gouser` */
 
 insert  into `gouser`(`iduser`,`tipouser`,`nameandlast`,`ubigeo`,`direccion`,`fechaderegistro`,`email`,`pass`,`imagen`,`nrodoc`,`celular`,`contrato`,`tdocumento`,`present`,`idtipservicio`) values 
-(99,2,'David Cosio','150514','Av Santa Anita 234','0000-00-00 00:00:00','roy@gmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','34568976',986846176,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',4),
-(101,2,'Abel Perez','150134','PASEO DE LA REPUBLICA NRO. 3195 INT. 503','0000-00-00 00:00:00','izapata@innovacion-empresarial.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22698694',997797705,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',3),
-(102,2,'Abel Ruiz Aguila','150134','LAS FRAGUAS NO.167','0000-00-00 00:00:00','consonniperu@consonniperu.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','17316550',997249782,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',2),
-(103,2,'Abel Virgilio  Mattos  Jaque','150134','SAN JOSE NRO. 449 URB. SAN CARLOS','0000-00-00 00:00:00','ing_amattos@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','21514046',997394874,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',8),
-(104,2,'Abigail Mercedes  Morales  Corrales De Torres','150134','CAñON DEL PATO NRO. 103 (ESQ. CDRA. 5 AV. CAMINOS DEL INCA)','0000-00-00 00:00:00','tytl@tytl.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14115613',996023789,'1',1,'niñera',8),
-(105,2,'Abraham  Madrid  Ludeña','150134','JOSE MARTI NRO. 238 - MARANGA','0000-00-00 00:00:00','s3ggenerales@gmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12452500',993010449,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',7),
-(106,2,'Abraham Asuncion Vergara  Cordova','150134','PARURO NRO. 1207 ','0000-00-00 00:00:00','carlos_v2502@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23130541',993539507,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',4),
-(107,2,'Abraham Douglas  Yorgest Urbina','150134','AZANGARO Nº 1024 OF. 15','0000-00-00 00:00:00','ayu_1@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','13066354',996138059,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',5),
-(108,2,'Ada Beatriz Cardoso Paredes','150134','JOSE NEYRA NRO. 244 INT. 201 URB. LA CALERA DE LA MERCED ','0000-00-00 00:00:00','a.cardoso@holistic-consultores.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20612528',992052487,'1',1,'Me dedico a la atencion de niños',2),
-(109,2,'Ada Guillen  Castro','150134','CUSCO NRO. 417 INT. 704 ','0000-00-00 00:00:00','info@spavida.pe / rosof78@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14811026',996213729,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',5),
-(110,2,'Ada Mori .','150137','JORGE BASADRE 1186 (POR LA EMBAJADA DE ESPAÑA)','0000-00-00 00:00:00','ncosta@floreztijero.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','15224647',991507856,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',9),
-(111,2,'Ada Patricia  Camborda Montoya','150137','GRAL BORGOÑO NRO. 528 ','0000-00-00 00:00:00','estudio@abcmlegal.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12421604',991824258,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',9),
-(112,2,'Adalberto Eladio Carmona Gallo','150137','LAS HEBEAS NRO. 1284 URB. LOS JARDINES DE SAN JUAN','0000-00-00 00:00:00','adalcarmona@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12773623',993700972,'1',1,'Me dedico a la atencion de niños',6),
-(113,2,'Adalberto Seminario  Valle','150137','VIRREY TOLEDO NRO. 360 ','0000-00-00 00:00:00','jabelgui@gmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22260047',993150360,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',1),
-(114,2,'Adamo Gerolamo Angelo','150137','MARTIR OLAYA 129 OF. 1103','0000-00-00 00:00:00','j.vizcarra@aprilenet.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','21980382',990967468,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',5),
-(115,2,'Adelina Astudillo G.','150137','STA. MARIA MAGDALENA NRO. 124','0000-00-00 00:00:00','kokenperu@amauta.rcp.net.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23239192',992208412,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',4),
-(116,2,'Adolfo  Pinillos  Cordova','150137','PIO XII NRO. 480 INT. 301 URB. POLO HUNT ','0000-00-00 00:00:00','jjsantivanez@santivanezabogados.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','13096292',999529514,'1',1,'Me dedico a la atencion de niños',1),
-(117,2,'Adolfo Antonio  Chavez  Linares','150137','LOS LIBERTADORES NRO. 355 URB. SAN ISIDRO ','0000-00-00 00:00:00','contacto@achavezarquitectos.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14983813',998062638,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',6),
-(118,2,'Adolfo Auccapure .','150137','PUNKARI NRO. 1661 URB. MANGOMARCA ','0000-00-00 00:00:00','corpriseg@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','18626541',991894877,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',4),
-(119,2,'Adolfo Demetrio Mattos Rosel','150137','GERARDO UNGER NRO. 3273 ','0000-00-00 00:00:00','renviolmedios@renviol.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','18474616',991120959,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',7),
-(120,2,'Adolfo Felix  Alvarez  Chauca','150137','ALCALÁ NRO. 492 DPTO. 301 URB. LA CASTELLANA ','0000-00-00 00:00:00','afac_g@yahoo.es','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','13589139',999733276,'1',1,'Me dedico a la atencion de niños',7),
-(121,2,'Adolfo Giorgio Draxl  Molina','150137','ALCALÁ NRO. 492 DPTO. 301 URB. LA CASTELLANA ','0000-00-00 00:00:00','info@gdbusiness.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14418972',992512774,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',3),
-(122,2,'Adolfo Gygax Zegarra Ballon','150137','HAYA DE LA TORRE # 464(FTE.A LA ISLA DEL PARAISO)','0000-00-00 00:00:00','shurtado@orbislogistic.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','21795089',996264916,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',9),
-(123,2,'Adolfo Mariscal Leal','150137','LAS AGUILAS  237','0000-00-00 00:00:00','amariscal@visual-presence.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20052337',994186266,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',2),
-(124,2,'Adolfo Valz-Gen Rivera','150137','ANGAMOS ESTE 2612 OF. 202','0000-00-00 00:00:00','adolfovalzgen@protezione.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14029624',990777373,'1',1,'Me dedico a la atencion de niños',1),
-(125,2,'Adolth Brown','150137','VICTOR ANDRES BELAUNDE #395','0000-00-00 00:00:00','oalvarado@ferrero.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20861855',991953794,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',8),
-(126,2,'Adrian Poblete Espinosa','150103','AYACUCHO NRO. 328 INT. 328 URB. MIRAFLORES ','0000-00-00 00:00:00','clarosa@grupoincasac.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','19442725',992304554,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',5),
-(127,2,'Adrian Revilla  Vergara','150103','SALAVERRY NRO. 3231','0000-00-00 00:00:00','abogados@reyrios.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23204344',993893103,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',5),
-(128,2,'Adrian Sevillano .','150103','ELMER FAUCETT NRO. 2879 CENTRO AEREO COMERCIAL','0000-00-00 00:00:00','ana.oliva@talma.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','19249315',991314155,'1',1,'Me dedico a la atencion de niños',2),
-(129,2,'Adriana Esmeralda Mansilla Cabezudo','150103','LAS AZUCENAS Nº 1400 URB. LAS BRISAS ','0000-00-00 00:00:00','isrod2020@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22312471',992657852,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',7),
-(130,2,'Adriana Mellado Villa','150103','REPUBLICA DE PANAMA NRO. 5659 DPTO. 304 URB. AURORA ','0000-00-00 00:00:00','access@asesoriaaccess.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','15517078',999231845,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',4),
-(131,2,'Afra Maria  Torres Salas','150103','MRCAL MILLER NRO. 2190 ','0000-00-00 00:00:00','cshaw@assessmentcenterperu.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20960187',995310414,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',7),
-(132,2,'Aguilio Ruiz Rodriguez','150103','ANGAMOS OESTE NRO. 544 DPTO. 302 ','0000-00-00 00:00:00','intelect@intelect.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22007097',992447142,'1',1,'Me dedico a la atencion de niños',4),
-(133,2,'Agustin Flores Barboza','150103','REPUBLICA DE PANAMA NRO. 4095 ','0000-00-00 00:00:00','nofloresbarboza@terra.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20776368',992625440,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',7),
-(134,2,'Agustin Gerardo Gamero Nuñez','150103','CARLOS ARRIETA NRO. 1336 URB. SANTA BEATRIZ ','0000-00-00 00:00:00','agusgame@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20231381',995945433,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',5),
-(135,2,'Agustin Sanchez Mallqui','150103','CARABAYA NRO. 500 ','0000-00-00 00:00:00','aida@veraparedes.org','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12959550',991901126,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',2),
-(136,2,'Aida Dora Vera  Zambrano','150103','LOPEZ DE AYALA NRO. 1298 ','0000-00-00 00:00:00','aida@veraparedes.org','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12608641',998267761,'1',1,'Me dedico a la atencion de niños',9),
-(137,2,'Aida Huertas Tacchino','150103','AREQUIPA NRO. 2450 DPTO. 1606 ','0000-00-00 00:00:00','serviciosjrl@jrlsa.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23029092',990579580,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',5),
-(138,2,'Aida Luz  Zambrano  Valdivia','150103','LOPEZ DE AYALA NRO. 1298 ','0000-00-00 00:00:00','aida@veraparedes.org','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','18167230',991928094,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',7),
-(139,2,'Aitor Arteta Cilloniz','150103','CADMIO NO.135-129 URB.GRIMANESA','0000-00-00 00:00:00','gmarina@transberperu.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','16146069',993873293,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',2),
-(140,2,'Alain Audoyer Uribe','150103',' 41 NRO. 840 ','0000-00-00 00:00:00','alain_audoyer@coface.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20179713',992050596,'1',1,'Me dedico a la atencion de niños',4),
-(141,2,'Alan  Olaechea Torres','150103','SEPARADORA INDUSTRIAL NRO. 2641 URB. SANTA RAQUEL ','0000-00-00 00:00:00','mdiezcanseco@bassler.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','16944885',995530997,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',1),
-(142,2,'Alan Dell Rodriguez','150103','CORONEL INCLAN NRO. 281 DPTO. 504 ','0000-00-00 00:00:00','futuros7@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','17487342',991263065,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',1),
-(143,2,'Alba Lucia Gonzalez  Vargas','150103','LOS EUCALIPTOS Nº 337 DPTO. 402','0000-00-00 00:00:00','albaluciagonzalez@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22772081',996510671,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',8),
-(144,2,'Albert Alex Jesus Forsyth  Solari','150103','RIVERA NAVARRETE 501 PISO 19 - EDIFICIO CAPITAL','0000-00-00 00:00:00','francisco.avendano@eafa.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','16844276',996476463,'1',1,'Me dedico a la atencion de niños',4),
-(145,2,'Albert Forsyth Solari','150103','REPUBLICA DE PANAMA NRO. 3411 INT. 13 ','0000-00-00 00:00:00','anamaria.valdez@forsytharbe.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20783688',993846024,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',2),
-(146,2,'Hora Loca Peru SAC','150137','Jiron Rio Eguren','2020-05-14 03:57:22','jose@gmail.com','$2y$10$ocg6wVA6PHVxjRWXJ5ZpCesjRAdM.3UkIqaDXpxnhDR4nCJbewVSK','default','45897873',98678789,'1',1,'Somos una empresa que se dedica a los show , fiesta , hora loca , tambien realizamos canto para varios distritos,espero les guste',2);
+(99,2,'David Cosio','150514','Av Santa Anita 234','0000-00-00 00:00:00','roy@gmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','34568976',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',4),
+(101,2,'Abel Perez','150134','PASEO DE LA REPUBLICA NRO. 3195 INT. 503','0000-00-00 00:00:00','izapata@innovacion-empresarial.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22698694',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',3),
+(102,2,'Abel Ruiz Aguila','150134','LAS FRAGUAS NO.167','0000-00-00 00:00:00','consonniperu@consonniperu.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','17316550',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',2),
+(103,2,'Abel Virgilio  Mattos  Jaque','150134','SAN JOSE NRO. 449 URB. SAN CARLOS','0000-00-00 00:00:00','ing_amattos@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','21514046',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',8),
+(104,2,'Abigail Mercedes  Morales  Corrales De Torres','150134','CAñON DEL PATO NRO. 103 (ESQ. CDRA. 5 AV. CAMINOS DEL INCA)','0000-00-00 00:00:00','tytl@tytl.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14115613',980464077,'1',1,'niñera',8),
+(105,2,'Abraham  Madrid  Ludeña','150134','JOSE MARTI NRO. 238 - MARANGA','0000-00-00 00:00:00','s3ggenerales@gmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12452500',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',7),
+(106,2,'Abraham Asuncion Vergara  Cordova','150134','PARURO NRO. 1207 ','0000-00-00 00:00:00','carlos_v2502@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23130541',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',4),
+(107,2,'Abraham Douglas  Yorgest Urbina','150134','AZANGARO Nº 1024 OF. 15','0000-00-00 00:00:00','ayu_1@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','13066354',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',5),
+(108,2,'Ada Beatriz Cardoso Paredes','150134','JOSE NEYRA NRO. 244 INT. 201 URB. LA CALERA DE LA MERCED ','0000-00-00 00:00:00','a.cardoso@holistic-consultores.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20612528',980464077,'1',1,'Me dedico a la atencion de niños',2),
+(109,2,'Ada Guillen  Castro','150134','CUSCO NRO. 417 INT. 704 ','0000-00-00 00:00:00','info@spavida.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14811026',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',5),
+(110,2,'Ada Mori .','150137','JORGE BASADRE 1186 (POR LA EMBAJADA DE ESPAÑA)','0000-00-00 00:00:00','ncosta@floreztijero.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','15224647',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',9),
+(111,2,'Ada Patricia  Camborda Montoya','150137','GRAL BORGOÑO NRO. 528 ','0000-00-00 00:00:00','estudio@abcmlegal.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12421604',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',9),
+(112,2,'Adalberto Eladio Carmona Gallo','150137','LAS HEBEAS NRO. 1284 URB. LOS JARDINES DE SAN JUAN','0000-00-00 00:00:00','adalcarmona@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12773623',980464077,'1',1,'Me dedico a la atencion de niños',6),
+(113,2,'Adalberto Seminario  Valle','150137','VIRREY TOLEDO NRO. 360 ','0000-00-00 00:00:00','jabelgui@gmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22260047',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',1),
+(114,2,'Adamo Gerolamo Angelo','150137','MARTIR OLAYA 129 OF. 1103','0000-00-00 00:00:00','j.vizcarra@aprilenet.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','21980382',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',5),
+(115,2,'Adelina Astudillo G.','150137','STA. MARIA MAGDALENA NRO. 124','0000-00-00 00:00:00','kokenperu@amauta.rcp.net.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23239192',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',4),
+(116,2,'Adolfo  Pinillos  Cordova','150137','PIO XII NRO. 480 INT. 301 URB. POLO HUNT ','0000-00-00 00:00:00','jjsantivanez@santivanezabogados.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','13096292',980464077,'1',1,'Me dedico a la atencion de niños',1),
+(117,2,'Adolfo Antonio  Chavez  Linares','150137','LOS LIBERTADORES NRO. 355 URB. SAN ISIDRO ','0000-00-00 00:00:00','contacto@achavezarquitectos.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14983813',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',6),
+(118,2,'Adolfo Auccapure .','150137','PUNKARI NRO. 1661 URB. MANGOMARCA ','0000-00-00 00:00:00','corpriseg@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','18626541',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',4),
+(119,2,'Adolfo Demetrio Mattos Rosel','150137','GERARDO UNGER NRO. 3273 ','0000-00-00 00:00:00','renviolmedios@renviol.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','18474616',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',7),
+(120,2,'Adolfo Felix  Alvarez  Chauca','150137','ALCALÁ NRO. 492 DPTO. 301 URB. LA CASTELLANA ','0000-00-00 00:00:00','afac_g@yahoo.es','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','13589139',980464077,'1',1,'Me dedico a la atencion de niños',7),
+(121,2,'Adolfo Giorgio Draxl  Molina','150137','ALCALÁ NRO. 492 DPTO. 301 URB. LA CASTELLANA ','0000-00-00 00:00:00','info@gdbusiness.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14418972',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',3),
+(122,2,'Adolfo Gygax Zegarra Ballon','150137','HAYA DE LA TORRE # 464(FTE.A LA ISLA DEL PARAISO)','0000-00-00 00:00:00','shurtado@orbislogistic.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','21795089',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',9),
+(123,2,'Adolfo Mariscal Leal','150137','LAS AGUILAS  237','0000-00-00 00:00:00','amariscal@visual-presence.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20052337',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',2),
+(124,2,'Adolfo Valz-Gen Rivera','150137','ANGAMOS ESTE 2612 OF. 202','0000-00-00 00:00:00','adolfovalzgen@protezione.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','14029624',980464077,'1',1,'Me dedico a la atencion de niños',1),
+(125,2,'Adolth Brown','150137','VICTOR ANDRES BELAUNDE #395','0000-00-00 00:00:00','oalvarado@ferrero.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20861855',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',8),
+(126,2,'Adrian Poblete Espinosa','150103','AYACUCHO NRO. 328 INT. 328 URB. MIRAFLORES ','0000-00-00 00:00:00','clarosa@grupoincasac.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','19442725',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',5),
+(127,2,'Adrian Revilla  Vergara','150103','SALAVERRY NRO. 3231','0000-00-00 00:00:00','abogados@reyrios.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23204344',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',5),
+(128,2,'Adrian Sevillano .','150103','ELMER FAUCETT NRO. 2879 CENTRO AEREO COMERCIAL','0000-00-00 00:00:00','ana.oliva@talma.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','19249315',980464077,'1',1,'Me dedico a la atencion de niños',2),
+(129,2,'Adriana Esmeralda Mansilla Cabezudo','150103','LAS AZUCENAS Nº 1400 URB. LAS BRISAS ','0000-00-00 00:00:00','isrod2020@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22312471',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',7),
+(130,2,'Adriana Mellado Villa','150103','REPUBLICA DE PANAMA NRO. 5659 DPTO. 304 URB. AURORA ','0000-00-00 00:00:00','access@asesoriaaccess.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','15517078',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',4),
+(131,2,'Afra Maria  Torres Salas','150103','MRCAL MILLER NRO. 2190 ','0000-00-00 00:00:00','cshaw@assessmentcenterperu.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20960187',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',7),
+(132,2,'Aguilio Ruiz Rodriguez','150103','ANGAMOS OESTE NRO. 544 DPTO. 302 ','0000-00-00 00:00:00','intelect@intelect.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22007097',980464077,'1',1,'Me dedico a la atencion de niños',4),
+(133,2,'Agustin Flores Barboza','150103','REPUBLICA DE PANAMA NRO. 4095 ','0000-00-00 00:00:00','nofloresbarboza@terra.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20776368',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',7),
+(134,2,'Agustin Gerardo Gamero Nuñez','150103','CARLOS ARRIETA NRO. 1336 URB. SANTA BEATRIZ ','0000-00-00 00:00:00','agusgame@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20231381',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',5),
+(135,2,'Agustin Sanchez Mallqui','150103','CARABAYA NRO. 500 ','0000-00-00 00:00:00','aida@veraparedes.org','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12959550',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',2),
+(136,2,'Aida Dora Vera  Zambrano','150103','LOPEZ DE AYALA NRO. 1298 ','0000-00-00 00:00:00','aida@veraparedes.org','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','12608641',980464077,'1',1,'Me dedico a la atencion de niños',9),
+(137,2,'Aida Huertas Tacchino','150103','AREQUIPA NRO. 2450 DPTO. 1606 ','0000-00-00 00:00:00','serviciosjrl@jrlsa.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','23029092',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',5),
+(138,2,'Aida Luz  Zambrano  Valdivia','150103','LOPEZ DE AYALA NRO. 1298 ','0000-00-00 00:00:00','aida@veraparedes.org','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','18167230',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',7),
+(139,2,'Aitor Arteta Cilloniz','150103','CADMIO NO.135-129 URB.GRIMANESA','0000-00-00 00:00:00','gmarina@transberperu.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','16146069',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',2),
+(140,2,'Alain Audoyer Uribe','150103',' 41 NRO. 840 ','0000-00-00 00:00:00','alain_audoyer@coface.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20179713',980464077,'1',1,'Me dedico a la atencion de niños',4),
+(141,2,'Alan  Olaechea Torres','150103','SEPARADORA INDUSTRIAL NRO. 2641 URB. SANTA RAQUEL ','0000-00-00 00:00:00','mdiezcanseco@bassler.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','16944885',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',1),
+(142,2,'Alan Dell Rodriguez','150103','CORONEL INCLAN NRO. 281 DPTO. 504 ','0000-00-00 00:00:00','futuros7@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','17487342',980464077,'1',1,'Reparo todo tipo de muebles o ventanas , ademas tambien realizo pintado y otras que tenga que ver con el rubro',1),
+(143,2,'Alba Lucia Gonzalez  Vargas','150103','LOS EUCALIPTOS Nº 337 DPTO. 402','0000-00-00 00:00:00','albaluciagonzalez@hotmail.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','22772081',980464077,'1',1,'Reparo impresoras , laptops , escanner , instalación de programas informáticos , Instalación de Redes y cualquier articulo de oficina , espero les guste mi servicio , muchas gracias',8),
+(144,2,'Albert Alex Jesus Forsyth  Solari','150103','RIVERA NAVARRETE 501 PISO 19 - EDIFICIO CAPITAL','0000-00-00 00:00:00','francisco.avendano@eafa.com.pe','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','16844276',980464077,'1',1,'Me dedico a la atencion de niños',4),
+(145,2,'Albert Forsyth Solari','150103','REPUBLICA DE PANAMA NRO. 3411 INT. 13 ','0000-00-00 00:00:00','anamaria.valdez@forsytharbe.com','$2y$10$Z34DID7EwF4QAxkzMDDjm.oeMZd1hYPRfvDMhTwnSNQ0HkH69CMH6','default','20783688',980464077,'1',1,'Me llamo Anthony puente olano , me dedico a la fabricación de paredes , pintado y entre otras cosas',2),
+(146,2,'Hora Loca Peru SAC','150137','Jiron Rio Eguren','2020-05-14 03:57:22','jose@gmail.com','$2y$10$ocg6wVA6PHVxjRWXJ5ZpCesjRAdM.3UkIqaDXpxnhDR4nCJbewVSK','default','45897873',980464077,'1',1,'Somos una empresa que se dedica a los show , fiesta , hora loca , tambien realizamos canto para varios distritos,espero les guste',2),
+(147,2,'Catherin','160706','Jiron Rio 105','2020-05-15 05:46:06','caty@gmail.com','$2y$10$KPxQngYMGb4eiNqNGJ.lf.mPUKDfpMQJy2iYfi9AXPG.ZI9oHsJYi','default','45818901',980464077,'1',1,'Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105Jiron rio 105',1),
+(148,1,'REne Puente','150137','Jiron RIo Rimac','2020-05-16 01:13:10','rene@gmail.com','$2y$10$6R2jH2keJzWgkKB8CXAMlO/n6KsERyRWianB9xl4.oW0Mc/meq7EW','default','45818901',980464077,'1',1,'Jiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo RimacJiron RIo Rimac',99),
+(149,1,'Juancho','default','default','2020-05-16 01:19:20','juancho@gmail.com','$2y$10$v.vv47Z/QLzVw0kXL47bzOXSXDaLSr8Cvs5tqSbyFFAtFoPbisxwO','default','000000000000',980464077,'1',9,'default',99),
+(150,1,'Sabrina','default','default','2020-05-16 01:41:24','sabrina@gmail.com','$2y$10$liOB10GUa0BysamMJf4IaekiNSjHRjzcyD.tae1WG1fag4ixP4zs.','default','000000000000',980464077,'1',9,'default',99),
+(151,1,'Catherine','default','default','2020-05-16 02:20:28','data@gmail.com','$2y$10$tUU7A/y4uiQ195WEaCGE/Olh5qlcHOZoiCNwI2zYqicZu3J4Gw3DG','default','000000000000',980464077,'1',9,'default',99),
+(152,1,'Pitagoras','default','default','2020-05-16 02:23:57','pitagoras@gmail.com','$2y$10$D6ePSJOse2SIulkOBc4k6O9cbn0EpeP7o9B5y097MIDY1g1c.s54m','default','000000000000',980464077,'1',9,'default',99),
+(153,1,'George De La Selva','default','default','2020-05-17 11:23:42','george@gmail.com','$2y$10$LeQZXLAuFjwBMkMfgC7UReE9vgh9IUNtHoR/4txDIRK8nX6NjvV7q','default','000000000000',980464077,'1',9,'default',99),
+(154,2,'Anthony Puente Olano','150514','Jiron Rio Rimac','2020-05-17 11:25:20','olano@gmail.com','$2y$10$Uua.kExcF6xjgSG2i/TsqOjLTVN9JPRMHSWtfkMCg5H.lycJDQghC','default','45818901',980464077,'1',1,'Dsaddsadaddasdasdsadsadadsadsadadadadadadadadadadadasdadad',1),
+(156,2,'Matias','default','default','2020-05-21 04:47:00','matias@gmail.com','$2y$10$C09Lpj2oAvm9PWJBK2XC0.Xh6YK8Pv0ibtrxa5mHGQOBhJmJ77uMK','default','000000000000',980464077,'1',9,'default',99),
+(157,2,'Anthony Puente Olano','150134','Jiron Rio Rimac 195','2020-05-22 03:12:35','reparador@gmail.com','$2y$10$25y0RMpW/OpdJUdxL/BOteshn57Q1mKqxeeLBkT07.4Mo/sX2HB3S','default','45818901',980464077,'1',1,'Me gusta reparar computadoras , redes , informática y sobre todo la reparación de tables.',4),
+(158,1,'Anthony Puente Olano','150514','Jiron Rio Rimac 195','2020-05-22 04:45:47','anthonypuente@gmail.com','$2y$10$Q1uMm9pJwWt6rZ.4ODqjc.fIDtYEVUHNBu6FPzaCfpmKVYg3meWgy','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(159,2,'ROY montura','150137','Jiron Rio Rimac 195','2020-05-22 04:50:06','roy2020@gmail.com','$2y$10$zjSskd.PevrLAGJ2ZqHl6uJvcXkHmoBZ.HxyqTxbDhXq8fNUem8ra','default','45818901',980464077,'1',1,'Me gusta todo lo relacionado a la informática , espero les guste',6),
+(160,1,'Sandra Paricahua','150134','Jiron Rio Rimac 195','2020-05-22 05:04:02','sandra@gmail.com','$2y$10$tStorQpvS8h0zgAxIUhLuO3uoCuQr72uI/YHAO3KcrbGz1qUM4qCK','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(161,1,'Mario Del Solar','150137','Jiron Rio Rimac 195','2020-05-22 05:27:48','mario@gmail.com','$2y$10$ZgaPoBFj2MyTjHOFE8MOSODomJ.XzMJGAKpIMNxye19TH7dIND1ai','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(162,1,'Anthony Puente Olano','150514','Jiron Rio Rimac','2020-05-22 05:29:26','anthonysistemas2014@gmail.com','$2y$10$gpTkgsVLV8SiN.QH6bcYc.ETbMJSkWc0CO3vaMpQi6RsWtFGHd.ca','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(163,1,'cristina@gmail.com','150137','Jiron Rio Rimac','2020-05-22 05:31:56','cristina@gmail.com','$2y$10$4VlmSUIUPtEHbnx/hvpEb.lIKlycHSy0UjBuBj17VaQ/GmmpiF5Nu','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(164,1,'Jorge Puncho','160706','Jiron Ate','2020-05-22 05:36:07','jorgein@gmail.com','$2y$10$1pjxoshcs4ibyBkRRa3yWeFHo4ctqefvsCDMN/qe.LRRkK7X9FW1S','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(165,1,'Sandra Paricahua','150137','Jiron Rio Rimac 195','2020-05-22 05:40:18','parihuela@gmail.com','$2y$10$uL1zDVXxQ3h4wVseZ6wCtOkS2Fv.e/m9gzBbzhd5edMUlfwNlYcYW','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(166,1,'Roy Perreo','150137','Jiron Rio Rimac','2020-05-22 05:47:14','perro@gmail.com','$2y$10$1onn0UujuU5qraWlVZdmx..HKsTJe7ctGddMpDRIRfgkgPHU56GBe','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(167,1,'De la Cruz','150514','Jiron Rio Rimac','2020-05-22 08:39:27','cruz@gmail.com','$2y$10$WFDLOm7fUfHuLaAB6oxZeePGnI/VPae.ccbFN54y9tIhveag91OhG','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(168,1,'Artur','150137','Jiron Huarochiri','2020-05-22 08:42:03','artur@gmail.com','$2y$10$qAbWy9hqsLa1oLvo95JoG.Sanvq94Cd0JyPdKxoMLd6b6FHFWjN3q','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(169,1,'Trabajitos','150514','Jiron Rio Rimac','2020-05-22 08:44:47','trabajo@gmail.com','$2y$10$QOMwyCfo2BZRyJTJBwDqPOJeJnJGiwjOEN4XBqKqXsN05ErBOfqim','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(170,1,'Prueba testing','150514','Jiron Rio Rimac','2020-05-22 08:47:32','prueba2@gmail.com','$2y$10$vBWhatGCReW1Pmgqjw9JHeAGuO8kkY2zKMGqRbBMAlI4q5XGQDPHG','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(172,2,'Teting','150137','Jiron Rio Rimac','2020-05-23 09:49:01','testing3@gmail.com','$2y$10$uj6OrDGPtqn6V3QYF/D3x.A.EqSH35afNc4vmSJ3ngGmdokWQ308i','default','45818901',980464077,'1',1,'Me gusta el sombrero de paja, espero les guste , muchas gracias',1),
+(173,2,'Testing','150137','Jiron Rio Rimac 195','2020-05-23 09:50:48','testing4@gmail.com','$2y$10$BFD6M3mJqckweRWHI17Hv.iKz73m6gpYNlwfvV14iX.Bz35.vSjW2','default','45818901',980464077,'1',1,'Brindo servicios Contables y me gusta interactuar con productos contables',103),
+(174,2,'George Ventura','150102','Jiron','2020-05-23 10:36:26','g@gmail.com','$2y$10$587WkcAxlUBF6vBzGqQ4d.o30h50uD9Cm4dtKaJzINbam3J9NCBRK','default','45818901',980464077,'1',1,'Jironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironjironfff',1),
+(177,1,'Anthony Puente Olano','150134','Jiron Rio Rimac 195 - Urb Las Moras','2020-05-23 03:51:25','anthony_alexandre89@gmail.com','$2y$10$OPH4wAlpBHR0VdO9bVHuZuatakGDH8F4rvcVJFqD3ZgwanQHemdsK','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(178,1,'Anthony Puente Olano','150137','Jiron Rio Rimac','2020-05-24 09:16:12','carito@gmail.com','$2y$10$3aOUnf3P4cXPLf2Q642wGOb4vnhadyynUmy.XpYhsl/btU2l9zgQa','default','45818901',980464077,'1',1,'Defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(179,1,'Anthony Puente Olano','150137','Jiron RIo Rimac 195','2020-05-24 10:48:28','carlos@gmail.com','$2y$10$dkVq.jWnPqP0zR9pKFUGT.ZqAuBPbk9owBE1mBMTGLsRjpRVidgO.','default','45818901',980464077,'1',1,'Defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(180,2,'Anthony Alexandre','150514','Jiron Rio Rimac','2020-05-24 11:08:38','anthony_alexandre89@hotmail.com','$2y$10$Cz/HDMCaJPL/rSCWEiloNe15GIMMPItzbkp6xrqQxWvar4pILu3X6','default','45818901',980464077,'1',1,'Jiron Rio RimacJiron Rio RimacJiron Rio RimacJiron Rio Rimac',5),
+(181,2,'Bernardo Stamateas','150134','Jiron Rio Rimac 195','2020-05-24 11:12:22','bernardo@gmail.com','$2y$10$m1WYT4XwKBjtWIs6aOf9Fe2IvsJGNAdXU94zsyXpCLiUmZlpIMjaG','default','45818901',980464077,'1',1,'Hola me llamo Anthony puente olano espero les guste mi servicio',4),
+(182,2,'Mario Del Pilar','default','default','2020-05-24 11:17:21','mpilar@gmail.com','$2y$10$QoPLzeoOPyCLElhgk9agHOinAxlmLl9esQsxaaD9NKH727cnE9r46','default','000000000000',980464077,'1',9,'default',99),
+(183,2,'Anthony Puente Olano','150514','Jiron Rio Rimac 195','2020-05-24 11:26:17','laurasaavedra@gmail.com','$2y$10$G8nEZy38lwBuIwDxNishLOlQdxxr2No2EThZBipP2mPkjUaF6xCIy','default','45818901',980464077,'1',1,'Jiron Rio Rimac 195Jiron Rio Rimac 195Jiron Rio Rimac 195Jiron Rio Rimac 195',1),
+(184,2,'Anthony Puente Olano','150137','Jiron Rio Rimac 195','2020-05-24 11:37:31','infor@gmail.com','$2y$10$uxd7cNXYKx9t9G6vErbS0eq732pPhCNxwZm6dyMzRn4zt9btBUxRu','default','45818901',980464077,'1',1,'Jiron Rio Rimac 195Jiron Rio Rimac 195Jiron Rio Rimac 195Jiron Rio Rimac 195Jiron Rio Rimac 195',5),
+(185,2,'Anthony Puente Olano','150137','Jiron Rio Rimac 195','2020-05-24 11:49:07','gergito@gmail.com','$2y$10$bV7hKa/5oAuBbOQw4dO.ceFXJjEOTuT2eNT9UDVOP45Af3d5GyHPi','default','45818901',980464077,'1',1,'Me gusta interactuar con mis hijos y mis perros , gracias',4),
+(186,2,'Informatica De Computadoras','150514','Jiron Rio Rimac 195','2020-05-24 11:55:25','informaticapc@gmail.com','$2y$10$v/C5q68EXkSJpoQcNHubNeB.kDNfQ627mx4096evjY7Zqf4Rdk0/K','default','45818901',980464077,'1',1,'Me gusta saberMe gusta saberMe gusta saberMe gusta saberMe gusta saberMe gusta saber',1),
+(187,1,'Janet Paricahua','150137','Jiron Rio La Libertad','2020-05-24 11:56:52','laputamasputa@gmail.com','$2y$10$GVr5eXsMoPm1Ttn.hwcYu.717k9pWYgkw9tun.B5AZmefl2ytslwi','default','45818901',980464077,'1',1,'Defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(188,1,'Anthony Puente Olano','150134','Jirón Rio Rimac 195','2020-05-24 04:12:08','anthonyalexandre89@hotmail.com','$2y$10$k5JjVHS8nsKHFQpYp0H4G.SM.Umk4B20gu40ydkxw2D2NNHNZnw7y','default','45818901',980464077,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(189,2,'La Prueba Del Tester','150103','Jiron Huarochiri 102','2020-05-24 04:32:47','testing@gmail.com','$2y$10$7.TSatJcwsLUbaOfITTrAuCYjKYFMeY6UgAG03vy2270cI47eIGam','default','45818901',980464077,'1',1,'Hola , me dedico a reparar laptops,impresoras , teclados y mouse , espero puedan confiar en miSlds',4),
+(190,1,'Jose Carlos Aramburu','131002','Jiron Rio 234','2020-05-24 05:48:23','carlosaramburu@gmail.com','$2y$10$iF93yTGoxQFdB0tHSm82reQZibFTmR4BYmfEjbdOElFaIbx/ChDua','default','45818901',991943044,'1',1,'Defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(192,1,'Jorge Colors','default','default','2020-05-26 02:14:42','jorge@gmail.com','$2y$10$slXGuz2zuLM7IOI2pQij1eKwqtukvyj6/ciblgMM8TlI2IEgWhptS','default','000000000000',980464077,'1',9,'default',99),
+(193,2,'Viviana de La cruz','150140','Jiron 154','2020-05-26 04:28:04','vivianasistemas2013@gmail.com','$2y$10$AIc0M0q5Q43XRW3mGHVeeOsQYrjY1a75TpE8EFAt6Rs57qRiqDxlW','default','45818901',991943044,'1',1,'Realizo servicios informaticos para cualquier empresa de lima',4),
+(194,1,'Laura Olano Saavedra','150134','Jiron Rio Rimac 195','2020-05-26 06:52:58','lauracarolina_07@hotmail.com','$2y$10$YEUiUX7X5FbLvaQI8Zc/nOaUqWQdBHNjeVhDqo/M5adVRYI1jdd2i','default','09312921',986846176,'1',1,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99),
+(195,1,'Carolo perolo','150514','Jiron Rio Rimac 195','2020-05-27 06:45:56','carolo@gmail.com','$2y$10$zc47bis1UAADtlsCVdLYZ.nJXsvXq1y4RrPsmJpwmS57/mrdTz1LK','default','MT434323JU43',991943044,'1',2,'defaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulclientedefaulcliente',99);
 
 /*Table structure for table `newservice` */
 
@@ -130,16 +175,17 @@ CREATE TABLE `newservice` (
   `idprecioaprox` int(2) DEFAULT NULL,
   `tipdservicio` int(2) DEFAULT NULL COMMENT 'remoto / presencial',
   `fregistro` datetime DEFAULT NULL,
-  `fsolucion` datetime DEFAULT NULL,
-  `faceptacion` datetime DEFAULT NULL,
-  `estadosol` int(3) NOT NULL COMMENT 'Abierto,Cerrado,Noconcluido',
+  `fsolucion` datetime DEFAULT NULL COMMENT 'cuando el usuario ya termina el ticket',
+  `faceptacion` datetime DEFAULT NULL COMMENT 'Fecha en la cual se acepta el servicio , solo en caso de subasta',
+  `estadosol` int(3) NOT NULL COMMENT 'Abierto,Cerrado,intermedio,Noconcluido',
+  `idespeclient` int(11) DEFAULT NULL,
+  `tcontratacion` varchar(1) DEFAULT NULL COMMENT 'S = SUBASTA | D = DIRECTO SIN SUBASTA | SA = SIN ASIGNACION',
+  `fdterminoespec` datetime DEFAULT NULL COMMENT 'Campo que indica la fecha de termino por parte del especialista',
+  PRIMARY KEY (`idhistorico`),
   KEY `idhistorico` (`idhistorico`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `newservice` */
-
-insert  into `newservice`(`idhistorico`,`iduser`,`idservicio`,`temaservicio`,`detalleservicio`,`idprecioaprox`,`tipdservicio`,`fregistro`,`fsolucion`,`faceptacion`,`estadosol`) values 
-(15,77,6,'Necesito un corte de cabelloabelloabello','Necesito un corte de cabelloNecesito un corte de cabelloNecesito un corte de cabelloNecesito un corte de cabelloNecesito un corte de cabello',1,1,'2020-05-12 12:41:34',NULL,NULL,1);
 
 /*Table structure for table `precios` */
 
@@ -160,6 +206,24 @@ insert  into `precios`(`idprecio`,`rango`) values
 (4,'S/.500.00 - 1000.00'),
 (5,'S/.1000.00 a más');
 
+/*Table structure for table `qualityservice` */
+
+DROP TABLE IF EXISTS `qualityservice`;
+
+CREATE TABLE `qualityservice` (
+  `idhistorico` int(9) DEFAULT NULL,
+  `points` int(1) DEFAULT NULL COMMENT 'valoración de estrellas del 1 al 5',
+  `comentario` varchar(350) DEFAULT NULL,
+  `tempcovid` int(1) DEFAULT NULL COMMENT 'valoracion',
+  `id` int(9) NOT NULL AUTO_INCREMENT,
+  `idtiperror` int(9) DEFAULT NULL COMMENT 'Indica la razon del porque no se concluyo el servicio',
+  UNIQUE KEY `idhistorico` (`idhistorico`) USING BTREE,
+  KEY `id` (`id`),
+  CONSTRAINT `qualityservice_ibfk_1` FOREIGN KEY (`idhistorico`) REFERENCES `newservice` (`idhistorico`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `qualityservice` */
+
 /*Table structure for table `servicesdet` */
 
 DROP TABLE IF EXISTS `servicesdet`;
@@ -168,8 +232,9 @@ CREATE TABLE `servicesdet` (
   `idtipservicio` int(4) NOT NULL AUTO_INCREMENT,
   `tiprama` int(4) DEFAULT NULL,
   `name` varbinary(50) DEFAULT NULL,
+  PRIMARY KEY (`idtipservicio`),
   KEY `idtipservicio` (`idtipservicio`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
 
 /*Data for the table `servicesdet` */
 
@@ -182,7 +247,45 @@ insert  into `servicesdet`(`idtipservicio`,`tiprama`,`name`) values
 (6,1,'Peluqueria'),
 (7,1,'Transporte - Mudanza'),
 (8,1,'Albañileria'),
-(9,1,'Gasfiteria');
+(9,1,'Gasfiteria'),
+(103,1,'Contabilidad');
+
+/*Table structure for table `tblerrorserv` */
+
+DROP TABLE IF EXISTS `tblerrorserv`;
+
+CREATE TABLE `tblerrorserv` (
+  `iderrorserv` int(9) NOT NULL AUTO_INCREMENT,
+  `name` varchar(56) DEFAULT NULL,
+  KEY `iderrorserv` (`iderrorserv`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `tblerrorserv` */
+
+insert  into `tblerrorserv`(`iderrorserv`,`name`) values 
+(1,'Genere la solicitud por error.'),
+(2,'No pude contactar con el especialista.'),
+(3,'No se pudo concluir el servicio.'),
+(4,'El especialista cobraba demasiado.'),
+(5,'Decisi cambiar de Especialista.'),
+(6,'Otros motivos.');
+
+/*Table structure for table `tdocumento` */
+
+DROP TABLE IF EXISTS `tdocumento`;
+
+CREATE TABLE `tdocumento` (
+  `id` int(1) NOT NULL AUTO_INCREMENT,
+  `alias` varchar(35) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `tdocumento` */
+
+insert  into `tdocumento`(`id`,`alias`) values 
+(1,'DNI'),
+(2,'Carnet de Extranjería'),
+(3,'Pasaporte');
 
 /*Table structure for table `tipservicio` */
 
@@ -191,6 +294,7 @@ DROP TABLE IF EXISTS `tipservicio`;
 CREATE TABLE `tipservicio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
@@ -2105,6 +2209,31 @@ insert  into `ubigeo`(`idubigeo`,`departamento`,`provincia`,`distrito`,`unido`) 
 ('240201','TUMBES','CONTRALMIRANTE VILLAR','ZORRITOS','TUMBES,CONTRALMIRANTE VILLAR,ZORRITOS'),
 ('150516','LIMA','CAÑETE','ZUÑIGA','LIMA,CAÑETE,ZUÑIGA'),
 ('080309','CUSCO','ANTA','ZURITE','CUSCO,ANTA,ZURITE');
+
+/*Table structure for table `viewstart` */
+
+DROP TABLE IF EXISTS `viewstart`;
+
+/*!50001 DROP VIEW IF EXISTS `viewstart` */;
+/*!50001 DROP TABLE IF EXISTS `viewstart` */;
+
+/*!50001 CREATE TABLE  `viewstart`(
+ `idhistorico` int(9) ,
+ `idespeclient` int(11) ,
+ `estadosol` int(3) ,
+ `tcontratacion` varchar(1) ,
+ `points` int(1) ,
+ `tempcovid` int(1) ,
+ `idtiperror` int(9) ,
+ `iduser` int(11) 
+)*/;
+
+/*View structure for view viewstart */
+
+/*!50001 DROP TABLE IF EXISTS `viewstart` */;
+/*!50001 DROP VIEW IF EXISTS `viewstart` */;
+
+/*!50001 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `viewstart` AS select `newservice`.`idhistorico` AS `idhistorico`,`newservice`.`idespeclient` AS `idespeclient`,`newservice`.`estadosol` AS `estadosol`,`newservice`.`tcontratacion` AS `tcontratacion`,`qualityservice`.`points` AS `points`,`qualityservice`.`tempcovid` AS `tempcovid`,`qualityservice`.`idtiperror` AS `idtiperror`,`newservice`.`iduser` AS `iduser` from (`qualityservice` join `newservice` on(`qualityservice`.`idhistorico` = `newservice`.`idhistorico`)) */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
