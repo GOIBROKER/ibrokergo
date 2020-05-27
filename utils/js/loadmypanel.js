@@ -70,7 +70,7 @@ function grabar(){
             postpuntaje2:puntaje2,
             postcomentario:comentario
         },function(responseacti){
-        
+        alert(responseacti);
             if(responseacti == 1){
                 alert("se registro correctamente");
                 $("#idregister").modal("hide");

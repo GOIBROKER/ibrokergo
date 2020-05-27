@@ -2,12 +2,14 @@
 require_once("../modal/entityusers.php");
 require_once("../utils/utils.php");
 require_once("../modal/entityubicacion.php");
-require_once("../controllers/flagsystem.php");
+require("../controllers/flagsystem.php");
+require_once("../modal/entityviews.php");
 
 $entityusers = new entityusersmodal();
 $utilsfront = new utilsphp();
 $entityubic = new modalubicacion();
 $flagsystem = new flags();
+$viewscalculate = new viewscalculate();
 session_start();
 
 $flaginiciosearch = '2';
@@ -52,14 +54,10 @@ if (!empty($_POST['postactivatetable'])) {
         echo "<small>" . $entityubic->mnameubic($lastfquereseach['ubigeo']) . "</small>";
         echo "</div>";
         echo "<p class='mb-1'>" . $utilsfront->cortartexto($lastfquereseach['present']) . "</p>";
-        echo "<p class='text-warning'><small><strong>Calidad de Atención.:</strong>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "</small></p>";
-        echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
+        echo "<h5><p class='text-danger'><small><strong>Calidad en.:</strong>";
+        echo $viewscalculate->calculastar($lastfquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagpoints);
+        echo "| Seguridad anti-Covid".$viewscalculate->calculastar($lastfquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagcovid)."</small></p></h5>";
+        echo "<strong><small>".$viewscalculate->calculaestrellas($lastfquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado)."</small></strong>";
         echo "</br>";
         echo "<button type='button' id='".$lastfquereseach['iduser']."' onclick='validatesession(this.id)' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
@@ -85,14 +83,11 @@ if(!empty($_POST['postactespec'])){
         echo "<small>".$entityubic->mnameubic($fcantregistros['ubigeo'])."</small>";
         echo "</div>";
         echo "<p class='mb-1'>".$utilsfront->cortartexto($fcantregistros['present'])."</p>";
-        echo "<p class='text-warning'><small><strong>Calidad de Atención.:</strong>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "</small></p>";
-        echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
+        echo "<h5><p class='text-danger'><small><strong>Calidad de Atención.:</strong>";
+        echo $viewscalculate->calculastar($fcantregistros['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,'points');
+        echo "| Seguridad anti-Covid .: ".$viewscalculate->calculastar($fcantregistros['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagcovid)."</small></p></h5>";
+        echo "</small></p></h5>";
+        echo "<small>".$viewscalculate->calculaestrellas($fcantregistros['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado)."</small>";
         echo "</br>";
         echo "<button type='button' id='".$fcantregistros['iduser']."' onclick='validatesession(this.id)' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
@@ -155,15 +150,17 @@ if (!empty($_POST['postactivatesearch'])) {
         echo "<small>" . $entityubic->mnameubic($fquereseach['ubigeo']) . "</small>";
         echo "</div>";
         echo "<p class='mb-1'>" . $utilsfront->cortartexto($fquereseach['present']) . "</p>";
-        echo "<p class='text-warning'><small><strong>Calidad de Atención.:</strong>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='far fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "<i class='fas fa-star'></i>";
-        echo "</small></p>";
-        echo "<strong><small>35 usuarios lo recomiendan</small></strong>";
+        echo "<h5><p class='text-danger'><small><strong>Calidad de Atención.:</strong>";
+        echo $viewscalculate->calculastar($fquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,'points');
+        echo "| Seguridad anti-Covid".$viewscalculate->calculastar($fquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagcovid)."</small></p></h5>";
+        echo "</small></p></h5>";
+        echo "<small>".$viewscalculate->calculaestrellas($fquereseach ['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado)."</small>";
         echo "</br>";
+        // foreach($viewscalculate->calculastar($fquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado) as $fpoint){
+        //     echo "Aqui <small>".$fpoint['sumapserv']."</small>";
+        // }
+
+   
         echo "<button type='button' id='".$fquereseach['iduser']."' onclick='validatesession(this.id)' class='btn btn-primary'>Contactar</button>";
         echo "</a>";
     }
