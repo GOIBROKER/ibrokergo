@@ -24,132 +24,26 @@ require_once("../frames/sliderndesing.php");
   <main id="main">
 
     <!-- ======= App Features Section ======= -->
-    <section style="background: #eff6ea">
-        <h3 class="h3 text-center mb-5">BrokerGo - CONECTAMOS TRABAJO</h3>
+    <section id="features" class="features">
+      <div class="container">
 
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <h3 class="h4 text-center mb-4">Filtrar por.:</h3>
-            </div>
-            <div class="col-sm">
-              <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
-                <select class="form-control" id="tuser">
-                  <option value="">1.- ¿Buscas un .: ?</option>
-                  <option value='1'>Especialista</option>
-                  <option value='2'>Trabajo</option>
-                </select>
-              </div>
-
-            </div>
-            <div class="col-sm">
-              <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
-
-                <div id="resutcomboserv">
-                </div>
-
-
-              </div>
-
-            </div>
-            <div class="col-sm">
-              <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">¿En que Ubicación?</label> -->
-                <div id="resutcombo">
-
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="section-title">
+          <h2>App Features</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="container">
-          <div class="row">
+        <div class="row no-gutters">
 
-            <div class="col-sm">
 
-              <div class="card border-dark">
-                <div class="card-body">
-                  <div class="card-body row no-gutters align-items-center">
-                    <div class="col-auto">
-                      <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <!--end of col-->
-                    <div class="col">
-                      <input class="form-control form-control-lg form-control-borderless" id="txtsearchbar" type="search" placeholder="Especialidad o nombre de especialista">
-                    </div>
-                    <!--end of col-->
-                    <div class="col-auto">
-                      <button class="btn btn-lg btn-success" onclick="searchfront()">Buscar!</button>
-                    </div>
-                    <!--end of col-->
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
 
-          </div>
-        </div>
+    </section><!-- End App Features Section -->
 
     <!-- ======= Details Section ======= -->
-    <hr class="my-5">
-      <section>
-
-        <h3 class="h4 text-center mb-4">Resultado de Busqueda.:</h3>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9">
-
-              <div class="list-group" id="resultable">
-                <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
-
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h6 class="mb-1">
-                      <p class="text-dark"><strong>Especialista .: Anthony Puente Olano</strong></p>
-                    </h6>
-                    </br>
-                    <small>Lima - San Luis.</small>
-                  </div>
-                  <p class="mb-1">Me dedico a la Reparación de laptops , impresoras , escanner.</p>
-                  <p class="text-warning"><small><strong>Calidad de Atención.:</strong>
-                      <i class='far fa-star'></i>
-                      <i class='far fa-star'></i>
-                      <i class='far fa-star'></i>
-                      <i class='fas fa-star'></i>
-                      <i class='fas fa-star'></i>
-                    </small></p>
-                  <strong><small>35 usuarios lo recomiendan</small></strong>
-                  </br>
-                  <button type="button" class="btn btn-primary">Contactar</button>
-                </a>
-
-              </div>
-
-              <div id="buttonbusq"></div>
-
-            </div>
-
-
-
-            <div class="col-md-3">
-
-
-              .Columna para patrocinadores o Publicad Premium
-
-
-            </div>
-          </div>
-        </div>
-
-
-
-
-      </section>
+    <section id="details" class="details">
+      
+      </div>
+    </section><!-- End Details Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
@@ -420,90 +314,6 @@ require_once("../frames/sliderndesing.php");
     </div>
   </footer><!-- End Footer -->
 
-
-  <!-- Modal -->
-<div class="modal fade" id="idbuscartrabajo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Filtro de Busqueda</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-
-      <label for="inputState">Buscas un?</label>
-      <select id="inputState" class="form-control">
-        <option selected>Especialista...</option>
-        <option selected>Trabajo...</option>
-        
-      </select>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputState">De ?</label>
-      <select id="inputState" class="form-control">
-        <option selected>Informatica...</option>
-        <option selected>Trabajo...</option>
-        
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Ubicación : Departamento,Provincia,Distrito</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Lima,Lima,San Luis">
-  </div>
-  
-  
-
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Buscar!</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<script src="../utils/js/loadcomponentsfront.js"></script>
-<script src="../utils/js/verifysesiones.js"></script>
-<script src="../utils/js/utils.js"></script>
-<script>
-  $(document).ready(function() {
-
-    // Handler for .ready() called.
-    loadbuttons();
-    loadinitialespec();
-    buscarserv();
-    borrarsesiones();
-    buscardep();
-    // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
-    //Carga Inicial de combo
-  });
-</script>
-
-<script src="../utils/js/initialsesionintra.js"></script>
-<script src="../utils/js/frontbusqueda.js"></script>
-<script src="../utils/js/seachfront.js"></script>
-<script src="../utils/js/validatesessionfront.js"></script>
-<script src="../utils/js/registerservicefront.js"></script>
-<script src="../utils/js/datospersonales.js"></script>
-
-
-
-
-<script>
-
-  function apmodalbus(){
-    $("#idbuscartrabajo").modal("show");
-  }
-</script>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
