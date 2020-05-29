@@ -12,6 +12,6 @@ session_start();
 if($_SESSION['idtipouser']=="2"){
 
 }else{
-    header("location:../bienvenido/register.php");
+    header("location:../bienvenido/registergo.php");
 }
 ?>

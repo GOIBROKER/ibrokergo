@@ -5,9 +5,11 @@
   <title>Broker</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
+  <link rel=”shortcut icon” href=”frontend/assets/img/favicon.ico” mce_href=”favicon.ico” type=”image/x-icon” />
 
+<link rel="icon" type="image/png" href="frontend/assets/img/favicon.ico" />
   <!-- Favicons -->
-  <link href="frontend/assets/img/favicon.png" rel="icon">
+  <link href="frontend/assets/img/favicon.ico" rel="icon">
   <link href="frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->

@@ -75,7 +75,7 @@
     <!-- /.social-auth-links -->
 
     <a href="#">Perdi mi contraseña</a><br>
-    <a href="register.php" class="text-center">No tengo cuenta - Registrarme</a>
+    <a href="registergo.php" class="text-center">No tengo cuenta - Registrarme</a>
 
   </div>
   <!-- /.login-box-body -->
