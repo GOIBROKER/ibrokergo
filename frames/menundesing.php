@@ -14,14 +14,13 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-fw fa-home"></i>Iniciar Sesión
+                    <a class="nav-link dropdown-toggle" href="#" id="iniciarse" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-home" div='idiniciars'></i>Iniciar Sesión
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Registrate</a>
-                        <a class="dropdown-item" href="#">Iniciar Sesión</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id='buttonsapert'>
+                        <!-- <a class="dropdown-item" href="#">Registrate</a>
+                        <a class="dropdown-item" href="#">Iniciar Sesión</a> -->
+
                     </div>
                 </li>
             </ul>

@@ -83,7 +83,7 @@ require_once("../frames/sliderndesing.php");
                     </div>
                     <!--end of col-->
                     <div class="col-auto">
-                      <button class="btn btn-lg btn-success" onclick="searchfront()">Buscar!</button>
+                    <button type="button" onclick="searchfront()" class="btn btn-success">Buscar!</button>
                     </div>
                     <!--end of col-->
                   </div>
@@ -267,7 +267,7 @@ require_once("../frames/sliderndesing.php");
     <!-- ======= Frequently Asked Questions Section ======= -->
    
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
@@ -325,20 +325,20 @@ require_once("../frames/sliderndesing.php");
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="button">Send Message</button></div>
             </form>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>End Contact Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
+<!-- 
     <div class="footer-newsletter" data-aos="fade-up">
       <div class="container">
         <div class="row justify-content-center">
@@ -346,12 +346,12 @@ require_once("../frames/sliderndesing.php");
             <h4>Join Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="button" value="Subscribe">
             </form>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="footer-top">
       <div class="container">
@@ -411,10 +411,7 @@ require_once("../frames/sliderndesing.php");
         &copy; Copyright <strong><span>Appland</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
+      
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -462,12 +459,298 @@ require_once("../frames/sliderndesing.php");
 </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Buscar!</button>
+        <a type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</a>
+        <a type="button" class="btn btn-primary">Buscar!</a>
       </div>
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab" ><i class="fas fa-user mr-1"></i>
+              Iniciar Sesión</a>
+          </li>
+
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="text" id="txtemail" class="form-control">
+                <label for="txtemail">Ingresa tu Email</label>
+              </div>
+
+              <div class="md-form form-sm">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="txtpassword" class="form-control">
+                <label for="txtpassword">Ingresa tu contraseña</label>
+                <div id="alertsesion">
+
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info" onclick="iniciarsesion()">Ingresar <i class="fas fa-sign-in-alt ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>No estas registrado? <a href="registergo.php" class="blue-text">Registrate</a></p>
+                <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+<!-- Modal Warning -->
+<div class="modal fade" id="centralModalWarningDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading">Hola! - Tienes que Iniciar Sesión para continuar</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-3 text-center">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
+            <div style="height: 10px"></div>
+            <p class="title mb-0">VISITANTE</p>
+            <p class="text-muted " style="font-size: 13px">Broker Go</p>
+          </div>
+
+          <div class="col-9">
+            <p>Estas a punto de contactar al especialista, favor de Iniciar sesión o Registrate!.</p>
+            <p class="card-text">
+              <strong>Gracias por tu compresión</strong>
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
+          <i class="far fa-gem ml-1 text-white"></i>
+        </a>
+        <a href="registergo.php" class="btn btn-outline-warning waves-effect">Registrate</a>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal Warning FIN-->
+
+
+<!-- Modal de contactar espe -->
+<div class="modal fade" id="modalcontacespe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Detalle del Especialista</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div id="informcontac"></div>
+      </div>
+      <!--Final Modal-->
+
+
+      <!--Footer-->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-info waves-effect waves-light" onclick="registerservice()">Solicitar Servicio
+          <i class="far fa-gem ml-1"></i>
+        </a>
+        <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">No ,Continuar</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Fin de modal -->
+
+<!-- Inicio de modal -->
+
+
+<div class="modal fade" id="modalregiterdata" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item waves-effect waves-light">
+            <a class="nav-link active" data-toggle="tab" href="#panel17" role="tab">
+              <i class="fas fa-user mr-1"></i> Termina tu Registro</a>
+          </li>
+
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 17-->
+          <div class="tab-pane fade in show active" id="panel17" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div id="moduleregisteruser">Here</div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 18-->
+
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+<!-- Fin de modal -->
+
+<!-- Modal Warning -->
+<div class="modal fade" id="modalwarning2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading">GRACIAS!</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-3 text-center">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" alt="Michal Szymanski - founder of Material Design for Bootstrap" class="img-fluid z-depth-1-half rounded-circle">
+            <div style="height: 10px"></div>
+            <p class="title mb-0">Administrador</p>
+            <p class="text-muted " style="font-size: 13px">Broker Go</p>
+          </div>
+
+          <div class="col-9">
+            <p>Gracias por completar tus datos.</p>
+            <p class="card-text">
+              <strong>Continua con tu busqueda.</strong>
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--Footer-->
+      <!-- <div class="modal-footer justify-content-center">
+        <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
+          <i class="far fa-gem ml-1 text-white"></i>
+        </a>
+        <a href="register.php" class="btn btn-outline-warning waves-effect">Registrate</a>
+
+      </div> -->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+<!--Modal de whatsa!-->
+
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="modalwhatsapp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Registro exitoso</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fab fa-whatsapp fa-4x mb-3 animated rotateIn"></i>
+          <p>Dar en contactar , para <strong>enviar un mensaje al whatsapp del especialista</strong></br><strong>Recuerda que debes de tener activado tu whatsapp Web si estuvieras en una Computadora de Escritorio.</strong></br>Si deseas hacerlo más tarde puedes encontrar tus solicitudes pendientes en tu Panel</p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" onclick="contactarwha()" class="btn btn-success">Contactar<i class="far fa-gem ml-1 text-white"></i></a>
+        <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, Gracias</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Central Modal Medium Success-->
 
 
 
@@ -483,6 +766,7 @@ require_once("../frames/sliderndesing.php");
     buscarserv();
     borrarsesiones();
     buscardep();
+    loadmenub();
     // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
     //Carga Inicial de combo
   });
@@ -510,7 +794,7 @@ require_once("../frames/sliderndesing.php");
   <script src="frontend/assets/vendor/jquery/jquery.min.js"></script>
   <script src="frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="frontend/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="frontend/assets/vendor/php-email-form/validate.js"></script>
+
   <script src="frontend/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="frontend/assets/vendor/venobox/venobox.min.js"></script>
   <script src="frontend/assets/vendor/aos/aos.js"></script>

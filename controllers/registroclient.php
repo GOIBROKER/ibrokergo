@@ -54,15 +54,15 @@ if (!empty($_POST['requestactivate'])) {
 }
 if(!empty($_POST['requestactivatesesionexist'])){
        
-        echo "<p class='text-warning'>Ya tienes una cuenta en GO! - Inicia Sesión</p>";
+        echo "<p class='text-danger'>Ya tienes una cuenta en GO! - Inicia Sesión</p>";
         echo "<div class='form-group row'>";
-        echo "<p class='text-warning'>Email</p>";
+        echo "<p class='text-danger'>Email</p>";
         echo "<div class='col-sm-10'>";
         echo "<input type='email' class='form-control' id='txtemail' placeholder='Email'>";
         echo "</div>";
         echo "</div>";
         echo "<div class='form-group row'>";
-        echo "<p class='text-warning'>Pass :</p>";
+        echo "<p class='text-danger'>Pass :</p>";
         echo "<div class='col-sm-10'>";
         echo "<input type='password' class='form-control' id='txtpassword' placeholder='Password'>";
         echo "<div id='alertsesion'></div>";
@@ -70,7 +70,7 @@ if(!empty($_POST['requestactivatesesionexist'])){
         echo "</div>";
         echo "<div class='form-group row'>";
         echo "<div class='col-sm-10'>";
-        echo "<button type='button' class='btn btn-outline-warning' onclick='iniciarsesion()'>Iniciar Sesión</button><p class='text-warning'>¿Recuperar contraseña?</p>";
+        echo "<button type='button' class='btn btn-outline-warning' onclick='iniciarsesion()'>Iniciar Sesión</button><p class='text-primary'>¿Recuperar contraseña?</p>";
         echo "</div>";
         echo "</div>";
         

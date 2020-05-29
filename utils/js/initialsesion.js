@@ -13,7 +13,7 @@ function iniciarsesion(){
         $(location).attr('href',"miespacio.php");
     }else{
         
-        $("#alertsesion").html("<p class='text-warning'>"+responselogin+"</p>");
+        $("#alertsesion").html("<p class='text-primary'>"+responselogin+"</p>");
     }
         
    });

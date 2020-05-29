@@ -8,7 +8,7 @@ if(!empty($_POST['requestactivate'])){
 
 $listarserviciosmodal = new serviciosmodal();
 
-echo "<p class='text-warning'>Escoge el Tipo de Dispositivo Informático</p>";
+echo "<p class='text-info' style='margin-bottom:14px'><h4>Escoge el Tipo de Servicio.</h4></p>";
 echo "<select class='browser-default custom-select' id='selectioninformatico'>"; 
 echo "<option selected>Seleccion aqui - GO</option>";
 
@@ -17,8 +17,8 @@ foreach($listarserviciosmodal->listarservicios() as $foreachlistarservicios){
     echo "<option value='".$foreachlistarservicios['idtipservicio']."'>".$foreachlistarservicios['name']."</option>";
 }
 echo "</select>"; 
-echo "<img src='welcome/img/especialidad/especialidadpng.png' class='rounded mx-auto d-block'>"; 
-echo "<button type='button' onclick='secondoption()' class='btn btn-outline-warning'>Continuar</button>";
+echo "<img src='frontend/assets/img/logobroker.png' class='rounded mx-auto d-block'>"; 
+echo "<button type='button' onclick='secondoption()' class='btn btn-danger btn-lg'>Continuar</button>";
 
 }
 //jj
@@ -27,7 +27,7 @@ session_start();
 // Tomamos el valor del combobox
 $_SESSION['idespecialidad'] = $_POST['requestoptionservice'];
 
-echo "<p class='text-warning'>Registrate para Continuar</p>";
+echo "<p class='text-danger'>Registrate para Continuar</p>";
 echo "<div class='form-group'>";
 echo "<div class='col-lg-10'>";
 echo "<input type='text' class='form-control' id='txtnombrescompletos' placeholder='Nombres Completos'>";
@@ -52,7 +52,7 @@ echo "</label>";
 echo "</div>";
 echo "</div>";
 echo "</div>";
-echo "<button type='button' onclick='firtsoption()' class='btn btn-outline-warning'>Retroceder</button>";
-echo "<button type='button' id='btnregistrarse' onclick='registrar(1)' class='btn btn-outline-warning'>Registrarse</button>";
+echo "<button type='button' onclick='firtsoption()' class='btn btn-danger btn-lg'>Retroceder</button>";
+echo "<button type='button' id='btnregistrarse' onclick='registrar(1)' class='btn btn-primary btn-lg'>Registrarse</button>";
 }
 ?>

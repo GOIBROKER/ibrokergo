@@ -8,7 +8,13 @@ function loadbuttons(){
         $("#buttonsapert").append(responsecodespecialist);
 
     });   
+}
 
-
-
+function loadmenub(){
+    var loadb='iniciars';
+    $.post("../controllers/loadcomponentsfront.php",{
+        postloadb:loadb
+    },function(responseload){
+     $("#iniciarse").html(responseload);
+    });
 }
