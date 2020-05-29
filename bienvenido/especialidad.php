@@ -38,10 +38,7 @@
                     <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
                 </div>
                 <div id="optionusers">
-                <!-- <button type="button" class="btn btn-outline-success">Crear Trabajo para Dispositivos Moviles</button>
-
                
-                    <img src="img/especialidad/dismoviles.png" class="rounded mx-auto d-block"> -->
                 </div>
 
 

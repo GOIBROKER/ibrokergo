@@ -56,20 +56,6 @@ require_once("../frames/headndesing.php");
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <!-- 
-    <div class="footer-newsletter" data-aos="fade-up">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="button" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <div class="footer-top">
       <div class="container">
@@ -129,10 +115,7 @@ require_once("../frames/headndesing.php");
         &copy; Copyright <strong><span>Appland</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
+       
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -265,8 +248,7 @@ require_once("../frames/headndesing.php");
       borrarsesiones();
       buscardep();
       loadmenub();
-      // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
-      //Carga Inicial de combo
+
     });
   </script>
 

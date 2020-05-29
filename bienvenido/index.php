@@ -35,7 +35,6 @@ require_once("../frames/sliderndesing.php");
             </div>
             <div class="col-sm">
               <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
                 <select class="form-control" id="tuser">
                   <option value="">1.- ¿Buscas un .: ?</option>
                   <option value='1'>Especialista</option>
@@ -46,7 +45,6 @@ require_once("../frames/sliderndesing.php");
             </div>
             <div class="col-sm">
               <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">Departamento</label> -->
 
                 <div id="resutcomboserv">
                 </div>
@@ -57,7 +55,6 @@ require_once("../frames/sliderndesing.php");
             </div>
             <div class="col-sm">
               <div class="form-group">
-                <!-- <label for="exampleFormControlSelect1">¿En que Ubicación?</label> -->
                 <div id="resutcombo">
 
                 </div>
@@ -105,7 +102,6 @@ require_once("../frames/sliderndesing.php");
             <div class="col-md-9">
 
               <div class="list-group" id="resultable">
-                <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"> -->
 
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
@@ -264,94 +260,12 @@ require_once("../frames/sliderndesing.php");
      
     </section><!-- End Pricing Section -->
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
-   
-    <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact">
-      <div class="container">
 
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-lg-6 info" data-aos="fade-up">
-                <i class="bx bx-map"></i>
-                <h4>Address</h4>
-                <p>A108 Adam Street,<br>New York, NY 535022</p>
-              </div>
-              <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-phone"></i>
-                <h4>Call Us</h4>
-                <p>+1 5589 55488 55<br>+1 5589 22548 64</p>
-              </div>
-              <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-envelope"></i>
-                <h4>Email Us</h4>
-                <p>contact@example.com<br>info@example.com</p>
-              </div>
-              <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-time-five"></i>
-                <h4>Working Hours</h4>
-                <p>Mon - Fri: 9AM to 5PM<br>Sunday: 9AM to 1PM</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <form action="frontend/forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
-              <div class="form-group">
-                <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <input placeholder="Subject" type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Message" class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="button">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Contact Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-<!-- 
-    <div class="footer-newsletter" data-aos="fade-up">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="button" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <div class="footer-top">
       <div class="container">
@@ -704,14 +618,7 @@ require_once("../frames/sliderndesing.php");
 
       </div>
 
-      <!--Footer-->
-      <!-- <div class="modal-footer justify-content-center">
-        <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
-          <i class="far fa-gem ml-1 text-white"></i>
-        </a>
-        <a href="register.php" class="btn btn-outline-warning waves-effect">Registrate</a>
-
-      </div> -->
+    
     </div>
     <!--/.Content-->
   </div>
@@ -760,15 +667,14 @@ require_once("../frames/sliderndesing.php");
 <script>
   $(document).ready(function() {
 
-    // Handler for .ready() called.
+
     loadbuttons();
     loadinitialespec();
     buscarserv();
     borrarsesiones();
     buscardep();
     loadmenub();
-    // cuando se recargue la página se van a borrar las sesiones para evitar errores de busqueda.
-    //Carga Inicial de combo
+
   });
 </script>
 
