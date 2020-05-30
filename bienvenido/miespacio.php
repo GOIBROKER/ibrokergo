@@ -294,6 +294,8 @@ input[type = "radio"]:checked ~ label{color:orange;}
       </div>
     </div>
   </div>
+
+  
   <!-- -->
   <!-- <script>
     function clickear() {
@@ -342,6 +344,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
   <script src="../utils/js/url.js"></script>
   <script src="../utils/js/datospersonales.js"></script>
   <script src="../utils/js/utils.js"></script>
+  
 </body>
 
 </html>

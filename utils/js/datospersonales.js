@@ -85,6 +85,9 @@ function mostrarformfirst(){
         requestactivateformfirst:activatefirstform
     },function(responseformfirs){
         $("#datospersonales").html(responseformfirs);
+        loaddepartamento();
+      departamentochange();
+      provinciachange();
     });
 }
 

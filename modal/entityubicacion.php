@@ -15,7 +15,7 @@ class modalubicacion{
     function selectdataubigeo($codubigeo){
         require("../utils/config/conex.php");
         $arrayubigeo = array();
-        $queryubicacion = mysqli_query($enlacego,"select * from ubigeo where idubigeo='$codubigeo'");
+        $queryubicacion = mysqli_query($enlacego,"select * from viewubigeo where idDistrito='$codubigeo'");
         while($rowubigeo = mysqli_fetch_assoc($queryubicacion)){
             $arrayubigeo[] = $rowubigeo;
         }
@@ -35,9 +35,9 @@ class modalubicacion{
         function mnameubic($codubic2){
             require("../utils/config/conex.php");
             
-            $querymnameubic = mysqli_query($enlacego,"SELECT * FROM ubigeo WHERE idubigeo = '$codubic2'");
+            $querymnameubic = mysqli_query($enlacego,"SELECT * FROM viewubigeo WHERE idDistrito = '$codubic2'");
             while($rowmnameubic = mysqli_fetch_assoc($querymnameubic)){
-                $lugar = $rowmnameubic['unido'];
+                $lugar = $rowmnameubic['distrito'].",".$rowmnameubic['departamento'];
             }
             return $lugar;
             mysqli_close($enlacego);

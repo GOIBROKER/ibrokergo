@@ -59,7 +59,7 @@ echo "<div class='col col-example'>";
 echo "<div class='card'>";
 echo "<div class='card-body'>";
 
-echo "<p class='text-primary'><center><strong>Mi servicio es .: ".$fdesserv['name']."</center></strong></br> Nombre.: ".$fdescripespeci['nameandlast']."</br>Ubicación .: ".$fubigeo['unido']."</p>";
+echo "<p class='text-primary'><center><strong>Mi servicio es .: ".$fdesserv['name']."</center></strong></br> Nombre.: ".$fdescripespeci['nameandlast']."</br>Ubicación .: ".$fubigeo['provincia'].",".$fubigeo['distrito']."</p>";
 
 echo $fdescripespeci['present'];
 echo "</div>";

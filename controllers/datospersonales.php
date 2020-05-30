@@ -75,12 +75,25 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "</div>";
     echo "</div>";
     echo "<div class='form-group'>";
-    echo "<label for='txtemail' class='col-sm-2 control-label'> Ubicación</label>";
+    echo "<label for='txtemail' class='col-sm-2 control-label'> Escoge.:</label>";
     echo "<div class='col-sm-10'>";
-    echo "<input type='text' class='form-control' id='txtubicacion' onkeyup='valubi()' placeholder='Provincia,provincia,distrito'>";
-    echo "<div id='smsubicacion'></div>";
+    // echo "<input type='text' class='form-control' id='txtubicacion' onkeyup='valubi()' placeholder='Provincia,provincia,distrito'>";
+    // echo "<div id='smsubicacion'></div>";
+
+
+    echo "<label for='inputAddress'>Ubicación : Departamento,Provincia,Distrito</label>";
+    echo "<select id='iddepartamento' class='form-control'>";
+    echo "</select>";
+    echo "<select id='idprovincia' class='form-control'>";
+    echo "<option value='' id=''>Escoge la provincia...</option>";
+    echo "</select>";
+    echo "<select id='iddistrito' class='form-control'>";
+    echo "<option value='' id=''>Escoge el Distrito...</option>";
+    echo "</select>";
     echo "</div>";
     echo "</div>";
+
+
     echo "<div class='form-group'>";
     echo "<label for='inputName' class='col-sm-2 control-label'>Dirección</label>";
     echo "<div class='col-sm-10'>";
@@ -195,7 +208,7 @@ if (!empty($_POST['requestmostrar'])) {
         echo "<label for='txtemail' class='col-sm-2 control-label'> Ubicación</label>";
         echo "<div class='col-sm-10'>";
         foreach ($dataubicacion->selectdataubigeo($foreachusers['ubigeo']) as $foreachubicacion) {
-            echo $foreachubicacion['unido'];
+            echo $foreachubicacion['provincia'].",".$foreachubicacion['distrito'];
         }
         echo "</div>";
         echo "</div>";

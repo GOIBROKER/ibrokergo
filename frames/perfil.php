@@ -323,3 +323,19 @@ session_start();
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script>
+    $(document).ready(function() {
+      loaddepartamento();
+      departamentochange();
+      provinciachange();
+  });
+      //load ubigeo
+
+     
+      
+
+ 
+  </script>
+
+<script src="../utils/js/ubigeo.js"></script>
