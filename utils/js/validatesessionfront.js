@@ -1,5 +1,5 @@
 function validatesession(codespecialist){
-  alert(codespecialist);
+
 var activatecontaces = "activate";
 $.post("../controllers/frontcontactarespec.php",{
     postactivatecontaces:activatecontaces,

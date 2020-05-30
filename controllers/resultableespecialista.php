@@ -47,7 +47,7 @@ if (!empty($_POST['postactivatetable'])) {
     $tipouser = '2';
     foreach ($entityusers->filtrobusqfront($_SESSION['lastidentipservicio'], $tipouser, $_SESSION['lasttxtsearchbar'],$_SESSION['ubigeofron'], $_SESSION['acumulaquery'], $_SESSION['suma']) as $lastfquereseach) {
 
-        echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
+        echo "<a  class='list-group-item list-group-item-action flex-column align-items-start' id='".$lastfquereseach['iduser']."' onclick='validatesession(this.id)'>";
         echo "<div class='d-flex w-100 justify-content-between'>";
         echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: " . $lastfquereseach['nameandlast'] . "</strong></p></h6>";
         echo "</br>";
@@ -76,7 +76,7 @@ if(!empty($_POST['postactespec'])){
  
     foreach($entityusers->listaruserxtip($tipuser,$Cantregi) as $fcantregistros){
 
-        echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
+        echo "<a  class='list-group-item list-group-item-action flex-column align-items-start' id='".$fcantregistros['iduser']."' onclick='validatesession(this.id)'>";
         echo "<div class='d-flex w-100 justify-content-between'>";
         echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: ".$fcantregistros['nameandlast']."</strong></p></h6>";
         echo "</br>";
@@ -143,7 +143,7 @@ if (!empty($_POST['postactivatesearch'])) {
     
     foreach ($entityusers->filtrobusqfront($_POST['postidentipservicio'], $tipouser, $_POST['posttxtsearchbar'], $_SESSION['ubigeofron'], 0, $flagsystem->flagviewregister) as $fquereseach) {
 
-        echo "<a href='#' class='list-group-item list-group-item-action flex-column align-items-start'>";
+        echo "<a  class='list-group-item list-group-item-action flex-column align-items-start' id='".$fquereseach['iduser']."' onclick='validatesession(this.id)'>";
         echo "<div class='d-flex w-100 justify-content-between'>";
         echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: " . $fquereseach['nameandlast'] . "</strong></p></h6>";
         echo "</br>";

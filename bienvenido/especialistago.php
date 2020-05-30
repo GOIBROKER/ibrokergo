@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition register-page">
+
+
+
 <div class="register-box">
   <div class="register-logo">
     <a href="../../index2.html"><b>Broker</b>Go</a>
