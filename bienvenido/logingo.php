@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php require_once("../controllers/validatesesion.php")?>
 
 <?php
 require_once("../frames/headndesing.php");
@@ -237,12 +238,12 @@ require_once("../frames/headndesing.php");
   </div>
   <!--Modal: Login / Register Form-->
 
-  <script src="../utils/js/loadcomponentsfront.js"></script>
+
   <script src="../utils/js/verifysesiones.js"></script>
   <script src="../utils/js/utils.js"></script>
   <script>
     $(document).ready(function() {
-
+      $("#iniciarse").html("<button type='button' class='btn btn-outline-primary' onclick='apmodalbus()'>Ir a inicio!</button>");
       // Handler for .ready() called.
       loadbuttons();
       loadinitialespec();
@@ -250,7 +251,7 @@ require_once("../frames/headndesing.php");
       borrarsesiones();
       buscardep();
       loadmenub();
-
+      
     });
   </script>
 

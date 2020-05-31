@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php require_once("../controllers/validatesesion.php")?>
 <?php
 require_once("../frames/headndesing.php");
 ?>
@@ -213,7 +213,7 @@ require_once("../frames/headndesing.php");
               <!--Footer-->
               <div class="modal-footer">
                 <div class="options text-center text-md-right mt-1">
-                  <p>No estas registrado? <a href="registergo.php" class="blue-text">Registrate</a></p>
+                  <p>No estas registrado? <a href="registrate.php" class="blue-text">Registrate</a></p>
                   <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
                 </div>
                 <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>

@@ -9,9 +9,14 @@ Incluir este módulo
 
 //Activamos la sesión 
 session_start();
-if($_SESSION['idtipouser']=="2"){
-
-}else{
-    header("location:../bienvenido/registergo.php");
+if(!empty($_SESSION['email'])){
+    echo "<script>alert('Tienes una sesión iniciada , te vamos a redirigir a tu panel')</script>";
+    header("location:../bienvenido/miespacio.php");
 }
+
+// if($_SESSION['flagactimenuse']=="2"){
+
+// }else{
+//     header("location:../bienvenido/registrate.php");
+// }
 ?>
