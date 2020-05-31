@@ -238,10 +238,12 @@ require_once("../frames/headndesing.php");
   <script src="../utils/js/loadcomponentsfront.js"></script>
   <script src="../utils/js/verifysesiones.js"></script>
   <script src="../utils/js/utils.js"></script>
+  <script src="../utils/js/menudesing.js"></script>
   <script>
     $(document).ready(function() {
 
       // Handler for .ready() called.
+      menuregistergo();
       loadbuttons();
       loadinitialespec();
       buscarserv();

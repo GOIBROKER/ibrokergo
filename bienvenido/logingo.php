@@ -241,10 +241,13 @@ require_once("../frames/headndesing.php");
 
   <script src="../utils/js/verifysesiones.js"></script>
   <script src="../utils/js/utils.js"></script>
+  <script src="../utils/js/menudesing.js"></script>
   <script>
     $(document).ready(function() {
-      $("#iniciarse").html("<button type='button' class='btn btn-outline-primary' onclick='apmodalbus()'>Ir a inicio!</button>");
+      // val menu
+      
       // Handler for .ready() called.
+      menulogingo();
       loadbuttons();
       loadinitialespec();
       buscarserv();
