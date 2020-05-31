@@ -71,6 +71,7 @@
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- jQuery 3 -->
 <script src="../librerias/bower_components/jquery/dist/jquery.min.js"></script>

@@ -32,6 +32,7 @@ function valdescripcion() {
 }
 
 function registrar() {
+    var ubicacion = $("#iddistrito option:selected").val();
     var txtname = $("#txtname").val();
     var txtdireccion = $("#txtdireccion").val();
     var txtdescripcion = $("#txtdescripcion").val();
@@ -52,11 +53,17 @@ function registrar() {
         requesttxtnrodoc: txtnrodoc,
         requestselectedtipodoc: selectedtipodoc,
         requesttxtubicacion: txtubicacion,
-        requestsespecialidad:sespecialidad
+        requestsespecialidad:sespecialidad,
+        requestubicacion:ubicacion
     }, function (responseregister) {
-        $("#smserrordatospersonales").html(responseregister);
-        var validateupdateusers = "Activate";
 
+        $("#smserrordatospersonales").html(responseregister);
+        if(responseregister.trim() === "0"){
+            alert("Hubo un error de actualización , intentalo más tarde");
+            $("#smserrordatospersonales").html("<code>Intentalo más tarde</code>");
+        }else if(responseregister.trim() === "1"){
+               var validateupdateusers = "Activate";
+       
             $.post("../controllers/gsolicitudcontroller.php", {
                 postvalidateupdateusers: validateupdateusers
             }, function (responseupdateusers) {
@@ -66,11 +73,14 @@ function registrar() {
                 $.post("../controllers/datospersonales.php", {
                     requestmostrar: mostrarvar
                 },function(responseeditar){
+                   
                 alert("Tu información fue actualizada! , Gracias.");
                 $("#datospersonales").html(responseeditar);
                 });
             }
         });
+        }
+      
      
        
     });
@@ -85,9 +95,7 @@ function mostrarformfirst(){
         requestactivateformfirst:activatefirstform
     },function(responseformfirs){
         $("#datospersonales").html(responseformfirs);
-        loaddepartamento();
-      departamentochange();
-      provinciachange();
+
     });
 }
 

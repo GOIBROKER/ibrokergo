@@ -239,5 +239,7 @@
           </div>
         </div>
       </div>
-      <!-- Main row -->
+
+    
+      <!-- Main rows -->
       <script src="../utils/js/loadmypanel.js"></script>

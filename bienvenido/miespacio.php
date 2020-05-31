@@ -14,7 +14,9 @@ label:hover ~ label{color:orange;}
 input[type = "radio"]:checked ~ label{color:orange;}
 </style> -->
 <!-- Importando el head -->
-<?php require_once("../frames/head.php"); ?>
+<?php require_once("../frames/head.php");
+
+?>
 
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -295,15 +297,110 @@ input[type = "radio"]:checked ~ label{color:orange;}
     </div>
   </div>
 
-  
-  <!-- -->
-  <!-- <script>
-    function clickear() {
+  <!-- Modal de iniciar sesion tipo cliente escogiendo una especialidad por primera vez -->
+  <div class="modal fade bd-example-modal-lg" id="id01" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Bienvenido a BROKERGO - GUIA DE USO!</h4>
 
-        $("#informeespecialidad").modal("show");
+        <div class="modal-body">
+          <div id="datawelcome">
 
-    }
-  </script> -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="box box-default">
+                  <div class="box-header with-border">
+                    <i class="fa fa-warning"></i>
+
+                    <h3 class="box-title">Publica un trabajo</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <div class="alert alert-success alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      <?php
+                      if($_SESSION['tipouser'] == 1){
+                      echo "<h4><i class='icon fa fa-ban'></i> Recibe Propuestas</h4>";
+                      echo "Publica un trabajo y recibe propuestas y elige al mejor en calidad y precio!.";
+                      }else if($_SESSION['tipouser'] == 2){
+                        echo "<h4><i class='icon fa fa-ban'></i>Encuentra Trabajo</h4>";
+                        echo "Muchos Clientes esperando que hagas realidad sus proyectos - Encuentralo en Subastas!.";
+                      }
+
+                      ?>
+                      
+                    </div>
+                    <img class="img-responsive" src="frontend/assets/img/subasta.png" alt="Photo">
+                       
+                    <div class="alert alert-info alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      <h4><i class="icon fa fa-info"></i>Ir a .: Mis Opciones - <strong>Publicar Trabajo</strong></h4>
+
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+              </div>
+              <!-- /.col -->
+
+              <div class="col-md-6">
+                <div class="box box-default">
+                  <div class="box-header with-border">
+                    <i class="fa fa-bullhorn"></i>
+
+                    <h3 class="box-title">Ver mi Panel</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+
+
+
+                    <div class="callout callout-success">
+                      <h4>Ver tus Solicitudes</h4>
+
+                      <p>Verifica tus solicitudes o propuestas de trabajo ( En caso seas especialista) .</p>
+                    </div>
+                    <img class="img-responsive" src="frontend/assets/img/solicitudes.png" alt="Photo">
+
+                    <div class="alert alert-info alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                      <h4><i class="icon fa fa-info"></i>Ir a .: Mis Opciones - <strong>Mi Panel</strong></h4>
+
+                    </div>
+
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+              </div>
+              <!-- /.col -->
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar Guía</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../utils/js/bienvenidse.js"></script>
+  <script>
+    $(document).ready(function() {
+        welcome();
+    })
+  </script>
+
+  <script>
+
+
+  </script>
   <!-- jQuery 3 -->
   <script src="../librerias/bower_components/jquery/dist/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
@@ -344,7 +441,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
   <script src="../utils/js/url.js"></script>
   <script src="../utils/js/datospersonales.js"></script>
   <script src="../utils/js/utils.js"></script>
-  
+
 </body>
 
 </html>

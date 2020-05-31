@@ -370,11 +370,11 @@ require_once("../frames/headndesing.php");
               </select>
 
               <select id="idprovincia" class="form-control">
-                <option value='' id=''>Escoge la provincia...</option>
+                <option value='' disabled>Escoge la provincia...</option>
               </select>
 
               <select id="iddistrito" class="form-control">
-                <option value='' id=''>Escoge el Distrito...</option>
+                <option value=''>Escoge el Distrito...</option>
               </select>
 
             </div>

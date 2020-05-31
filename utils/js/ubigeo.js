@@ -18,7 +18,7 @@ function departamentochange() {
         postvalprov:valprov
     },function(responseprov){
         $("#idprovincia").html(responseprov);
-        $("#iddistrito").html("<option>Escoge el Distrito...</option>");
+        $("#iddistrito").html("<option value=''>Escoge el Distrito...</option>");
     });
     });
 }

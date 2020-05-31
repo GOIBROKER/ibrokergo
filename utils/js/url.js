@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // Pasará el parameto a content.php
     function validar(url){
+
         var rutainicial="../frames/"+url;
         $.post(rutainicial,{
         

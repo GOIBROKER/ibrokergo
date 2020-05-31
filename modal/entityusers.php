@@ -34,8 +34,15 @@ class entityusersmodal{
         // Función que realizará la primera actualización del Especialista GO o Cliente GO
     function Actualizarusuario($nameandlastname,$ubigeo,$direccion,$nrodoc,$celular,$tipodoc,$email,$presentacion,$especialidad){
         require("../utils/config/conex.php");
+        
         $updatequery = mysqli_query($enlacego,"UPDATE gouser SET nameandlast = '$nameandlastname',ubigeo = '$ubigeo',direccion = '$direccion',nrodoc = '$nrodoc',celular = '$celular',tdocumento = '$tipodoc' ,present = '$presentacion' ,idtipservicio = '$especialidad' WHERE email = '$email'");
-         mysqli_close($enlacego);
+        if($updatequery == false){
+            $flagac = "0"; // Error
+        }else{
+            $flagac = "1";
+        }
+        return $flagac;
+        mysqli_close($enlacego);
     }
 
 

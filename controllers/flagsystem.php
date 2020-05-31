@@ -34,5 +34,8 @@ class flags{
     // flag estrellas
     public $flagcovid = "tempcovid";
     public $flagpoints = "points";
+
+    // limitador del nro de de veces que va a parecer el modal id01 que es la bienvenida
+    public $id01 = 3;
 }
 ?>

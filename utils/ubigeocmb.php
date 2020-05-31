@@ -1,14 +1,5 @@
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
 
@@ -17,11 +8,11 @@
 </select>
 
 <select id="idprovincia" class="form-control">
-<option value='' id='' >Escoge la provincia...</option>
+<option value=''>Escoge la provincia...</option>
 </select>
 
 <select id="iddistrito" class="form-control">
-<option value='' id='' >Escoge el Distrito...</option>
+<option value=''>Escoge el Distrito...</option>
 </select>
 
 
@@ -52,7 +43,7 @@
             postvalprov:valprov
         },function(responseprov){
             $("#idprovincia").html(responseprov);
-            $("#iddistrito").html("<option>Escoge el Distrito...</option>");
+            $("#iddistrito").html("<option value=''>Escoge el Distrito...</option>");
         });
         });
     }

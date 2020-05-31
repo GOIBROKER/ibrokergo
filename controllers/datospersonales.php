@@ -82,14 +82,15 @@ if (!empty($_POST['requestactivateformfirst'])) {
 
 
     echo "<label for='inputAddress'>Ubicación : Departamento,Provincia,Distrito</label>";
-    echo "<select id='iddepartamento' class='form-control'>";
-    echo "</select>";
-    echo "<select id='idprovincia' class='form-control'>";
-    echo "<option value='' id=''>Escoge la provincia...</option>";
-    echo "</select>";
-    echo "<select id='iddistrito' class='form-control'>";
-    echo "<option value='' id=''>Escoge el Distrito...</option>";
-    echo "</select>";
+    require("../utils/ubigeocmb.php");
+    // echo "<select id='iddepartamento' class='form-control'>";
+    // echo "</select>";
+    // echo "<select id='idprovincia' class='form-control'>";
+    // echo "<option value='' id=''>Escoge la provincia...</option>";
+    // echo "</select>";
+    // echo "<select id='iddistrito' class='form-control'>";
+    // echo "<option value=''>Escoge el Distrito...</option>";
+    // echo "</select>";
     echo "</div>";
     echo "</div>";
 
@@ -104,9 +105,8 @@ if (!empty($_POST['requestactivateformfirst'])) {
  if($_SESSION['tipouser'] == "2"){
     echo "<div class='form-group'>";
     echo "<label for='inputExperience' class='col-sm-2 control-label'>Presentación</label>";
-    echo "<div id='smspresentacion'></div>";
     echo "<div class='col-sm-10'>";
-    echo "<textarea class='form-control' maxlength='350' id='txtdescripcion' onkeyup='valdescripcion()' placeholder='Describe un poco lo que sabes hacer...' required></textarea>";
+    echo "<textarea class='form-control' maxlength='350' id='txtdescripcion'  placeholder='Describe un poco lo que sabes hacer...' required></textarea>";
     echo "</div>";
     echo "</div>";
  }
@@ -158,11 +158,13 @@ if (!empty($_POST['requestmostrar'])) {
     // Lógica que envia al front si el usuario tiene registrado los datos para iniciar con la validación
 
     //Validar si es la primera vez que ingrsa a la opción para editar datos
-
+    
     foreach ($entityusers->listaruser($_SESSION['email']) as $foreachusers) {
         $flagdevalidacion = $foreachusers['nrodoc'];
     }
-    if ($flagdevalidacion == 0) {
+
+    $vregistro = $utils->vregisteruser($_SESSION['email']);
+    if ($vregistro === 0) {
         // es 0 cuando se encuentra sin registrar
         echo "<div class='alert alert-info alert-dismissible'>";
         echo "<h4><i class='icon fa fa-info'></i> Gracias por Registrarte!</h4>";
@@ -172,7 +174,7 @@ if (!empty($_POST['requestmostrar'])) {
         echo "<button type='button' onclick='mostrarformfirst()' class='btn btn-block btn-primary btn-lg'>Comienza a Editar</button>";
 
         echo "</div>";
-    } else {
+    } else if($vregistro === 1){
         // Si encuentra información en la Base de datos sobre el Doc,Dirección,whatsapp , entre otras , se mostrará este Form para editar la información
         //Vamos a extraer la información desde la base de datos.
         //Si la data existe se va a crear una sesión para no editar el campo de DNI y Nombres y apellidos.
@@ -316,8 +318,8 @@ if (!empty($_POST['requestactivateregister'])) {
     $descripcion = $utils->firtsletterup($utils->characterespecialubicacion($_POST['requesttxtdescripcion']));
     $celular = $utils->characterespecialubicacion($_POST['requesttxtcel']);
     $nrodoc = $utils->characterespecialubicacion($_POST['requesttxtnrodoc']);
-    $requesttxtubicacion = $utils->characterespecialubicacion($_POST['requesttxtubicacion']);
-
+    // $requesttxtubicacion = $utils->characterespecialubicacion($_POST['requesttxtubicacion']);
+    $requesttxtubicacion = $utils->characterespecialubicacion($_POST['requestubicacion']);
 
 
     foreach($entityusers->listaruser($_SESSION['email']) as $resulttipo2){
@@ -355,7 +357,7 @@ if (!empty($_POST['requestactivateregister'])) {
     } else if ($utils->valdatavacia($descripcion) === "false") {
         $mensaje = "El campo presentación no puede estar vacia";
     } else if ($utils->valdatavacia($requesttxtubicacion) === "false") {
-        $mensaje = "El campo Ubicación no puede estar vacia";
+        $mensaje = "Debes de indicar tu Departamento/Provincia/Distrito";
     } else if ($utils->valdatavacia($celular) === "false") {
         $mensaje = "El campo Celular no puede estar vacia";
     } else if ($utils->valnrotelefono($celular) != 1) {
@@ -364,20 +366,18 @@ if (!empty($_POST['requestactivateregister'])) {
         $mensaje = "Error en el campo presentación";
     } else if (!empty($utils->validaciontipodoc($nrodoc, $tipodoc))) {
         $mensaje = $utils->validaciontipodoc($nrodoc, $tipodoc);
-    } else if (!isset($_SESSION['ubigeo'])) {
-        $mensaje = "Falta escoger tu Ubicación";
-    } else if ($_SESSION['ubigeo'] == "ubigeofalse") {
-        $mensaje = "No existe la Ubicación indicada , favor de corregir";
+    // } else if (!isset($_SESSION['ubigeo'])) {
+    //     $mensaje = "Falta escoger tu Ubicación";
+    // } else if ($_SESSION['ubigeo'] == "ubigeofalse") {
+    //     $mensaje = "No existe la Ubicación indicada , favor de corregir";
     } else if(!empty($utils->tipouser($resulttip,$requestsespecialidad,$sdettable,$cdettable))){
         $mensaje = $utils->tipouser($resulttip,$requestsespecialidad,$sdettable,$cdettable);
     } else {
         // Funcionalidad "Publicar un trabajo"
         //Cambia la variable si ya existe la sesión de tdoc,nombre y nro doc
-        $entityusers->Actualizarusuario($nombre, $_SESSION['ubigeo'], $direccion, $nrodoc, $celular, $tipodoc, $_SESSION['email'], $descripcion,$requestsespecialidad);
+        echo $_SESSION['flagactivadorupdateusers'] = $entityusers->Actualizarusuario($nombre,$_POST['requestubicacion'], $direccion, $nrodoc, $celular, $tipodoc, $_SESSION['email'], $descripcion,$requestsespecialidad);
         //Flag que indica que fue actualizado correctamente
-        $_SESSION['flagactivadorupdateusers'] = "1";
-        
-        
+  
     }
 
     if (!empty($mensaje)) {

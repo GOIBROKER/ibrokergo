@@ -12,7 +12,7 @@ function secondoption(){
     // Conseguir texto de selector:
     // var selectedespecialidad = $("#selectioninformatico option:selected").text();
     // Tomamos el valor de la opción para crear una sesión
-    var selectedespecialidad =$("#selectioninformatico").val();
+    var selectedespecialidad =$("#selectioninformatico option:selected").val();
     $.post("../controllers/viewelcome.php",{
         requestactivatesecond:varactivatesecond,
         requestoptionservice:selectedespecialidad

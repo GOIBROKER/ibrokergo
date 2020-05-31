@@ -10,7 +10,7 @@ $listarserviciosmodal = new serviciosmodal();
 
 echo "<p class='text-info' style='margin-bottom:14px'><h4>Escoge el Tipo de Servicio.</h4></p>";
 echo "<select class='browser-default custom-select' id='selectioninformatico'>"; 
-echo "<option selected>Seleccion aqui - GO</option>";
+echo "<option value=''>Seleccion aqui - GO</option>";
 
 //Cargar en el combo la lista de servicios del campo name
 foreach($listarserviciosmodal->listarservicios() as $foreachlistarservicios){

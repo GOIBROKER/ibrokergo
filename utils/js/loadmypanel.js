@@ -137,3 +137,8 @@ function ticketnottermin(){
 
     });
 }
+
+function valsesionloadaviso(){
+var activate = "activate";
+$.post();
+}

@@ -1,7 +1,13 @@
+
 <!-- Content Wrapper. Contains page content -->
 <?php require_once("../modal/entityprecios.php");
 
 ?>
+
+</div>
+
+
+
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -100,33 +106,7 @@
                   </div>
                 </div>
                 <div class="panel box box-success">
-                  <!-- <div class="box-header with-border">
-                    <h4 class="box-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                        ¿Remoto o Presencial?
-
-
-                      </a>
-                    </h4>
-                  </div> -->
-                  <!-- <div id="collapseThree" class="panel-collapse collapse">
-                    <div class="box-body">
-                      <strong>Remota .:</strong> Si tiene confianza con su Especialista , solicite una asistencia remota , una atención no presencial.
-                      <br>
-                      <strong>Presencial .: </strong>Desea que el especialista GO asista a su domicio.
-                      <br>
-                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                        <label class="btn btn-secondary">
-                          <input type="radio" name="tservicio" value='1' autocomplete="off"> Presencial
-                        </label>
-                        <label class="btn btn-secondary">
-                          <input type="radio" name="tservicio" value='2' autocomplete="off"> Remoto
-                        </label>
-                      </div>
-
-                    </div>
-                  </div> -->
+                 
                 </div>
               </div>
             </div>
@@ -230,6 +210,8 @@
     </div>
   </div>
   <!-- /.content -->
-</div>
+
+
 <!-- /.content-wrapper -->
 <script src="../utils/js/gsolicitud.js"></script>
+

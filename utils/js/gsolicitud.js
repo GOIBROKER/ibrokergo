@@ -38,6 +38,7 @@ function generarsolicitud() {
         if (responseregistrarsol == 1) {
 
             $("#modalnotexistdata").modal("show");
+
             var activatefirstform = "activate";
             $.post("../controllers/datospersonales.php", {
                 requestactivateformfirst: activatefirstform
@@ -74,30 +75,36 @@ function generarsolicitud() {
 
 function registrardata() {
     //Activar el registro   
+    
     registrar();
+    
+    var validateupdateusers ="activate";
+    $.post("../controllers/gsolicitudcontroller.php",{
+        postvalidateupdateusers:validateupdateusers
+    },function(response){
+        
+        if(response == 1){
+            var validateupdateusers = "activate";
+            $.post("../controllers/gsolicitudcontroller.php",{
+                postvalidateupdateusers:validateupdateusers 
+            },function(responseval2){
+              
+                if(responseval2 == 0){
+                    alert("Grabado incorrectamente");
+                }else if(responseval2 == 1){
+                    $("#modalnotexistdata").modal("hide");
+                    alert("Grabado Correctamente");
+                    
+                }
+                
+            });
+        }
+    });
     //$_SESSION['flagactivador']  -- La sesión se va activar cuando la función registrar registre correctamente.
 
     // Vamos a consultar la sesión y si existe se cerrara el formulario y se activara el registro de informacion
 
-    var activateflagactivador = "Activate";
-    $.post("../controllers/gsolicitudcontroller.php", {
-        postvalidateupdateusers: activateflagactivador
-    }, function (responseflagactivador) {
-        if(responseflagactivador == 0){
-            var activate ="data";
-            $.post("../controllers/gsolicitudcontroller.php", {
-                postvalidateupdateusers: activate
-            },function(response){
-                if(response == 1){
-                    alert("Información actualizada correctamente , termina tu solicitud");
-                    $("#modalnotexistdata").modal("hide");
-                }
-                if(response == 0){
-                    alert("Hubo un error al Grabar");
 
-                }
-            });
-        }
         // alert(responseflagactivador);
         
         // if (responseflagactivador.trim() == "1") {
@@ -112,7 +119,6 @@ function registrardata() {
         // }
 
 
-    });
 }
 
 function valdescripcionpublic() {
