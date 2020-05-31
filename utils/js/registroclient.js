@@ -61,7 +61,7 @@ function registrar(codtipuser) {
                     $("#gopc").html(responsesesionexiste);
                 } else if (codtipuser == 2) {
                     alert("Ya tienes cuenta - Te vamos a redireccionar");
-                    $(location).attr('href', "login.php");
+                    $(location).attr('href', "logingo.php");
                 }
 
 
@@ -78,12 +78,12 @@ function registrar(codtipuser) {
                 if (codtipuser == 1) {
                     // Ruta para cliente GO
                     alert("Ahora Eres un Cliente - Inicia tu Sesión")
-                    $(location).attr('href', "login.php");
+                    $(location).attr('href', "logingo.php");
                     // $("#gopc").html(responsesesionnotexiste);
                 }else if(codtipuser == 2) {
                     // Ruta para Especialista GO
                     alert("Ahora Eres un Especialista GO - Inicia tu Sesión")
-                    $(location).attr('href', "login.php");
+                    $(location).attr('href', "logingo.php");
                     
                 }
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("location:../bienvenido/login.php");
+header("location:../bienvenido/logingo.php");
 
 ?>

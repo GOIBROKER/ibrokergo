@@ -4,6 +4,6 @@ session_start();
 if(!empty($_SESSION['nameandlast'])){
 
 }else{
-    header("location:../bienvenido/login.php");
+    header("location:../bienvenido/logingo.php");
 }
 ?>

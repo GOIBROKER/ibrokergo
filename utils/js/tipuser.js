@@ -3,7 +3,7 @@ function validate(){
     $.post("../controllers/login.php",{
         requestactivatetipuser:activatetipuser
     },function(responsesesion){
-        $(location).attr('href',"especialistago.php");
+        $(location).attr('href',"registrate.php");
     });
 
 }

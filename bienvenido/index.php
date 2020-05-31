@@ -494,7 +494,7 @@ require_once("../frames/headndesing.php");
 
         <!--Footer-->
         <div class="modal-footer justify-content-center">
-          <a href="login.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
+          <a href="logingo.php" class="btn btn-warning waves-effect waves-light">Iniciar Sesión
             <i class="far fa-gem ml-1 text-white"></i>
           </a>
           <a href="registergo.php" class="btn btn-outline-warning waves-effect">Registrate</a>
