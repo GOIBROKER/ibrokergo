@@ -10,7 +10,7 @@ class loguingo
 
         $queryselect = mysqli_query($enlacego, "select * from gouser where email='$user'");
         $countuserexits = mysqli_num_rows($queryselect);
-
+        
         if ($countuserexits == 1) {
             $mensaje = "1";
         } else {

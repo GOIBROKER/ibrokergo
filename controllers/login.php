@@ -9,6 +9,8 @@ require_once("../utils/utils.php");
 //vamos a traer una clase para realizar las sesiones
 require_once("../modal/entityusers.php");
 session_start();
+$utilshe = new utilsphp();
+
 if (!empty($_POST['requestactivatelogin'])) {
     if(!empty($_SESSION['temptipuser1'])){
         $_SESSION['temptipuser1']="";
@@ -22,15 +24,17 @@ if (!empty($_POST['requestactivatelogin'])) {
         $email = $_POST['requestemail'];
         $password = $_POST['requestpassword'];
         $validatelogin = new loguingo();
+        $email2 = $utilshe->characterespecialubicacion($email);    
+
         // Mientras que el email y contraseña tengan informacion
-        if (!empty($email) && !empty($password)) {
+        if (!empty($email2) && !empty($password)) {
             // Validamos que exista el usuario
-            $resultado = $validatelogin->loginvalidate($email);
+            $resultado = $validatelogin->loginvalidate($email2);
             // Si existe el usuario retorna el número 1 , caso contrari sería incorrecto
             if ($resultado == 1) {
                 $desincryptar = new utilsphp();
                 //traemos la contraseña encryptada
-                $passdb = $validatelogin->verificaruser($email, $password);
+                $passdb = $validatelogin->verificaruser($email2, $password);
                 // Validamos en Util la desincrytación : si nos trae 1 es correcta , caso contrario error.
                 if ($desincryptar->desincryptarpass($password, $passdb) == "1") {
                     $selectuser = new entityusersmodal();
@@ -46,9 +50,9 @@ if (!empty($_POST['requestactivatelogin'])) {
                         $_SESSION['iduser'] = "";
                     }
                     //--------------------------------------------
-                    foreach ($selectuser->listaruser($email) as $foreachresultselect) {
+                    foreach ($selectuser->listaruser($email2) as $foreachresultselect) {
                         $_SESSION['nameandlast'] = $foreachresultselect['nameandlast'];
-                        $_SESSION['email'] = $email;
+                        $_SESSION['email'] = $email2;
                         $_SESSION['iduser'] = $foreachresultselect['iduser'];
                         $_SESSION['tipouser'] = $foreachresultselect['tipouser'];
                         $_SESSION['aliastipouser'] = $tipouser->buscartipuser($foreachresultselect['tipouser']);
