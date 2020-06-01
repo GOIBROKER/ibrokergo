@@ -27,3 +27,7 @@ function menulogingo(){
     $("#btnbuscar").attr("onclick","location.href='index.php';");
     $("#buttondos").html("<a href='registergo.php' >Registrate</a>");
 }
+
+function registratemenu(){
+    $("#btnbuscar").hide();
+}

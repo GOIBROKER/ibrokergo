@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once("../controllers/validatesesion.php")?>
+
+<?php
+//Crear sesión para registrar
+echo $_SESSION['temptipuser1'] = 1;
+
+?>
+
 <?php
 require_once("../frames/headndesing.php");
 ?>
@@ -235,10 +242,12 @@ require_once("../frames/headndesing.php");
   <script src="../utils/js/loadcomponentsfront.js"></script>
   <script src="../utils/js/verifysesiones.js"></script>
   <script src="../utils/js/utils.js"></script>
+  <script src="../utils/js/menudesing.js"></script>
   <script>
     $(document).ready(function() {
 
       // Handler for .ready() called.
+      menulogingo();
       loadbuttons();
       loadinitialespec();
       buscarserv();
