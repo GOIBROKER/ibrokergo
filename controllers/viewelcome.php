@@ -53,6 +53,6 @@ echo "</div>";
 echo "</div>";
 echo "</div>";
 echo "<button type='button' onclick='firtsoption()' class='btn btn-danger btn-lg'>Retroceder</button>";
-echo "<button type='button' id='btnregistrarse' onclick='registrar(1)' class='btn btn-primary btn-lg'>Registrarse</button>";
+echo "<button type='button' id='btnregistrarse' onclick='registrar()' class='btn btn-primary btn-lg'>Registrarse</button>";
 }
 ?>

@@ -43,7 +43,7 @@ class utilsphp
     function characterespecialubicacion($texto)
     {
         #$texto = preg_replace('([^A-Za-z0-9])', '', $texto); - - quita con espacios
-        $texto = preg_replace('([^A-Za-z0-9 ,ñÑáéíóúÁÉÍÓÚ])', '', $texto);	     					
+        $texto = preg_replace('([^A-Za-z0-9 ,ñÑáéíóúÁÉÍÓÚ@._-])', '', $texto);	     					
         return $texto;
     }
 

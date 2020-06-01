@@ -1,6 +1,7 @@
 <?php
 require_once("../utils/utils.php");
 require_once("../modal/entityusers.php");
+session_start();
 //obtener la hora actual
 // Fin de obtener hora actua
 
@@ -13,7 +14,7 @@ if (!empty($_POST['requestactivate'])) {
     $pass1 = trim($_POST['requestpass1']);
     $pass2 = trim($_POST['requestpass2']);
     $requestnamecompleto = ucwords(trim($_POST['requestnamecompleto']));
-    $email = strtolower(trim($_POST['requestemail']));
+    $email = $validatepass->characterespecialubicacion(strtolower(trim($_POST['requestemail'])));
     $valuser = $selectuser->buscarusers($email);
     if ($_POST['resquestvalemail'] == "false") {
         // Trae un mensaje de la base de datos , tabla alert , es lo mismo para los otros códigos
@@ -28,15 +29,17 @@ if (!empty($_POST['requestactivate'])) {
         echo $validatepass ->alerts("4");
     } else if ($_POST['requestvalcondiciones'] == "false") {
         echo $validatepass ->alerts("5");
-    } else if ($valuser == "true") {
+    } else if ($valuser === 0) {
         // Si existe el usuario el resultado será 1
         echo "1";
 
-    } else {
+    } else if($valuser === 69){
+        echo "69";// Error desconocido
+    }else {
         // Tipo de usuario 1 = Cliente
         $checkcontrato = $_POST['requestvalcondiciones'];
         // Tipo de Usuario 1 = Cliente , 2 = Especialista GO , desde registroclient.js
-        $tipodeuser = $_POST['requestcodtipuser'];
+        $tipodeuser = $_SESSION['temptipuser1'];
         // Encryptar contraseña
         $passencryptado = $validatepass->Encryptarpass($pass2);
         // Traer Fecha Actual
@@ -44,9 +47,9 @@ if (!empty($_POST['requestactivate'])) {
         // Verificar el tipo de usuario enviado desde registroclient.js
        
         // Se realizar el registro del usuario
-        $insertuser->registrarusers($tipodeuser,$fechaactual, $email, $passencryptado, $checkcontrato,$requestnamecompleto);
-        echo "2";
-
+        echo $insertuser->registrarusers($tipodeuser,$fechaactual, $email, $passencryptado, $checkcontrato,$requestnamecompleto);
+        
+        
 
 
 

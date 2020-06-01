@@ -9,14 +9,12 @@ function validateemail(valor) {
     return mensaje;
 }
 
-function registrar(codtipuser) {
+function registrar() {
 
-    // Rutas para verificar si que tipo de usuario es / Cliente o Especialista GO
-    if (codtipuser == 1) {
-        var rutaclienteorespecialistago = "../controllers/registroclient.php";
-    } else if (codtipuser == 2) {
-        var rutaclienteorespecialistago = "../controllers/registroclient.php";
-    }
+    // Rutas 
+
+    var rutaclienteorespecialistago = "../controllers/registroclient.php";
+
     // Rutas para verificar si que tipo de usuario es / Cliente o Especialista GO
 
     // Recibir valores de especialidad.php or register.php
@@ -47,53 +45,66 @@ function registrar(codtipuser) {
         requestvalcondiciones: mensajecondiciones,
         requestemail: inputemail,
         requestnamecompleto: inputnombres,
-        requestcodtipuser: codtipuser,
         requestactivate: activate
     }, function (responseregisterclient) {
+
         if (responseregisterclient == 1) {
-            // Si la sesión existe se va a crear una nueva ventana para que inicie sesión.
-            var activatesesionexist = "activate";
-            $.post(rutaclienteorespecialistago, {
-                requestactivatesesionexist: activatesesionexist
-            }, function (responsesesionexiste) {
-                // Depende el usuario va a redireccionar ya que se tiene diferentes rutas
-                if (codtipuser == 1) {
-                    $("#gopc").html(responsesesionexiste);
-                } else if (codtipuser == 2) {
-                    alert("Ya tienes cuenta - Te vamos a redireccionar");
-                    $(location).attr('href', "logingo.php");
-                }
-
-
-            });
-
-        } else if (responseregisterclient == 2) {
-            // Si no existe la cuenta , se va a insertar y se realizara la siguiente vista
-            var activatesesionnotexist = "activate";
-            $.post(rutaclienteorespecialistago, {
-                requestactivatesesionnotexist: activatesesionnotexist
-            }, function (responsesesionnotexiste) {
-      
-
-                if (codtipuser == 1) {
-                    // Ruta para cliente GO
-                    alert("Ahora Eres un Cliente - Inicia tu Sesión")
-                    $(location).attr('href', "logingo.php");
-                    // $("#gopc").html(responsesesionnotexiste);
-                }else if(codtipuser == 2) {
-                    // Ruta para Especialista GO
-                    alert("Ahora Eres un Especialista GO - Inicia tu Sesión")
-                    $(location).attr('href', "logingo.php");
-                    
-                }
-
-            });
-
-
-
-        } else {
-            $("#alertval").html(responseregisterclient);
+            alert("Ya tienes cuenta - Te vamos a redireccionar");
+            $(location).attr('href', "logingo.php");
+        }else if(responseregisterclient == 69){
+            alert("Error desconocido , intentalo más tarde");
+        }else if(responseregisterclient == 3){
+            alert("Error desconocido , intentalo más tarde");
+        }else if(responseregisterclient == 4){
+            alert("Registrado correctamente - Inicia Sesión");
+            $(location).attr('href', "logingo.php");
         }
-
     });
+            // Si la sesión existe se va a crear una nueva ventana para que inicie sesión.
+            // var activatesesionexist = "activate";
+            // $.post(rutaclienteorespecialistago, {
+            //     requestactivatesesionexist: activatesesionexist
+            // }, function (responsesesionexiste) {
+                // Depende el usuario va a redireccionar ya que se tiene diferentes rutas
+                // if (codtipuser == 1) {
+                //     $("#gopc").html(responsesesionexiste);
+                // } else if (codtipuser == 2) {
+                //     alert("Ya tienes cuenta - Te vamos a redireccionar");
+                //     $(location).attr('href', "logingo.php");
+                // }
+
+
+            // });
+
+            // } else if (responseregisterclient == 2) {
+            //     // Si no existe la cuenta , se va a insertar y se realizara la siguiente vista
+            //     var activatesesionnotexist = "activate";
+            //     $.post(rutaclienteorespecialistago, {
+            //         requestactivatesesionnotexist: activatesesionnotexist
+            //     }, function (responsesesionnotexiste) {
+
+
+            //         if (codtipuser == 1) {
+            //             // Ruta para cliente GO
+            //             alert("Ahora Eres un Cliente - Inicia tu Sesión")
+            //             $(location).attr('href', "logingo.php");
+            //             // $("#gopc").html(responsesesionnotexiste);
+            //         }else if(codtipuser == 2) {
+            //             // Ruta para Especialista GO
+            //             alert("Ahora Eres un Especialista GO - Inicia tu Sesión")
+            //             $(location).attr('href', "logingo.php");
+
+            //         }
+
+            //     });
+
+
+
+            // } else {
+            //     $("#alertval").html(responseregisterclient);
+            // }
+
+            // });
+    //     }
+    // }
 }

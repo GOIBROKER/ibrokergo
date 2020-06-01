@@ -5,20 +5,32 @@ class entityusersmodal{
     function registrarusers($tipouser,$datetime,$email,$password,$contrato,$nombrescompletos){
         require("../utils/config/conex.php");
         $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 'default', 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default','99')");
+        if($queryinsert==false){
+            $register = 3; // Error Desconocido
+        }else{
+            $register = 4; // Procede
+        }
+        return $register;
         mysqli_close($enlacego); 
     }
     // Buscar usuario por Email y devolver la cantidad de filas
     function buscarusers($codemail){
         require("../utils/config/conex.php");
-        $queryselect =mysqli_query($enlacego,"select * from gouser where email='$codemail'");
+        $queryselect = mysqli_query($enlacego,"select * from gouser where email='$codemail'");
         $filas = mysqli_fetch_row($queryselect);
-        if($filas >=1){
-            // Si existe el usuario es true
-            $respuesta = "true";
+        
+        if($queryselect==false){
+            $respuesta = 69;
         }else{
-            // Si no existe el usuario es false
-            $respuesta = "false";
+            if($filas >=1){
+                // Si existe el usuario es true
+                $respuesta = 0;
+            }else{
+                // Si no existe el usuario es false
+                $respuesta = 1;
+            }
         }
+        
         return $respuesta;
         mysqli_close($enlacego); 
     }

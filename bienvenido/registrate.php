@@ -4,7 +4,16 @@
 <?php
 require_once("../frames/headndesing.php");
 ?>
+<?php
+//Crear sesión para registrar
+if(!empty($_SESSION['temptipuser1'])){
+  $_SESSION['temptipuser1'] = 2;
+}else{
+  $_SESSION['temptipuser1'] = 2;
+}
 
+
+?>
 <body>
 
   <!-- ======= Header ======= -->

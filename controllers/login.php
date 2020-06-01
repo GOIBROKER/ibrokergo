@@ -10,6 +10,9 @@ require_once("../utils/utils.php");
 require_once("../modal/entityusers.php");
 session_start();
 if (!empty($_POST['requestactivatelogin'])) {
+    if(!empty($_SESSION['temptipuser1'])){
+        $_SESSION['temptipuser1']="";
+    }
     if (!empty($_SESSION['email'])) {
         // Si la sesión ya esta iniciada se va a rechazar y se va a enviar al panel
         echo "2";

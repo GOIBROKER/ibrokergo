@@ -4,7 +4,12 @@
 
 <?php
 //Crear sesión para registrar
-echo $_SESSION['temptipuser1'] = 1;
+if(!empty($_SESSION['temptipuser1'])){
+  $_SESSION['temptipuser1'] = 1;
+}else{
+  $_SESSION['temptipuser1'] = 1;
+}
+
 
 ?>
 
