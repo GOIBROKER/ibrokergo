@@ -363,7 +363,7 @@ if (!empty($_POST['requestactivateregister'])) {
     } else if ($utils->valnrotelefono($celular) != 1) {
         $mensaje = $utils->valnrotelefono($celular);
     } else if (!empty($utils->cajadedetxtarea($numdescripción))) {
-        $mensaje = $utils->cajadedetxtarea($numdescripción);
+        $mensaje = "El campo presentación ".$utils->cajadedetxtarea($numdescripción);
     } else if (!empty($utils->validaciontipodoc($nrodoc, $tipodoc))) {
         $mensaje = $utils->validaciontipodoc($nrodoc, $tipodoc);
     // } else if (!isset($_SESSION['ubigeo'])) {

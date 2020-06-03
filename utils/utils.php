@@ -138,7 +138,7 @@ class utilsphp
     }
 
     /*
-    Validar existencia de opciones en base de datos
+    Validar existencia de opciones en base de datos para los selects
     
     */
     function validarestados($codigo,$tabla,$campo){

@@ -10,18 +10,18 @@ function buscardep(){
 }
 function buscardepbusq(valor){
     
-    if(valor===""){
-        $("#resultdep").html("");
-    }else{
-        var busqdep = "activate";
-        $.post("../controllers/utilsfront.php",{
-            responsebusqdep:busqdep,
-            responsevalinput:valor
-        },function(responsedep){
+    // if(valor===""){
+    //     $("#resultdep").html("");
+    // }else{
+    //     var busqdep = "activate";
+    //     $.post("../controllers/utilsfront.php",{
+    //         responsebusqdep:busqdep,
+    //         responsevalinput:valor
+    //     },function(responsedep){
            
-            $("#resultdep").html(responsedep);
-        });
-    }
+    //         $("#resultdep").html(responsedep);
+    //     });
+    // }
     
     
 }

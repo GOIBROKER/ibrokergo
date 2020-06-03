@@ -149,15 +149,15 @@ if(!empty($_POST['postfinish'])){
     echo "<center><h3>";
     echo "<div id='wrapper'>";
     echo "<p class='clasificacion'>";
-    echo "<input id='radio1' type='radio' name='estrellas' value='5'>";
+    echo "<input id='radio1' type='radio' name='estrellas' value='1'>";
     echo "<label for='radio1'>★</label>";
-    echo "<input id='radio2' type='radio' name='estrellas' value='4'>";
+    echo "<input id='radio2' type='radio' name='estrellas' value='2'>";
     echo "<label for='radio2'>★</label>";
     echo "<input id='radio3' type='radio' name='estrellas' value='3'>";
     echo "<label for='radio3'>★</label>";
-    echo "<input id='radio4' type='radio' name='estrellas' value='2'>";
+    echo "<input id='radio4' type='radio' name='estrellas' value='4'>";
     echo "<label for='radio4'>★</label>";
-    echo "<input id='radio5' type='radio' name='estrellas' value='1'>";
+    echo "<input id='radio5' type='radio' name='estrellas' value='5'>";
     echo "<label for='radio5'>★</label>";
     echo "</p>";
     echo "</div>";
@@ -190,8 +190,9 @@ $postcoment = $_POST['postcomentario'];
 if(!empty($utilsphp2->depurateinfor('25',$_POST['postcomentario'],"Comentario"))){
     echo $utilsphp2->depurateinfor('25',$_POST['postcomentario'],"Comentario");
 }else{
+
     // Obtener fecha ( Devolvera un 1 si no hubo error en la insercción)
-    echo $entityquality->insertdata($_SESSION['sesionidhist'],$postpuntaje1,$_POST['postcomentario'],$postpuntaje2,$utilsphp2->fecha(),$flagsload->flagestintermedio,'99');
+    echo $entityquality->insertdata($_SESSION['sesionidhist'],$postpuntaje1,$utilsphp2->characterespecialubicacion($_POST['postcomentario']),$postpuntaje2,$utilsphp2->fecha(),$flagsload->flagestintermedio,'99');
 
 }
 
@@ -294,13 +295,13 @@ if(!empty($_POST['postnoconcluido'])){
 }
 
 if(!empty($_POST['postgrabarflujo2'])){
-  
+  $_POST['postselecterrorserv'];
     if(!empty($utilsphp2->depurateinfor('25',$_POST['postcoment'],"Comentario"))){
         echo $utilsphp2->depurateinfor('25',$_POST['postcoment'],"Comentario");
     }else{
         // Obtener fecha ( Devolvera un 1 si no hubo error en la insercción)
-
-        echo $entityquality->insertdata($_SESSION['sesionidhist'],$flagsload->puntaje,$_POST['postcoment'],$flagsload->puntaje,$utilsphp2->fecha(),$flagsload->flagestanotconcluido,$_POST['postselecterrorserv']);
+        
+        echo $entityquality->insertdata($_SESSION['sesionidhist'],$flagsload->puntaje,$utilsphp2->characterespecialubicacion($_POST['postcoment']),$flagsload->puntaje,$utilsphp2->fecha(),$flagsload->flagestanotconcluido,$_POST['postselecterrorserv']);
     
     }
 }

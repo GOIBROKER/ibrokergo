@@ -1,4 +1,5 @@
 function loadtickets(){
+
     var loadticket = "activate";
     $.post("../controllers/loadmypanelcont.php",{
         postloadticket:loadticket
@@ -58,6 +59,7 @@ function grabar(){
     var puntaje1 = $('input:radio[name=estrellas]:checked').val();
     var puntaje2 = $('#slspuntaje2 option:selected').val();
     var comentario = $("#txtcomentario").val();
+ 
     var acti ="activate";
     if(puntaje1<1 || puntaje1>=6 || puntaje1 == null){
         alert ("Tienes que indicar un puntaje válido de atención de especialista");
@@ -70,7 +72,7 @@ function grabar(){
             postpuntaje2:puntaje2,
             postcomentario:comentario
         },function(responseacti){
-        alert(responseacti);
+    
             if(responseacti == 1){
                 alert("se registro correctamente");
                 $("#idregister").modal("hide");
@@ -129,10 +131,14 @@ function ticketnottermin(){
         postcoment:coment,
         postselecterrorserv:selecterrorserv
     },function(responseflujo2){
+        alert(responseflujo2);
         if(responseflujo2 == 1){
             alert("Haremos lo mejor posible para mejorar el servicio , Gracias");
             $("#idregister").modal("hide");
             loadtickets();
+        }
+        if(responseflujo2 == 0){
+            alert("Hubo un error en la insercción , Intentalo más tarde");
         }
 
     });

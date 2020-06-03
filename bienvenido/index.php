@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <?php
 require_once("../frames/headndesing.php");
 ?>
@@ -31,7 +31,7 @@ require_once("../frames/headndesing.php");
       <div class="container">
         <div class="row">
           <div class="col-sm">
-            <h3 class="h4 text-center mb-4">Filtrar por.:</h3>
+            <h3 class="h4 text-center mb-4"><i class='fas fa-book' style='font-size:24px'></i>Filtrar por.:</h3>
           </div>
           <div class="col-sm">
             <div class="form-group">
@@ -60,6 +60,46 @@ require_once("../frames/headndesing.php");
               </div>
             </div>
           </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col-sm">
+
+            <div class="form-group">
+              <h3 class="h3 text-center mb-5"><i class='fas fa-map-marker-alt' style='font-size:24px'></i>
+                Ubicación.:</h3>
+            </div>
+
+
+          </div>
+
+          <div class="col-sm">
+            <div class="form-group">
+              <select class="form-control" id="iddepartamento">
+                <option value="">Departamento?</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <select class="form-control" id="idprovincia">
+                <option value="">Provincia?</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <select class="form-control" id="iddistrito">
+                <option value="">Distrito?</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm">
+
+          </div>
+
         </div>
       </div>
 

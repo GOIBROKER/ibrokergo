@@ -1,13 +1,24 @@
 <?php 
 
+// Default quality------------------
 
+
+
+
+//----------------------------------
 class entitynewservice{
 
 // Estado de solicitud 1 = Abierto , 2 = "Cerrado" , 3 = "No concretado" - Se insertara en duro
     function registrarservicio($iduser,$idserv,$tmaserv,$detalleserv,$idpaprox,$idtipserv,$fecharegistro,$estadoserv,$idespeasignado){
+        
+        $pointdefault = 100;
+        $comentario = "defaultsystem";
+        $pointtempcovid = 100;
+        $idtiperrordefault =99;
+
         require("../utils/config/conex.php");
         $estadosol='1';
-        $insertdata = mysqli_query($enlacego,"INSERT INTO newservice VALUES (NULL, '$iduser', '$idserv', '$tmaserv', '$detalleserv', '$idpaprox', '$idtipserv', '$fecharegistro', NULL, NULL, '$estadosol','$idespeasignado','$estadoserv',NULL)");
+        $insertdata = mysqli_query($enlacego,"INSERT INTO newservice VALUES (NULL, '$iduser', '$idserv', '$tmaserv', '$detalleserv', '$idpaprox', '$idtipserv', '$fecharegistro', NULL, NULL, '$estadosol','$idespeasignado','$estadoserv',NULL,'$pointdefault','$comentario','$pointtempcovid','$idtiperrordefault')");
         mysqli_close($enlacego);
 
     //    if($insertdata == false){

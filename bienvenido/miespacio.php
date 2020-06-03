@@ -394,6 +394,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
   <script>
     $(document).ready(function() {
         welcome();
+   
     })
   </script>
 
@@ -441,7 +442,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
   <script src="../utils/js/url.js"></script>
   <script src="../utils/js/datospersonales.js"></script>
   <script src="../utils/js/utils.js"></script>
-
+  <script src="../utils/js/loadmypanel.js"></script>
 </body>
 
 </html>

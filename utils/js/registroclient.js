@@ -10,7 +10,7 @@ function validateemail(valor) {
 }
 
 function registrar() {
-
+alert("hola");
     // Rutas 
 
     var rutaclienteorespecialistago = "../controllers/registroclient.php";
@@ -47,7 +47,7 @@ function registrar() {
         requestnamecompleto: inputnombres,
         requestactivate: activate
     }, function (responseregisterclient) {
-
+        $("#alertval").html(responseregisterclient);;
         if (responseregisterclient == 1) {
             alert("Ya tienes cuenta - Te vamos a redireccionar");
             $(location).attr('href', "logingo.php");
