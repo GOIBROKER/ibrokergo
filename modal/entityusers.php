@@ -4,7 +4,7 @@ class entityusersmodal{
 
     function registrarusers($tipouser,$datetime,$email,$password,$contrato,$nombrescompletos){
         require("../utils/config/conex.php");
-        $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 'default', 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default','99')");
+        $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 0, 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default','99')");
         if($queryinsert==false){
             $register = 3; // Error Desconocido
         }else{
@@ -83,15 +83,33 @@ class entityusersmodal{
         mysqli_close($enlacego);
     }
     // Funcion que se utiliza en el search de la web
-    function filtrobusqfront($idtipservicio, $idtipouser, $present, $ubigeo,$inicio2,$fin2)
+    function filtrobusqfront($idtipservicio, $idtipouser, $present, $departamento,$provincia,$distrito,$nameespecialista,$inicio2,$fin2)
     {
         require("../utils/config/conex.php");
-        $querysearch = mysqli_query($enlacego, "SELECT * FROM gouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND ubigeo LIKE '%$ubigeo%' AND tdocumento<>9 limit $inicio2,$fin2");
+        // $querysearch = mysqli_query($enlacego, "SELECT * FROM gouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND ubigeo LIKE '%$ubigeo%' AND tdocumento<>9 limit $inicio2,$fin2");
+        $querysearch = mysqli_query($enlacego, "SELECT * FROM viewubigeouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND idDistrito LIKE '%$distrito%' AND idProvincia  LIKE '%$provincia%' AND idDepartamento  LIKE '%$departamento%' AND nameandlast LIKE '%$nameespecialista%' AND tdocumento<>9 LIMIT $inicio2,$fin2");
         $arraysearch = array();
         while ($rowsearch = mysqli_fetch_assoc($querysearch)) {
             $arraysearch[] = $rowsearch;
         }
-        return $arraysearch;
+        
+            return $arraysearch;
+        
+        
+        mysqli_close($enlacego);
+    }
+// Busca cantidad
+    function totalbusqfront($idtipservicio, $idtipouser, $present, $departamento,$provincia,$distrito,$nameespecialista,$inicio2,$fin2)
+    {
+        require("../utils/config/conex.php");
+        // $querysearch = mysqli_query($enlacego, "SELECT * FROM gouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND ubigeo LIKE '%$ubigeo%' AND tdocumento<>9 limit $inicio2,$fin2");
+        $querysearch = mysqli_query($enlacego, "SELECT * FROM viewubigeouser WHERE idtipservicio LIKE '%$idtipservicio%' AND tipouser = '$idtipouser' AND present LIKE '%$present%' AND idDistrito LIKE '%$distrito%' AND idProvincia  LIKE '%$provincia%' AND idDepartamento  LIKE '%$departamento%' AND nameandlast LIKE '%$nameespecialista%' AND tdocumento<>9 LIMIT $inicio2,$fin2");
+        if($querysearch == false){
+            return 99; // error
+        }else{
+            $flagtotal = mysqli_num_rows($querysearch);
+            return $flagtotal;
+        }
         mysqli_close($enlacego);
     }
 
