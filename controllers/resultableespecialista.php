@@ -15,57 +15,66 @@ session_start();
 $flaginiciosearch = '2';
 
 
-// if (!empty($_POST['postactivatetable'])) {
+if (!empty($_POST['postactivatetable'])) {
 
-//     if(empty($_SESSION['lastidentipservicio'])){
-//         $_SESSION['lastidentipservicio']="";
-//     }
-//     if(empty($_SESSION['lasttxtsearchbar'])){
-//         $_SESSION['lasttxtsearchbar']="";
-//     }
-//     if(empty($_SESSION['ubigeofron'])){
-//         $_SESSION['ubigeofron']="";
-//     }
-
-
+    if(empty($_SESSION['lastidentipservicio'])){
+        $_SESSION['lastidentipservicio']="";
+    }
+    if(empty($_SESSION['lasttxtsearchbar'])){
+        $_SESSION['lasttxtsearchbar']="";
+    }
+    if(empty($_SESSION['ubigeofron'])){
+        $_SESSION['ubigeofron']="";
+    }
 
 
-//   // Flag que muestra  la cantidad de registros que se va a visualizar
-//     $flagregistrosview = $flagsystem->flagviewregister;
-//     //----------------------
 
-//     if (empty($_SESSION['acumulaquery'])) {
+
+  // Flag que muestra  la cantidad de registros que se va a visualizar
+    $flagregistrosview = $flagsystem->flagviewregister;
+    //----------------------
+
+    if (empty($_SESSION['acumulaquery'])) {
      
-//         $_SESSION['acumulaquery'] = 0;
-//     }
-//     if (empty($_SESSION['suma'])) {
-//         $_SESSION['suma'] = $flagsystem->flagviewregister ;
-//     }
-//     $_SESSION['acumulaquery'] = $_SESSION['acumulaquery'] + $_SESSION['suma'];
-//     //---------------------
+        $_SESSION['acumulaquery'] = 0;
+    }
+    if (empty($_SESSION['suma'])) {
+        $_SESSION['suma'] = $flagsystem->flagviewregister ;
+    }
+    $_SESSION['acumulaquery'] = $_SESSION['acumulaquery'] + $_SESSION['suma'];
+    //---------------------
 
-//     $tipouser = '2';
-//     foreach ($entityusers->filtrobusqfront($_SESSION['lastidentipservicio'], $tipouser, $_SESSION['lasttxtsearchbar'],$_SESSION['ubigeofron'], $_SESSION['acumulaquery'], $_SESSION['suma']) as $lastfquereseach) {
+    $tipouser = '2';
+    //                     filtrobusqfront($utilsfront->characterespecialubicacion($_POST['postidentipservicio']), $tipouser, $utilsfront->characterespecialubicacion($_POST['posttxtsearchbar']), $utilsfront->characterespecialubicacion($departamento), $utilsfront->characterespecialubicacion($provincia), $utilsfront->characterespecialubicacion($distrito), $utilsfront->characterespecialubicacion($txtnameespe), 0, $flagsystem->flagviewregister) as $fquereseach) {
 
-//         echo "<a  class='list-group-item list-group-item-action flex-column align-items-start' id='".$lastfquereseach['iduser']."' onclick='validatesession(this.id)'>";
-//         echo "<div class='d-flex w-100 justify-content-between'>";
-//         echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: " . $lastfquereseach['nameandlast'] . "</strong></p></h6>";
-//         echo "</br>";
-//         echo "<small>" . $entityubic->mnameubic($lastfquereseach['ubigeo']) . "</small>";
-//         echo "</div>";
-//         echo "<p class='mb-1'>" . $utilsfront->cortartexto($lastfquereseach['present']) . "</p>";
-//         echo "<h5><p class='text-danger'><small><strong>Calidad en.:</strong>";
-//         echo $viewscalculate->calculastar($lastfquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagpoints);
-//         echo "| Seguridad anti-Covid".$viewscalculate->calculastar($lastfquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagcovid)."</small></p></h5>";
-//         echo "<strong><small>".$viewscalculate->calculaestrellas($lastfquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado)."</small></strong>";
-//         echo "</br>";
-//         echo "<button type='button' id='".$lastfquereseach['iduser']."' onclick='validatesession(this.id)' class='btn btn-primary'>Contactar</button>";
-//         echo "</a>";
-//     }
+    $flagcount = $entityusers->totalbusqfront($utilsfront->characterespecialubicacion($_SESSION['lastidentipservicio']), $tipouser, $utilsfront->characterespecialubicacion($_SESSION['lasttxtsearchbar']), $utilsfront->characterespecialubicacion($_SESSION['depa']), $utilsfront->characterespecialubicacion($_SESSION['prov']), $utilsfront->characterespecialubicacion($_SESSION['dist']), $utilsfront->characterespecialubicacion($_SESSION['nameessearch']), $_SESSION['acumulaquery'], $_SESSION['suma']);
+    if ($flagcount === 99) {
+        echo "Ocurrio un error de busqueda, lo estaremos solucionando lo más pronto posible";
+    } else if ($flagcount === 0) {
+        echo "Sin Resultados!";
+    } else if ($flagcount >= 0) {
+        foreach ($entityusers->filtrobusqfront($utilsfront->characterespecialubicacion($_SESSION['lastidentipservicio']), $tipouser, $utilsfront->characterespecialubicacion($_SESSION['lasttxtsearchbar']), $utilsfront->characterespecialubicacion($_SESSION['depa']), $utilsfront->characterespecialubicacion($_SESSION['prov']), $utilsfront->characterespecialubicacion($_SESSION['dist']), $utilsfront->characterespecialubicacion($_SESSION['nameessearch']), $_SESSION['acumulaquery'], $_SESSION['suma']) as $lastfquereseach) {
 
-//     $_SESSION['suma'] = $flagregistrosview;
-
-// }
+            echo "<a  class='list-group-item list-group-item-action flex-column align-items-start' id='" . $lastfquereseach['iduser'] . "' onclick='validatesession(this.id)'>";
+            echo "<div class='d-flex w-100 justify-content-between'>";
+            echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: " . $lastfquereseach['nameandlast'] . "</strong></p></h6>";
+            echo "</br>";
+            echo "<small>" . $lastfquereseach['provincia'] . "," . $lastfquereseach['distrito'] . "</small>";
+            echo "</div>";
+            echo "<p class='mb-1'>" . $utilsfront->cortartexto($lastfquereseach['present']) . "</p>";
+            echo "<h5><p class='text-danger'><small><strong>Calidad en.:</strong>";
+            echo $viewscalculate->calculastar($lastfquereseach['iduser'], $flagsystem->flagnoconcluido, $flagsystem->flagestacerrado, $flagsystem->flagpoints);
+            echo "| Seguridad anti-Covid" . $viewscalculate->calculastar($lastfquereseach['iduser'], $flagsystem->flagnoconcluido, $flagsystem->flagestacerrado, $flagsystem->flagcovid) . "</small></p></h5>";
+            echo "<strong><small>" . $viewscalculate->calculaestrellas($lastfquereseach['iduser'], $flagsystem->flagnoconcluido, $flagsystem->flagestacerrado) . "</small></strong>";
+            echo "</br>";
+            echo "<button type='button' id='" . $lastfquereseach['iduser'] . "' onclick='validatesession(this.id)' class='btn btn-primary'>Contactar</button>";
+            echo "</a>";
+        }
+    }else{
+        echo "Error desconocido en busqueda , estaremos solucionando lo más pronto posible";
+    }
+    $_SESSION['suma'] = $flagregistrosview;
+}
 
 if(!empty($_POST['postactespec'])){
     
@@ -95,29 +104,37 @@ if(!empty($_POST['postactespec'])){
         
     }
 }
-//
+
 if (!empty($_POST['postactivatesearch'])) {
     // Validar vacios - Valor por defecto - Nuevo Ubigeo
     if (empty($_POST['postiddepartamento'])) {
         $departamento = "";
+        $_SESSION['depa'] = "";
     } else {
         $departamento = $_POST['postiddepartamento'];
+        $_SESSION['depa'] = $_POST['postiddepartamento'];
     }
     if (empty($_POST['postidprovincia'])) {
         $provincia = "";
+        $_SESSION['prov'] = "";
     } else {
         $provincia = $_POST['postidprovincia'];
+        $_SESSION['prov'] = $_POST['postidprovincia'];
     }
     if (empty($_POST['postiddistrito'])) {
         $distrito = "";
+        $_SESSION['dist'] = "";
     } else {
         $distrito = $_POST['postiddistrito'];
+        $_SESSION['dist'] = $_POST['postiddistrito'];
     }
 
     if (empty($_POST['posttxtnameespe'])) {
         $txtnameespe = "";
+        $_SESSION['nameessearch'] = "";
     } else {
         $txtnameespe = $_POST['posttxtnameespe'];
+        $_SESSION['nameessearch'] = $_POST['posttxtnameespe'];
     }
  
 
@@ -165,7 +182,7 @@ if (!empty($_POST['postactivatesearch'])) {
     $tipouser = '2'; // Tipo de usuario especialista , no aplica para cliente , solo para trabajos
     //--------------------------------------
 
-    //Aplicar Filtrados Ver variable de retorno
+    // Aplicar Filtrados Ver variable de retorno
     // echo "tipo ser.:".$utilsfront->characterespecialubicacion($_POST['postidentipservicio']);
     // echo "</br>";
     // echo "tipo user.:".$tipouser;
@@ -183,6 +200,10 @@ if (!empty($_POST['postactivatesearch'])) {
     // echo "tipo inicio. 0.";
     // echo "</br>";
     // echo "tipo fin.:".$flagsystem->flagviewregister;
+
+
+
+
     $flagcant = $entityusers->totalbusqfront($utilsfront->characterespecialubicacion($_POST['postidentipservicio']), $tipouser, $utilsfront->characterespecialubicacion($_POST['posttxtsearchbar']), $utilsfront->characterespecialubicacion($departamento), $utilsfront->characterespecialubicacion($provincia), $utilsfront->characterespecialubicacion($distrito), $utilsfront->characterespecialubicacion($txtnameespe), 0, $flagsystem->flagviewregister);
     if ($flagcant === 99) {
         echo "Ocurrio un error de busqueda, lo estaremos solucionando lo más pronto posible";
@@ -215,29 +236,7 @@ if (!empty($_POST['postactivatesearch'])) {
     }else{
         echo "Error desconocido en busqueda , estaremos solucionando lo más pronto posible";
     }
-    // foreach ($entityusers->filtrobusqfront($utilsfront->characterespecialubicacion($_POST['postidentipservicio']), $tipouser, $utilsfront->characterespecialubicacion($_POST['posttxtsearchbar']), $utilsfront->characterespecialubicacion($departamento), $utilsfront->characterespecialubicacion($provincia), $utilsfront->characterespecialubicacion($distrito), $utilsfront->characterespecialubicacion($txtnameespe), 0, $flagsystem->flagviewregister) as $fquereseach) {
-
-    //     echo "<a  class='list-group-item list-group-item-action flex-column align-items-start' id='".$fquereseach['iduser']."' onclick='validatesession(this.id)'>";
-    //     echo "<div class='d-flex w-100 justify-content-between'>";
-    //     echo "<h6 class='mb-1'><p class='text-dark'><strong>Especialista .: " . $fquereseach['nameandlast'] . "</strong></p></h6>";
-    //     echo "</br>";
-    //     echo "<small>".$fquereseach['provincia']."</small>";
-    //     echo "</div>";
-    //     echo "<p class='mb-1'>" . $utilsfront->cortartexto($fquereseach['present']) . "</p>";
-    //     echo "<h5><p class='text-danger'><small><strong>Calidad de Atención.:</strong>";
-    //     echo $viewscalculate->calculastar($fquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,'points');
-    //     echo "| Seguridad anti-Covid".$viewscalculate->calculastar($fquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado,$flagsystem->flagcovid)."</small></p></h5>";
-    //     echo "</small></p></h5>";
-    //     echo "<small>".$viewscalculate->calculaestrellas($fquereseach ['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado)."</small>";
-    //     echo "</br>";
-    //     // foreach($viewscalculate->calculastar($fquereseach['iduser'],$flagsystem->flagnoconcluido,$flagsystem->flagestacerrado) as $fpoint){
-    //     //     echo "Aqui <small>".$fpoint['sumapserv']."</small>";
-    //     // }
-
-   
-    //     echo "<button type='button' id='".$fquereseach['iduser']."' onclick='validatesession(this.id)' class='btn btn-primary'>Contactar</button>";
-    //     echo "</a>";
-    // }
+    
 
 
 }
