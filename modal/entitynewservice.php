@@ -19,6 +19,11 @@ class entitynewservice{
         require("../utils/config/conex.php");
         $estadosol='1';
         $insertdata = mysqli_query($enlacego,"INSERT INTO newservice VALUES (NULL, '$iduser', '$idserv', '$tmaserv', '$detalleserv', '$idpaprox', '$idtipserv', '$fecharegistro', NULL, NULL, '$estadosol','$idespeasignado','$estadoserv',NULL,'$pointdefault','$comentario','$pointtempcovid','$idtiperrordefault')");
+        if($insertdata==false){
+            return 0;// error
+        }else{
+            return 1;
+        }
         mysqli_close($enlacego);
 
     //    if($insertdata == false){

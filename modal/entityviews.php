@@ -32,10 +32,10 @@ function calculaestrellas($idespecialista,$flagxdefecto,$solcerrada){
         $starlleno ="<i class='fas fa-star'></i>";//lleno
         $starmedio ="<i class='fas fa-star-half-alt'></i>";//Medio Lleno
         // Estraer total de clientes
-        $querynum2 = mysqli_query($enlacego, "SELECT iduser FROM viewstart WHERE idespeclient = '$idespecialista' AND idtiperror = '$flagxdefecto' AND estadosol='$solcerrada'");
+        $querynum2 = mysqli_query($enlacego, "SELECT iduser FROM newservice WHERE idespeclient = '$idespecialista' AND idtiperror = '$flagxdefecto' AND estadosol='$solcerrada'");
         $totclien = mysqli_num_rows($querynum2);
         // Estraer el total de points de servicio
-        $querysum = mysqli_query($enlacego, "SELECT SUM($campoamedir) as sumapserv FROM viewstart WHERE idespeclient = '$idespecialista' AND idtiperror = '$flagxdefecto' AND estadosol='$solcerrada'");
+        $querysum = mysqli_query($enlacego, "SELECT SUM($campoamedir) as sumapserv FROM newservice WHERE idespeclient = '$idespecialista' AND idtiperror = '$flagxdefecto' AND estadosol='$solcerrada'");
         while ($rowd = mysqli_fetch_assoc($querysum)) {
             $total = $rowd['sumapserv'];
         }

@@ -181,7 +181,7 @@ if(!empty($_POST['postfinish'])){
     echo "<textarea class='form-control' id='txtcomentario' rows='3'></textarea>";
     echo "</div>";
 }
-
+//
 if(!empty($_POST['grabarflujo1'])){
 $postpuntaje1 = $_POST['postpuntaje1'];
 $postpuntaje2 = $_POST['postpuntaje2'];

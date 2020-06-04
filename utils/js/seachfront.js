@@ -11,7 +11,7 @@ function searchfront(){
     var iddepartamento = $("#iddepartamento option:selected").val();
     var idprovincia = $("#idprovincia option:selected").val();
     var iddistrito = $("#iddistrito option:selected").val();
-    alert(iddepartamento+idprovincia+iddistrito+txtnameespe);
+
     $.post("../controllers/resultableespecialista.php",{   
         
         postactivatesearch : activatesearch,
@@ -24,7 +24,7 @@ function searchfront(){
         postiddistrito:iddistrito,
         posttxtnameespe:txtnameespe
     },function(responsectivatesearch){
-        alert(responsectivatesearch);
+    
         $("#resultable").html(responsectivatesearch);
         $("#buttonbusq").html("<button type='button' class='btn btn-danger btn-lg btn-block' id='btntable' value='1' onclick='addtable()'><i class='fas fa-wifi pr-2' aria-hidden='true'></i>Cargar más resultados</button>");
         

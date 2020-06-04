@@ -3,6 +3,7 @@ function registerservice(){
     titulo = $("#txttitulo").val();
     detalle = $("#txtdetalleob").val();
     select = $("#selectserv option:selected").val();
+
     $.post("../controllers/gsolicitudfront.php",{
         postactivaterse:activaterse,
         posttitulo:titulo,

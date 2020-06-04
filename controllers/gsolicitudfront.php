@@ -22,8 +22,13 @@ if(!empty($_POST['postactivaterse'])){
     }else if($_SESSION['iduser'] == $_SESSION['idespeci']){
         echo "<p class='text-danger'> No puedes generar solicitudes para tu mismo usuario ;)</p>";
     }else{
-        $entitynewservice->registrarservicio($_SESSION['iduser'],$_SESSION['idtservicioespe'],$_POST['posttitulo'],$_POST['postdetalle'],$_POST['postselect'],'1',$utilsphpregister->fecha(),'D',$_SESSION['idespeci']);
-        echo "1";
+        $result = $entitynewservice->registrarservicio($_SESSION['iduser'],$_SESSION['idtservicioespe'],$_POST['posttitulo'],$_POST['postdetalle'],$_POST['postselect'],'1',$utilsphpregister->fecha(),'D',$_SESSION['idespeci']);
+        if($result === 0){
+            echo "Ocurrio un error inesperado, volver a intentarlo o volver más tarde";
+        }else if($result === 1){
+            echo 1;
+        }
+        
     }
 
 }
