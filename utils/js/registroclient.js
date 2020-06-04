@@ -47,7 +47,7 @@ function registrar() {
         requestnamecompleto: inputnombres,
         requestactivate: activate
     }, function (responseregisterclient) {
-        $("#alertval").html(responseregisterclient);;
+        
         if (responseregisterclient == 1) {
             alert("Ya tienes cuenta - Te vamos a redireccionar");
             $(location).attr('href', "logingo.php");
@@ -58,6 +58,8 @@ function registrar() {
         }else if(responseregisterclient == 4){
             alert("Registrado correctamente - Inicia Sesión");
             $(location).attr('href', "logingo.php");
+        }else{
+            $("#alertval").html(responseregisterclient);
         }
     });
            }

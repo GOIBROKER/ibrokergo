@@ -98,7 +98,7 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "<div class='form-group'>";
     echo "<label for='inputName' class='col-sm-2 control-label'>Dirección</label>";
     echo "<div class='col-sm-10'>";
-    echo "<input type='text' class='form-control' id='txtdireccion' placeholder='Indica donde estas ubicado' required>";
+    echo "<input type='text' class='form-control' id='txtdireccion' placeholder='Indica donde estas ubicado - No se verá en la web' required>";
     echo "</div>";
     echo "</div>";
 
@@ -106,7 +106,7 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "<div class='form-group'>";
     echo "<label for='inputExperience' class='col-sm-2 control-label'>Presentación</label>";
     echo "<div class='col-sm-10'>";
-    echo "<textarea class='form-control' maxlength='350' id='txtdescripcion'  placeholder='Describe un poco lo que sabes hacer...' required></textarea>";
+    echo "<textarea class='form-control' maxlength='350' id='txtdescripcion'  placeholder='Haz una buena presentación , esto es lo que verán tus clientes...' required></textarea>";
     echo "</div>";
     echo "</div>";
  }
@@ -114,7 +114,7 @@ if (!empty($_POST['requestactivateformfirst'])) {
     echo "<div class='form-group'>";
     echo "<label for='inputSkills' class='col-sm-2 control-label'><i class='fa fa-whatsapp fa-2' aria-hidden='true'></i> Whatsapp</label>";
     echo "<div class='col-sm-10'>";
-    echo "<input type='tiponumber' class='form-control' id='txtcel' placeholder='Nro Whatsapp' required>";
+    echo "<input type='tiponumber' class='form-control' id='txtcel' placeholder='Por aqui te van a contactar' required>";
     echo "</div>";
     echo "</div>";
 

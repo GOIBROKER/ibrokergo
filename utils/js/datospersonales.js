@@ -57,7 +57,7 @@ function registrar() {
         requestubicacion:ubicacion
     }, function (responseregister) {
 
-        $("#smserrordatospersonales").html(responseregister);
+        
         if(responseregister.trim() === "0"){
             alert("Hubo un error de actualización , intentalo más tarde");
             $("#smserrordatospersonales").html("<code>Intentalo más tarde</code>");
@@ -79,6 +79,8 @@ function registrar() {
                 });
             }
         });
+        }else{
+            $("#smserrordatospersonales").html(responseregister);
         }
       
      

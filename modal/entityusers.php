@@ -74,7 +74,7 @@ class entityusersmodal{
     }
     function listaruserxtip($tipuser,$cantregistros){
         require("../utils/config/conex.php");
-        $querytouser = mysqli_query($enlacego,"select * from gouser where tipouser ='$tipuser' limit $cantregistros");
+        $querytouser = mysqli_query($enlacego,"select * from gouser where tipouser ='$tipuser' AND tdocumento<>9 limit $cantregistros");
         $arraytouser = array();
         while($rowtouser = mysqli_fetch_assoc($querytouser)){
             $arraytouser[] = $rowtouser;
