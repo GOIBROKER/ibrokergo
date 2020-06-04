@@ -322,7 +322,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
                       <?php
                       if($_SESSION['tipouser'] == 1){
                       echo "<h4><i class='icon fa fa-ban'></i> Recibe Propuestas</h4>";
-                      echo "Publica un trabajo y recibe propuestas y elige al mejor en calidad y precio!.";
+                      echo "Publica un trabajo y recibe propuestas y elige al mejor en calidad y precio - Proximamente!.";
                       }else if($_SESSION['tipouser'] == 2){
                         echo "<h4><i class='icon fa fa-ban'></i>Encuentra Trabajo</h4>";
                         echo "Muchos Clientes esperando que hagas realidad sus proyectos - Encuentralo en Subastas!.";
@@ -335,7 +335,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
                        
                     <div class="alert alert-info alert-dismissible">
                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                      <h4><i class="icon fa fa-info"></i>Ir a .: Mis Opciones - <strong>Publicar Trabajo</strong></h4>
+                      <h4><i class="icon fa fa-info"></i>Proximamente - <strong>En Go!</strong></h4>
 
                     </div>
                   </div>

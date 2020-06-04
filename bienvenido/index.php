@@ -33,19 +33,10 @@ require_once("../frames/headndesing.php");
           <div class="col-sm">
             <h3 class="h4 text-center mb-4"><i class='fas fa-book' style='font-size:24px'></i>Filtrar por.:</h3>
           </div>
+   
           <div class="col-sm">
             <div class="form-group">
-              <select class="form-control" id="tuser">
-                <option value="">1.- ¿Buscas un .: ?</option>
-                <option value='1'>Especialista</option>
-                <option value='2'>Trabajo</option>
-              </select>
-            </div>
-
-          </div>
-          <div class="col-sm">
-            <div class="form-group">
-
+            
               <div id="resutcomboserv">
               </div>
 
