@@ -200,7 +200,7 @@ require_once("../frames/headndesing.php");
 
           <div class="section-title">
             <h2>Patrocinadores</h2>
-            <p>¿Quieres salir en primera plana? , envianos un correo a contactos@brokergo.com.pe o envianos un whatsapp al 933-289-058</p>
+            <p><strong>¿Quieres salir en primera plana?</strong> , envianos un correo a <strong>contactos@brokergo.com.pe</strong> o envianos un whatsapp al <strong>933-289-058</strong></p>
           </div>
 
           <div class="owl-carousel gallery-carousel" data-aos="fade-up">

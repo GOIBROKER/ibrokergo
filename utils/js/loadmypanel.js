@@ -131,7 +131,7 @@ function ticketnottermin(){
         postcoment:coment,
         postselecterrorserv:selecterrorserv
     },function(responseflujo2){
-        alert(responseflujo2);
+        
         if(responseflujo2 == 1){
             alert("Haremos lo mejor posible para mejorar el servicio , Gracias");
             $("#idregister").modal("hide");
@@ -139,6 +139,8 @@ function ticketnottermin(){
         }
         if(responseflujo2 == 0){
             alert("Hubo un error en la insercción , Intentalo más tarde");
+        }else{
+            alert(responseflujo2);
         }
 
     });
