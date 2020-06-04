@@ -6,7 +6,8 @@ function menuindex(){
         if(responsemenui == 1){
             $("#button2").text("Sesión Iniciada");
             $("#iniciarseid").hide();
-            $("#buttondos").html("<a href='miespacio.php' >Ir a Panel</a>");
+            $("#buttondos").html("<a href='miespacio.php' >Ir a Panel</a></br>");
+            $("#buttondos").append("<a href='../controllers/sessiondestroy.php' >Cerrar Sesión</a>");
         }
         if(responsemenui == 0){
             // para más adelante  
@@ -18,16 +19,25 @@ function menuindex(){
 function menuregistergo(){
     $("#btnbuscar").text("Ir al Inicio");
     $("#btnbuscar").removeAttr("onclick");
+    $("#btnbuscar").attr("href","");
     $("#btnbuscar").attr("onclick","location.href='index.php';");
+    $("#buttondos").append("<a href='index.php' >Ir al Inicio</a>");
 }
-
+function menucompletes(){
+    $("#buttondos").text("Ir al Inicio");
+    $("#buttondos").attr("onclick","location.href='index.php';");
+}
 function menulogingo(){
     $("#btnbuscar").text("Ir al Inicio");
     $("#btnbuscar").removeAttr("onclick");
     $("#btnbuscar").attr("onclick","location.href='index.php';");
-    $("#buttondos").html("<a href='registergo.php' >Registrate</a>");
+    $("#buttondos").html("<a href='registergo.php' >Registrate</a></br>");
+    $("#buttondos").append("<a href='index.php' >Ir al Inicio</a>");
 }
 
 function registratemenu(){
+    $("#buttondos").text("Ir al Inicio");
+    $("#buttondos").attr("onclick","location.href='index.php';");
+    // $("#buttondos").append("<a href='#' data-toggle='modal' data-target='#modalLRForm'>Ingresar</a>");
     $("#btnbuscar").hide();
 }

@@ -132,7 +132,7 @@ require_once("../frames/headndesing.php");
                   </div>
                   <!--end of col-->
                   <div class="col">
-                    <input class="form-control form-control-lg form-control-borderless" id="txtsearchbar" type="search" placeholder="Especialidad o nombre de especialista">
+                    <input class="form-control form-control-lg form-control-borderless" id="txtsearchbar" type="search" placeholder="Palabras claves : Computadora ,eventos ,etc.">
                   </div>
                   <!--end of col-->
                   <div class="col-auto">

@@ -213,9 +213,10 @@ echo "</div>";
   <script src="../utils/js/verifysesiones.js"></script>
   <script src="../utils/js/utils.js"></script>
   <script src="../utils/js/menudesing.js"></script>
+
   <script>
     $(document).ready(function() {
-
+      menucompletes();
             //load ubigeo
       loaddepartamento();
       departamentochange();

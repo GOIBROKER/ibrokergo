@@ -16,7 +16,7 @@
                 <li class="nav-item dropdown">
                     <div class="btn-group">
                         <button id="button2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Vamos! - Login<span class="caret"></span></button>
+                            Navegación<span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu" id="buttondos">
                             <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Ingresar</a></li>
                             <li><a href="registergo.php">Registrarse</a></li>
