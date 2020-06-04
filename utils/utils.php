@@ -85,7 +85,7 @@ class utilsphp
     function cajadedetxtarea($numtota)
     {
         if ($numtota < 56) {
-            $smsvaltxtarea = "Debe contener como mínimo 56 carácteres | Total .: " . $numtota;
+            $smsvaltxtarea = "Debe contener como mínimo 56 carácteres | Vas .: " . $numtota." carácter Válido";
         } else if ($numtota > 350) {
             $smsvaltxtarea = "No debe de superar los 350 carácteres .: " . $numtota;
         } else if ($numtota >= 56 && $numtota <= 350) {

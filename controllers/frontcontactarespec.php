@@ -79,7 +79,7 @@ foreach ($modalubicacion->selectdataubigeo($fdescripespeci['ubigeo']) as $fubige
     echo "<form>";
     echo "<div class='form-group'>";
     echo "<label for='txttitulo'>Titúlo de Inconveniente</label>";
-    echo "<input type='email' class='form-control' id='txttitulo' placeholder='Problema con mi Laptop LENOVO G45'>";
+    echo "<input type='text' class='form-control' id='txttitulo' placeholder='Problema con mi Laptop LENOVO G45'>";
     echo "</div>";
     echo "<div class='form-group'>";
     echo "<label for='txtdetalleob'>Brindanos mas detalle</label>";

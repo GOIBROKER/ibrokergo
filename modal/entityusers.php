@@ -4,7 +4,7 @@ class entityusersmodal{
 
     function registrarusers($tipouser,$datetime,$email,$password,$contrato,$nombrescompletos){
         require("../utils/config/conex.php");
-        $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 0, 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default','99')");
+        $queryinsert = mysqli_query($enlacego,"INSERT INTO gouser VALUES (NULL, '$tipouser', '$nombrescompletos', 50000, 'default', '$datetime', '$email', '$password', 'default', '000000000000', '000000000000',$contrato,'9','default','99')");
         if($queryinsert==false){
             $register = 3; // Error Desconocido
         }else{

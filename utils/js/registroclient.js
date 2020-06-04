@@ -10,7 +10,7 @@ function validateemail(valor) {
 }
 
 function registrar() {
-alert("hola");
+
     // Rutas 
 
     var rutaclienteorespecialistago = "../controllers/registroclient.php";

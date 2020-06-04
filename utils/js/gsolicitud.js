@@ -100,24 +100,7 @@ function registrardata() {
             });
         }
     });
-    //$_SESSION['flagactivador']  -- La sesión se va activar cuando la función registrar registre correctamente.
-
-    // Vamos a consultar la sesión y si existe se cerrara el formulario y se activara el registro de informacion
-
-
-        // alert(responseflagactivador);
-        
-        // if (responseflagactivador.trim() == "1") {
-        //     alert("Entro a cerrar moda");
-        //     // Condicional si parece 1 en la respuesta , significa que grabo correctamente , se debe cerrar formulario 
-        //     // y proceder con el registro de la solicitud de PC
-        //     // $("#modalnotexistdata").modal("hide");
-        //     // generarsolicitud();
-        // } else if (responseflagactivador.trim() == "0") {
-        //     // Si aparece cero , se debe mantener el form de registro abierto
-        //     alert("Grabado Incorrectamente");
-        // }
-
+  
 
 }
 

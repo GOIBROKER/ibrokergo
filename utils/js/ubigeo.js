@@ -1,4 +1,5 @@
 function loaddepartamento() {
+
     var bubigeo = "activate";
     $.post("moduleubigeo.php", {
         postbubigeo: bubigeo

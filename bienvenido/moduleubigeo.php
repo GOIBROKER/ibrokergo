@@ -1,4 +1,5 @@
 <?php
+//
 require("../modal/entityubigeonew.php");
 $ubigeo = new modalubigeo();
 

@@ -11,7 +11,7 @@ class viewscalculate{
 function calculaestrellas($idespecialista,$flagxdefecto,$solcerrada){
     require("../utils/config/conex.php");
     // Estraer total de clientes de un especialista ( Tipo 2)
-    $querynum = mysqli_query($enlacego,"SELECT iduser FROM viewstart WHERE idespeclient = '$idespecialista' AND idtiperror = '$flagxdefecto' AND estadosol='$solcerrada' GROUP BY iduser");
+    $querynum = mysqli_query($enlacego,"SELECT iduser FROM newservice WHERE idespeclient = '$idespecialista' AND idtiperror = '$flagxdefecto' AND estadosol='$solcerrada' GROUP BY iduser");
     
     $totalcliensatis = mysqli_num_rows($querynum);
     if($totalcliensatis == 0){

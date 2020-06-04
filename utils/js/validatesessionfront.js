@@ -33,7 +33,8 @@ $.post("../controllers/frontcontactarespec.php",{
                 $("#moduleregisteruser").html(responseregister);
                 
               });
-              $("#modalregiterdata").modal("show");
+              alert("Eres nuevo? , te falta completar tus datos , te vamos a redirigir!");
+              $(location).attr('href','complete.php');
                 
                 
             }
@@ -49,7 +50,8 @@ function registercont(){
   var txtlastname = $("#txtlastname").val();
   var slstdocumento = $("#slstdocumento option:selected").val();
   var txtnrodocumento = $("#txtnrodocumento").val();
-  var txtubicaciond = $("#txtubicacion").val();
+  // var txtubicaciond = $("#txtubicacion").val();
+  var iddistrito = $("#iddistrito option:selected").val();
   var txtdirecciond = $("#txtdirecciond").val();
   var slstipodoc = $("#slstipodoc option:selected").val();
   var txtareades = $("#txtareades").val();
@@ -60,7 +62,8 @@ $.post("../controllers/modules.php",{
   ptxtlastname:txtlastname,
   pslstdocumento:slstdocumento,
   ptxtnrodocumento:txtnrodocumento,
-  ptxtubicaciond:txtubicaciond,
+  // ptxtubicaciond:txtubicaciond,
+  postiddistrito:iddistrito,
   ptxtdirecciond:txtdirecciond,
   pslstipodoc:slstipodoc,
   ptxtareades:txtareades,
@@ -70,12 +73,10 @@ $.post("../controllers/modules.php",{
   var filtrado = responsere.trim();
  
   if(filtrado === "1"){
-    
-    $("#modalregiterdata").modal("hide");
-    $("#modalwarning2").modal("show");
+    alert("Gracias por registrate en BROKERGO!")
+    $(location).attr('href','index.php');
   }else{
-    
-    $("#msmerrorge").html(responsere);
+  $("#msmerrorge").html(responsere);
   }
   
 });

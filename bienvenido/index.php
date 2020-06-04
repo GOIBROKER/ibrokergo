@@ -76,7 +76,7 @@ require_once("../frames/headndesing.php");
 
           <div class="col-sm">
             <div class="form-group">
-              <select class="form-control" id="iddepartamento">
+              <select class="form-control" id="iddepartamento" >
                 <option value="">Departamento?</option>
               </select>
             </div>
@@ -624,7 +624,7 @@ require_once("../frames/headndesing.php");
 
               <!--Body-->
               <div class="modal-body mb-1">
-                <div id="moduleregisteruser">Here</div>
+                <div id="moduleregisteruser"></div>
               </div>
               <!--Footer-->
               <div class="modal-footer">

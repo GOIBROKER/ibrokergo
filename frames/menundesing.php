@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Broker<strong>Go!</strong></a>
         <div id="button1">
-            <button type="button" id='btnbuscar' class="btn btn-outline-primary" onclick='apmodalbus()'>Pulsa para Buscar!</button>
+            <!-- <button type="button" id='btnbuscar' class="btn btn-outline-primary" onclick='apmodalbus()'>Pulsa para Buscar!</button> -->
         </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

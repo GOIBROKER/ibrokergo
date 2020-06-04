@@ -13,7 +13,7 @@ class entityquality{
         if($updatequer==false){
             $log = 0; // Si hay error sale 0
         }else{
-            $log = 1;// Si hay error sale 1
+            $log = 1;// Si no hay error sale 1
         }
         return $log;
     }

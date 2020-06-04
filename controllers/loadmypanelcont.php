@@ -180,6 +180,7 @@ if(!empty($_POST['postfinish'])){
     echo "<label for='exampleFormControlTextarea1'>Comentarios de atención.:</label>";
     echo "<textarea class='form-control' id='txtcomentario' rows='3'></textarea>";
     echo "</div>";
+    echo "<div id='errorf1'></div>";
 }
 //
 if(!empty($_POST['grabarflujo1'])){

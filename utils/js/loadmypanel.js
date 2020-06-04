@@ -62,9 +62,9 @@ function grabar(){
  
     var acti ="activate";
     if(puntaje1<1 || puntaje1>=6 || puntaje1 == null){
-        alert ("Tienes que indicar un puntaje válido de atención de especialista");
+        $("#errorf1").html("<code>Tienes que indicar un puntaje válido de atención de especialista</code>");
     }else if(puntaje2<1 || puntaje2>=6 || puntaje2 == null){
-        alert ("Tienes que indicar un puntaje válido de protección anti Covid");
+        $("#errorf1").html("<code>Tienes que indicar un puntaje válido de protección anti Covid</code>");
     }else{
         $.post("../controllers/loadmypanelcont.php",{
             grabarflujo1:acti,
@@ -72,7 +72,7 @@ function grabar(){
             postpuntaje2:puntaje2,
             postcomentario:comentario
         },function(responseacti){
-    
+            $("#errorf1").html("<code>"+responseacti+"</code>");
             if(responseacti == 1){
                 alert("se registro correctamente");
                 $("#idregister").modal("hide");
