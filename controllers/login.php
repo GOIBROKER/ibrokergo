@@ -1,4 +1,5 @@
 <?php
+require_once("../modal/entityhistorylogin.php");
 // Traemos para extraer el Alias
 require_once("../modal/entitytipouser.php");
 // traemos validaciones del modal
@@ -10,7 +11,7 @@ require_once("../utils/utils.php");
 require_once("../modal/entityusers.php");
 session_start();
 $utilshe = new utilsphp();
-
+$historylogin = new historylogin();
 if (!empty($_POST['requestactivatelogin'])) {
     if(!empty($_SESSION['temptipuser1'])){
         $_SESSION['temptipuser1']="";
@@ -37,6 +38,7 @@ if (!empty($_POST['requestactivatelogin'])) {
                 $passdb = $validatelogin->verificaruser($email2, $password);
                 // Validamos en Util la desincrytación : si nos trae 1 es correcta , caso contrario error.
                 if ($desincryptar->desincryptarpass($password, $passdb) == "1") {
+            
                     $selectuser = new entityusersmodal();
                     // Variable para extraer el Alias
                     $tipouser = new tipouser();
@@ -58,7 +60,11 @@ if (!empty($_POST['requestactivatelogin'])) {
                         $_SESSION['aliastipouser'] = $tipouser->buscartipuser($foreachresultselect['tipouser']);
                         $_SESSION['fechaderegistro'] = $foreachresultselect['fechaderegistro'];
                     }
-                   
+                    //Vamos a realizar un insert de logueo exitoso
+                    // Información de de iduser / fecha de login
+                    $historylogin->insertlogin($utilshe->fecha(),$foreachresultselect['iduser']);
+
+                    //
                     // echo $_SESSION['nameandlast'];
                     // echo $_SESSION['email'];
                     // echo $_SESSION['tipouser'];
