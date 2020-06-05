@@ -20,7 +20,21 @@ require_once("../frames/headndesing.php");
     require_once("../frames/sliderndesing.php");
     ?>
   </section><!-- End Hero -->
-
+  
+  <footer id="footer">
+  <div class="footer-newsletter aos-init aos-animate" data-aos="fade-up">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h2><code><strong>Ante esta Pandemia del Covid - 19</code></strong></h2>
+            <h4><p>Estamos cambiando para una era digital, <code><strong>Transfórmate en un especialista Digital con BROKER GO!</code></strong></p></h4>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
   <main id="main">
 
     <!-- ======= App Features Section ======= -->
@@ -615,7 +629,7 @@ require_once("../frames/headndesing.php");
         <div class="modal-body">
           <div class="text-center">
             <i class="fab fa-whatsapp fa-4x mb-3 animated rotateIn"></i>
-            <p>Dar en contactar , para <strong>enviar un mensaje al whatsapp del especialista</strong></br><strong>Recuerda que debes de tener activado tu whatsapp Web si estuvieras en una Computadora de Escritorio.</strong></br>Si deseas hacerlo más tarde puedes encontrar tus solicitudes pendientes en tu Panel</p>
+            <strong><code>Esta opción gratuita por los 3 primeros meses</code></strong><p>Dar en contactar , para <strong>enviar un mensaje al whatsapp del especialista</strong></br><strong>Recuerda que debes de tener activado tu whatsapp Web si estuvieras en una Computadora de Escritorio.</strong></br>Si deseas hacerlo más tarde puedes encontrar tus solicitudes pendientes en tu Panel</p>
           </div>
         </div>
 
