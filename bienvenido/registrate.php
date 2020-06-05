@@ -49,7 +49,7 @@ if(!empty($_SESSION['temptipuser1'])){
 
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" name="aceptar" id="aceptar"> Acepto Términos y condiciones
+          <input type="checkbox" name="aceptar" id="aceptar"> <small>Al crear una cuenta acepto los <a href='terms.php' target='_blank' tabindex='-1' rel='noopener' class='underline green'>términos de servicio</a> y la <a href='politica-privacidad.php' target='_blank' tabindex='-1' rel='noopener' class='underline green'>Política y privacidad</a> de BrokerGo!</small>
         </label>
       </div>
       

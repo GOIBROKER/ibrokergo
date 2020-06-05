@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Broker</title>
+  <title>Broker Go!</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
   <link rel=”shortcut icon” href=”frontend/assets/img/favicon.ico” mce_href=”favicon.ico” type=”image/x-icon” />

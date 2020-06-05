@@ -1,18 +1,20 @@
+//
 function menuindex(){
     var menui = "activate";
     $.post("../controllers/menudesingcontroller.php",{
         postmenui:menui
     },function(responsemenui){
         if(responsemenui == 1){
-            $("#button2").text("Sesión Iniciada");
-            $("#button2").attr("class","dropdown-menu");
-            $("#button2").attr("aria-labelledby","navbarDropdown");
+            $("#buttondos").text("Sesión Iniciada");
+            $("#buttondos").attr("class","dropdown-menu");
+            $("#buttondos").attr("aria-labelledby","navbarDropdown");
             $("#iniciarseid").hide();
             $("#buttondos").html("<a class='dropdown-item' href='miespacio.php' >Ir a Panel</a></br>");
             $("#buttondos").append("<a class='dropdown-item' href='../controllers/sessiondestroy.php' >Cerrar Sesión</a>");
         }
         if(responsemenui == 0){
-            // para más adelante  
+            // para más adelante
+              
         }
         // Si la sesión esta iniciada se cambiara el menú
     });

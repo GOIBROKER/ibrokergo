@@ -325,7 +325,7 @@ input[type = "radio"]:checked ~ label{color:orange;}
       echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
 
       echo "<h4><i class='icon fa fa-ban'></i>Contacta al especialista!</h4>";
-      echo "Para que contactes al especialista , necesitas completar datos para que se comuniquen!.";
+      echo "¡Para que contactes al especialista, necesitas completar datos para que se comuniquen!";
 
       echo "</div>";
       echo "<img class='img-responsive' src='frontend/assets/img/cli1.png' alt='Photo'>";

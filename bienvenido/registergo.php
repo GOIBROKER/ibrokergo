@@ -26,7 +26,7 @@ require_once("../frames/headndesing.php");
     <img class="card-img-top" src="frontend/assets/img/especialistaregister.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Registrate como <strong>Especialista</strong></h5>
-        <p class="card-text">Quieres recibir trabajo y ser parte de la familia BrokerGO! , esta es tu oportunidad.</p>
+        <p class="card-text">¡Quieres recibir trabajo y ser parte de la familia Broker GO!, esta es tu oportunidad.</p>
         <a href="#" class="btn btn-primary" onclick="validate()">Registrarme</a>
       </div>
     </div>
@@ -36,7 +36,7 @@ require_once("../frames/headndesing.php");
     <img class="card-img-top" src="frontend/assets/img/clienteregister.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Registrate como <strong>Cliente</strong></h5>
-        <p class="card-text">Quieres encontrar especialistas que solucionen tus inconvenientes o hagan reaidad tu proyecto, esta es tu aportunidad.</p>
+        <p class="card-text">Quieres encontrar especialistas que solucionen tus inconvenientes o hagan realidad tu proyecto, esta es tu oportunidad.</p>
         <a href="especialidadgo.php" class="btn btn-primary" >Registrarme</a>
       </div>
     </div>

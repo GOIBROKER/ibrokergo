@@ -121,7 +121,7 @@ function terminarserv(){
         // Si fuera 0 más adelante se van a colocar mas acciones
     })
 }
-
+//
 function ticketnottermin(){
     var grabarflujo2 = "finish";
     var coment = $("#txtcommen").val();
@@ -136,10 +136,9 @@ function ticketnottermin(){
             alert("Haremos lo mejor posible para mejorar el servicio , Gracias");
             $("#idregister").modal("hide");
             loadtickets();
-        }
-        if(responseflujo2 == 0){
+        }else if(responseflujo2 == 0){
             alert("Hubo un error en la insercción , Intentalo más tarde");
-        }else{
+        }else {
             alert(responseflujo2);
         }
 

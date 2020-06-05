@@ -47,7 +47,7 @@ echo "<div class='form-group'>";
 echo "<div class='col-lg-offset-2 col-lg-10'>";
 echo "<div class='checkbox'>";
 echo "<label>";
-echo "<p class='text-secondary'> <input type='checkbox' name='aceptar' id='aceptar'> Acepto Términos y Condiciones - Leer Condiciones";
+echo "<p class='text-secondary'> <input type='checkbox' name='aceptar' id='aceptar'> <small>Al crear una cuenta acepto los <a href='terms.php' target='_blank' tabindex='-1' rel='noopener' class='underline green'>términos de servicio</a> y la <a href='politica-privacidad.php' target='_blank' tabindex='-1' rel='noopener' class='underline green'>Política y privacidad</a> de BrokerGo!</small>";
 echo "</label>";
 echo "</div>";
 echo "</div>";

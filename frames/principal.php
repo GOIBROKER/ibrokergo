@@ -42,7 +42,7 @@
     <section class="content-header">
       <h1>
         Mi panel
-        <small>Version 1.0.1</small><a href="../bienvenido/index.php"   type="button" class="btn btn-warning">Regresar al Inicio</a>
+        <small>Version 1.0.1</small><a href="../bienvenido/index.php"   type="button" class="btn btn-danger btn-lg">Inicio</a>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
