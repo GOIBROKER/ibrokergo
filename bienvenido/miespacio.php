@@ -298,103 +298,149 @@ input[type = "radio"]:checked ~ label{color:orange;}
   </div>
 
   <!-- Modal de iniciar sesion tipo cliente escogiendo una especialidad por primera vez -->
-  <div class="modal fade bd-example-modal-lg" id="id01" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Bienvenido a BROKERGO - GUIA DE USO!</h4>
+  <?php
+  require_once("../utils/utils.php");
+  $utilsespacio = new utilsphp();
+  
+  echo "<div class='modal fade bd-example-modal-lg' id='id01' data-backdrop='static' tabindex='-1' role='dialog' aria-labelledby='staticBackdropLabel' aria-hidden='true'>";
+  echo "<div class='modal-dialog modal-lg' role='document'>";
+  echo "<div class='modal-content'>";
+  echo "<div class='modal-header'>";
+  echo "<h4 class='modal-title'>Bienvenido a BROKERGO - GUIA DE USO!</h4>";
+  echo "<div class='modal-body'>";
+  echo "<div id='datawelcome'>";
+  echo "<div class='row'>";
+  echo "<div class='col-md-6'>";
 
-        <div class="modal-body">
-          <div id="datawelcome">
+  if ($_SESSION['tipouser'] == 1) {
+    if ($utilsespacio->vregisteruser($_SESSION['email']) === 0) {
 
-            <div class="row">
-              <div class="col-md-6">
-                <div class="box box-default">
-                  <div class="box-header with-border">
-                    <i class="fa fa-warning"></i>
+      echo "<div class='box box-default'>";
+      echo "<div class='box-header with-border'>";
+      echo "<i class='fa fa-warning'></i>";
+      echo "<h3 class='box-title'>Termina tu registro!</h3>";
+      echo "</div>";
+      echo "<div class='box-body'>";
+      echo "<div class='alert alert-success alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
 
-                    <h3 class="box-title">Publica un trabajo</h3>
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                    <div class="alert alert-success alert-dismissible">
-                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                      <?php
-                      if($_SESSION['tipouser'] == 1){
-                      echo "<h4><i class='icon fa fa-ban'></i> Recibe Propuestas</h4>";
-                      echo "Publica un trabajo y recibe propuestas y elige al mejor en calidad y precio - Proximamente!.";
-                      }else if($_SESSION['tipouser'] == 2){
-                        echo "<h4><i class='icon fa fa-ban'></i>Encuentra Trabajo</h4>";
-                        echo "Muchos Clientes esperando que hagas realidad sus proyectos - Encuentralo en Subastas!.";
-                      }
+      echo "<h4><i class='icon fa fa-ban'></i>Contacta al especialista!</h4>";
+      echo "Para que contactes al especialista , necesitas completar datos para que se comuniquen!.";
 
-                      ?>
-                      
-                    </div>
-                    <img class="img-responsive" src="frontend/assets/img/subasta.png" alt="Photo">
-                       
-                    <div class="alert alert-info alert-dismissible">
-                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                      <h4><i class="icon fa fa-info"></i>Proximamente - <strong>En Go!</strong></h4>
+      echo "</div>";
+      echo "<img class='img-responsive' src='frontend/assets/img/cli1.png' alt='Photo'>";
+      echo "<div class='alert alert-info alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
+      echo "<h4><i class='icon fa fa-info'></i><a href='complete.php'>Click Aqui! <strong> En Go!</strong></a></h4>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+    }else{
+      echo "<div class='box box-default'>";
+      echo "<div class='box-header with-border'>";
+      echo "<i class='fa fa-warning'></i>";
+      echo "<h3 class='box-title'>Editar Perfil!</h3>";
+      echo "</div>";
+      echo "<div class='box-body'>";
+      echo "<div class='alert alert-success alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
 
-                    </div>
-                  </div>
-                  <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-              </div>
-              <!-- /.col -->
+      echo "<h4><i class='icon fa fa-ban'></i>Hola, Puedes editar tu perfil Aqui!</h4>";
+      echo "Si deseas cambiar ubicación , celular o demás datos ,encuentralo aqui!.";
 
-              <div class="col-md-6">
-                <div class="box box-default">
-                  <div class="box-header with-border">
-                    <i class="fa fa-bullhorn"></i>
+      echo "</div>";
+      echo "<img class='img-responsive' src='frontend/assets/img/cli2.png' alt='Photo'>";
+      echo "<div class='alert alert-info alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
+      echo "<h4><i class='icon fa fa-info'></i>Ir a : <strong> Mi Perfil</strong></a></h4>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+    }
+  } else if ($_SESSION['tipouser'] == 2) {
+    if ($utilsespacio->vregisteruser($_SESSION['email']) === 0) {
+      echo "<div class='box box-default'>";
+      echo "<div class='box-header with-border'>";
+      echo "<i class='fa fa-warning'></i>";
+      echo "<h3 class='box-title'>Termina tu registro!</h3>";
+      echo "</div>";
+      echo "<div class='box-body'>";
+      echo "<div class='alert alert-success alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
 
-                    <h3 class="box-title">Ver mi Panel</h3>
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body">
+      echo "<h4><i class='icon fa fa-ban'></i>Indica tu especialidad!</h4>";
+      echo "Termina tu registro para que aparezcas en las busquedas de la web, más adelante podrás editarlo!.";
+
+      echo "</div>";
+      echo "<img class='img-responsive' src='frontend/assets/img/es1.png' alt='Photo'>";
+      echo "<div class='alert alert-info alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
+      echo "<h4><i class='icon fa fa-info'></i><a href='complete.php'>Click Aqui! <strong> En Go!</strong></a></h4>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+    }else{
+      echo "<div class='box box-default'>";
+      echo "<div class='box-header with-border'>";
+      echo "<i class='fa fa-warning'></i>";
+      echo "<h3 class='box-title'>Editar Perfil!</h3>";
+      echo "</div>";
+      echo "<div class='box-body'>";
+      echo "<div class='alert alert-success alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
+
+      echo "<h4><i class='icon fa fa-ban'></i>Hola, Puedes editar tu perfil Aqui!</h4>";
+      echo "Si deseas cambiar tu especialidad , presentación , ubicación o demás datos ,encuentralo aqui!.";
+
+      echo "</div>";
+      echo "<img class='img-responsive' src='frontend/assets/img/es2.png' alt='Photo'>";
+      echo "<div class='alert alert-info alert-dismissible'>";
+      echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
+      echo "<h4><i class='icon fa fa-info'></i>Ir a : <strong> Mi Perfil</strong></a></h4>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+    }
 
 
-
-                    <div class="callout callout-success">
-                      <h4>Ver tus Solicitudes</h4>
-
-                      <p>Verifica tus solicitudes o propuestas de trabajo ( En caso seas especialista) .</p>
-                    </div>
-                    <img class="img-responsive" src="frontend/assets/img/solicitudes.png" alt="Photo">
-
-                    <div class="alert alert-info alert-dismissible">
-                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                      <h4><i class="icon fa fa-info"></i>Ir a .: Mis Opciones - <strong>Mi Panel</strong></h4>
-
-                    </div>
-
-                  </div>
-                  <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-              </div>
-              <!-- /.col -->
-            </div>
+  }
 
 
-
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar Guía</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+  echo "</div>";
+  echo "<div class='col-md-6'>";
+  echo "<div class='box box-default'>";
+  echo "<div class='box-header with-border'>";
+  echo "<i class='fa fa-bullhorn'></i>";
+  echo "<h3 class='box-title'>Ver mi Panel</h3>";
+  echo "</div>";
+  echo "<div class='box-body'>";
+  echo "<div class='callout callout-success'>";
+  echo "<h4>Ver tus Solicitudes</h4>";
+  echo "<p>Encuentra tus solicitudes en Mi Panel (Recuerda cerrar todas tus solicitudes , para que vean tu <strong>puntuación</strong>) .</p>";
+  echo "</div>";
+  echo "<img class='img-responsive' src='frontend/assets/img/solicitudes.png' alt='Photo'>";
+  echo "<div class='alert alert-info alert-dismissible'>";
+  echo "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>";
+  echo "<h4><i class='icon fa fa-info'></i>Ir a .: Mis Opciones - <strong>Mi Panel</strong></h4>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  echo "<div class='modal-footer'>";
+  echo "<button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar Guía</button>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  echo "</div>";
+  ?>
   <script src="../utils/js/bienvenidse.js"></script>
   <script>
     $(document).ready(function() {
-        welcome();
-   
+      welcome();
+
     })
   </script>
 

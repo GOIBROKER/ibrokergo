@@ -54,64 +54,11 @@
     <section class="content">
       
       <div class="row">
-        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text"><div id='2'>Nro</div></span>
-              <span class="info-box-number">3<small>Items</small></span>
-            </div>
-  
-          </div>
-
-        </div> -->
-        
-        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Recomendaciones</span>
-              <span class="info-box-number">41,410</span>
-            </div>
-          
-          </div>
-        
-        </div>
-      -->
-
-      
         <div class="clearfix visible-sm-block"></div>
 
-        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Items Cerradas</span>
-              <span class="info-box-number">760</span>
-            </div>
-     
-          </div>
-    
-        </div> -->
- 
-        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Cant de Clientes</span>
-              <span class="info-box-number">5</span>
-            </div>
-         
-          </div>
-   
-        </div> -->
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
+
 
       <div class="row">
         <div class="col-md-12">
@@ -144,11 +91,9 @@
                   <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-wrench"></i></button>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+           
+                    
+                  
                   </ul>
                 </div>
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>

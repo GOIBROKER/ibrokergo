@@ -205,17 +205,17 @@ require_once("../frames/headndesing.php");
 
           <div class="owl-carousel gallery-carousel" data-aos="fade-up">
             <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-2.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-3.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-4.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-5.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-6.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
             <a href="frontend/assets/img/gallery/gallery-7.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-8.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-9.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-10.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-11.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
-            <a href="frontend/assets/img/gallery/gallery-12.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
+            <a href="frontend/assets/img/gallery/gallery-1.png" class="venobox" data-gall="gallery-carousel"><img src="frontend/assets/img/gallery/gallery-1.png" alt=""></a>
           </div>
 
         </div>
@@ -258,44 +258,7 @@ require_once("../frames/headndesing.php");
               </div>
             </div>
 
-            <!-- <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <img src="frontend/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <img src="frontend/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <img src="frontend/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div> -->
+            
 
           </div>
 

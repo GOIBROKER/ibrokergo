@@ -122,7 +122,7 @@ if (!empty($_POST['requestactivateformfirst'])) {
 
     if($_SESSION['tipouser'] == "2"){
         echo "<div class='form-group'>";
-        echo "<label for='inputSkills' class='col-sm-2 control-label'> Te dedicas a ?</label>";
+        echo "<label for='inputSkills' class='col-sm-2 control-label'> Ocupación ?</label>";
         echo "<div class='col-sm-10'>";
         echo "<select class='form-control' id='selectespecialidad'>";
         foreach($listservice->listarservicios() as $resultlistser){

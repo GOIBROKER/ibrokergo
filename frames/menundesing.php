@@ -12,14 +12,16 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item dropdown">
                     <div class="btn-group">
                         <button id="button2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                             Navegación<span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu" id="buttondos">
-                            <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Ingresar</a></li>
-                            <li><a href="registergo.php">Registrarse</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalLRForm">Ingresar</a></li>
+                            <li><a class="dropdown-item" href="registergo.php">Registrarse</a></li>
                         </ul>
                     </div>
 

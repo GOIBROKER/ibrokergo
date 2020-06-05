@@ -5,9 +5,11 @@ function menuindex(){
     },function(responsemenui){
         if(responsemenui == 1){
             $("#button2").text("Sesión Iniciada");
+            $("#button2").attr("class","dropdown-menu");
+            $("#button2").attr("aria-labelledby","navbarDropdown");
             $("#iniciarseid").hide();
-            $("#buttondos").html("<a href='miespacio.php' >Ir a Panel</a></br>");
-            $("#buttondos").append("<a href='../controllers/sessiondestroy.php' >Cerrar Sesión</a>");
+            $("#buttondos").html("<a class='dropdown-item' href='miespacio.php' >Ir a Panel</a></br>");
+            $("#buttondos").append("<a class='dropdown-item' href='../controllers/sessiondestroy.php' >Cerrar Sesión</a>");
         }
         if(responsemenui == 0){
             // para más adelante  
