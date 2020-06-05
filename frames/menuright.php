@@ -64,7 +64,7 @@
             echo "</a>";
             echo "</li>";
           }
-        }else if($_SESSION['tipouser'] == '1'){
+        } else if ($_SESSION['tipouser'] == '1') {
           if ($utilsmenuri->vregisteruser($_SESSION['email']) === 0) {
             echo "<li class='active'>";
             echo "<a href='complete.php'>";
@@ -77,7 +77,14 @@
           }
         }
         ?>
-
+        <li class='active'>
+          <a href='#' type="button" onclick="guiauser()">
+            <i class='fa fa-th'></i> <span>Guia de usuario!</span>
+            <span class='pull-right-container'>
+              <small class='label pull-right bg-green'>Solicitudes!</small>
+            </span>
+          </a>
+        </li>
       </ul>
       </li>
 
