@@ -1,6 +1,7 @@
 <?php
 require_once("../utils/utils.php");
 require_once("../modal/entityusers.php");
+require_once("../utils/utilsemail.php");
 session_start();
 //obtener la hora actual
 // Fin de obtener hora actua
@@ -48,15 +49,11 @@ if (!empty($_POST['requestactivate'])) {
        
         // Se realizar el registro del usuario --------------- nuevo cambio
         $registrado = $insertuser->registrarusers($tipodeuser,$fechaactual, $email, $passencryptado, $checkcontrato,$requestnamecompleto);
-        if($requestactivate === 4){
+        if($registrado === 4){
+           // Vamos a enviar un correo con los datos del usuario
             // Vamos a enviar un correo con los datos del usuario
-            $asunto = "Activar usuario - BrokerGo!";
-            $msg = "Bienvenido ".$requestnamecompleto." a Brokergo!";
-            $emailto = $email;
-            $header = "From: tokenbrokergo@dapcontable.com" . "\r\n";
-            $header.="Reply-To: tokenbrokergo@dapcontable.com". "\r\n";
-            $header.="X-Mailer: PHP/". phpversion();
-            mail($emailto,$asunto,$msg,$header);
+           $emailutil = new email();
+           $emailutil->emailregister($email,$requestnamecompleto);
             echo $registrado;
         }
         //
