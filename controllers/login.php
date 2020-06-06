@@ -60,6 +60,9 @@ if (!empty($_POST['requestactivatelogin'])) {
                         $_SESSION['aliastipouser'] = $tipouser->buscartipuser($foreachresultselect['tipouser']);
                         $_SESSION['fechaderegistro'] = $foreachresultselect['fechaderegistro'];
                     }
+
+
+
                     //Vamos a realizar un insert de logueo exitoso
                     // Información de de iduser / fecha de login
                     $historylogin->insertlogin($utilshe->fecha(),$foreachresultselect['iduser']);
