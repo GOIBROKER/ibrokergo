@@ -56,7 +56,7 @@ function registrar() {
         }else if(responseregisterclient == 3){
             alert("Error desconocido , intentalo más tarde");
         }else if(responseregisterclient == 4){
-            alert("Registrado correctamente - Inicia Sesión");
+            alert("Se ha enviado un correo de Activación al Email Indicado , revisar tambien en tu bandeja de Spam en caso no te llegue ir a Recuperar Contraseña");
             $(location).attr('href', "logingo.php");
         }else{
             $("#alertval").html(responseregisterclient);

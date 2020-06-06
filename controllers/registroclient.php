@@ -48,13 +48,13 @@ if (!empty($_POST['requestactivate'])) {
         // Verificar el tipo de usuario enviado desde registroclient.js
        
         // Se realizar el registro del usuario --------------- nuevo cambio
-        $registrado = $insertuser->registrarusers($tipodeuser,$fechaactual, $email, $passencryptado, $checkcontrato,$requestnamecompleto);
+        $registrado = $insertuser->registrarusers($tipodeuser,$fechaactual, $email, $passencryptado, $checkcontrato,$requestnamecompleto,4);
         if($registrado === 4){
            // Vamos a enviar un correo con los datos del usuario
             // Vamos a enviar un correo con los datos del usuario
            $emailutil = new email();
            $emailutil->emailregister($email,$requestnamecompleto);
-            echo $registrado;
+           echo $registrado;
         }
         //
 

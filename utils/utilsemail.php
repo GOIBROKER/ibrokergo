@@ -156,7 +156,12 @@ class email {
                     $header .= "From: ".$flagsemail->emailfrom . "\r\n";
                     $header .="Reply-To: ".$flagsemail->emailfrom . "\r\n";
                     $header .="X-Mailer: PHP/". phpversion();
-                    mail($emailto,$flagsemail->asunto,$msg,$header);
+                    $enviomail = mail($emailto,$flagsemail->asunto,$msg,$header);
+                    if($enviomail){
+                        return 1; // Envio correcto
+                    }else{
+                        return 0; // Error al envio
+                    }
                
 
     }    

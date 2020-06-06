@@ -43,7 +43,7 @@ class flags{
     public $emailfrom = "tokenbrokergo@dapcontable.com";
     public $asunto = "Link Activar Usuario - BrokerGo!";
     public $urlsite = "http://testbrokergo.dapcontable.com";
-    public $bienvenida = "Estamos muy felices de que formes parte de la comunidad de <strong>BROKER GO!</strong>. Solo necesitas activar tu cuenta para terminar tu proceso de afiliación. ¡Falta muy poco!";
+    public $bienvenida = "Estamos muy felices de que formes parte de la comunidad de <strong>BROKER GO!</strong>. Solo necesitas activar tu cuenta para terminar tu proceso de afiliacion. ¡Falta muy poco!";
     public $buttonactivate = "Activar tu cuenta";
     public $emailtext1 = "Conoce los beneficios de ser Socio de <strong>BROKERGO*:</strong>";
     public $title1 = "100% Digital";
@@ -52,8 +52,15 @@ class flags{
     public $titlesubt2 = "Si eres especialista , recibe trabajos por parte de varios clientes.";
     public $title3 = "Si eres Cliente";
     public $titlesubt3 = "Encuentra especialistas de varios servicios que cumplan con buena calidad y precio.";
-    public $title4 = "Especialista - Cliente<";
+    public $title4 = "Especialista - Cliente";
     public $titlesubt4 = "Lleguen a acuerdos para terminar un servicio cumpliendo con calidad y precio.";
     public $ftittle = "Para poder acceder a todas las funcionalidades , no te olvides de registrar tus datos personales.";
+
+
+    // Estados de usuarios 1: Activado 2 : Bloqueado 3: Eliminado 4:Activando Usuario
+    public $useractivado = 1;
+    public $userbloqueado = 2;
+    public $userdelete = 3;
+    public $useractivandouser = 4;
 }
 ?>

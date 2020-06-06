@@ -1,4 +1,4 @@
-
+//
 function iniciarsesion(){
     var email = $("#txtemail").val();
     var password = $("#txtpassword").val()
@@ -9,7 +9,7 @@ function iniciarsesion(){
        requestemail:email,
        requestpassword:password
    },function(responselogin){
-      
+    
     if(responselogin==1){
         $(location).attr('href',"miespacio.php");
     }else if(responselogin==2){

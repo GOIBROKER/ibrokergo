@@ -53,25 +53,37 @@ if (!empty($_POST['requestactivatelogin'])) {
                     }
                     //--------------------------------------------
                     foreach ($selectuser->listaruser($email2) as $foreachresultselect) {
-                        $_SESSION['nameandlast'] = $foreachresultselect['nameandlast'];
-                        $_SESSION['email'] = $email2;
-                        $_SESSION['iduser'] = $foreachresultselect['iduser'];
-                        $_SESSION['tipouser'] = $foreachresultselect['tipouser'];
-                        $_SESSION['aliastipouser'] = $tipouser->buscartipuser($foreachresultselect['tipouser']);
-                        $_SESSION['fechaderegistro'] = $foreachresultselect['fechaderegistro'];
+
+
+                        if ($foreachresultselect['statususer'] == 1) {
+                            $_SESSION['nameandlast'] = $foreachresultselect['nameandlast'];
+                            $_SESSION['email'] = $email2;
+                            $_SESSION['iduser'] = $foreachresultselect['iduser'];
+                            $_SESSION['tipouser'] = $foreachresultselect['tipouser'];
+                            $_SESSION['aliastipouser'] = $tipouser->buscartipuser($foreachresultselect['tipouser']);
+                            $_SESSION['fechaderegistro'] = $foreachresultselect['fechaderegistro'];
+                            echo "1";
+                        } else if ($foreachresultselect['statususer'] == 2) {
+                            echo "El usuario se encuentra bloqueado , envia un correo a contacto@brokergo.com.pe para saber el motivo";
+                        } else if ($foreachresultselect['statususer'] == 3) {
+                            echo "Intenta con otro email diferente ,esta cuenta esta eliminada o envia un correo a contacto@brokergo.com.pe";
+                        } else if ($foreachresultselect['statususer'] == 4) {
+                            echo "Falta activar tu cuenta , si no te llego el correo ingresa a recuperar.php";
+                        }
                     }
 
-
+                      
+                    
 
                     //Vamos a realizar un insert de logueo exitoso
                     // Información de de iduser / fecha de login
-                    $historylogin->insertlogin($utilshe->fecha(),$foreachresultselect['iduser']);
+                  
 
                     //
                     // echo $_SESSION['nameandlast'];
                     // echo $_SESSION['email'];
                     // echo $_SESSION['tipouser'];
-                    echo "1";
+                    
                 } else {
                     //Mostramos la alerta desde BD
                     echo $alertslogin->alerts("10");
