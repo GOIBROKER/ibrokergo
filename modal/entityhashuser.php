@@ -22,15 +22,15 @@ class userhash{
         } else {
             $rowd = mysqli_num_rows($qryselect);
             if ($rowd == 0) {
-                $men = "Favor de volver a solicitar el link de activación por este link :";
+                $men = 3; // Enlace caducado
             } else if ($rowd == 1) {
                 // Se va actualizar el estado del usuario a 1
                 $qryupdatehash = mysqli_query($enlacego,"UPDATE hashuser SET status='1' where emailhash='$email'");
                 if($qryupdatehash){
                     $qryupdateuser = mysqli_query($enlacego,"UPDATE gouser SET statususer='1' where email='$email'");
-                    $men = "Usuario Activado correctamente";
+                    $men = 1; // Se inserto correctamente
                 }else{
-                   $men = 0;
+                   $men = 2; // Error en activación
                 }
             }
         }
