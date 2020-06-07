@@ -1,20 +1,15 @@
 <?php
+require_once("../modal/entityhashuser.php");
+$userhash = new userhash();
 
 $userid = $_GET['iduser'];
 $passurl = $_GET['token'];
 
+
+echo $userhash->validarhash($userid,$passurl);
+
 echo $userid;
 echo "</br>";
 echo $passurl;
-
-if($userid == "123" && $passurl == $valencryotacion){
-    echo "Ingreso correcto";
-}else{
-    echo "error";
-}
-
-
-
- 
 
 ?>

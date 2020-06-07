@@ -53,7 +53,7 @@ class email {
                                         </tr>
                                         <tr>
                                             <td style='width:100%;height:auto;padding:10px 50px;text-align:center'>
-                                                <a style='font-size:18px;color:#fff;display:inline-block;padding:15px 20px;border-radius:25px;text-decoration:none;background:#cc0066;text-align:center' href='".$flagsemail->urlsite.$flagsemail->urlwebaactivate."?iduser=".$iduser."&token=".$passaleatorio." target='_blank'>
+                                                <a style='font-size:18px;color:#fff;display:inline-block;padding:15px 20px;border-radius:25px;text-decoration:none;background:#cc0066;text-align:center' href='".$flagsemail->urlsite.$flagsemail->urlwebaactivate."?iduser=".$iduser."&token=".$passaleatorio."' target='_blank'>
                                                     ".$flagsemail->buttonactivate."
                                                 </a>
                                             </td>
