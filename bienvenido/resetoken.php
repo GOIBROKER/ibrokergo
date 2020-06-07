@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    padding: 100px 0;
+    background-color: #efefef
+  }
+
+  a,
+  a:hover {
+    color: #333
+  }
+</style>
+<?php
+require_once("../frames/headndesing.php");
+// if(!empty($_SESSION['useractivadotemp'])){
+
+// }else{
+//   header("location:index.php");
+// }
+?>
+
+<body>
+  <?php require_once("../controllers/validatesesion.php") ?>
+  <!-- ======= Header ======= -->
+  <?php
+  require_once("../frames/menundesing.php");
+  ?>
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="frontend/assets/img/especialistaregister.jpg" alt="Card image cap">
+          <div class="card-body" id="divtoken">
+              <h5 class="card-title">Hola <strong>Ingresa Tu Clave Token!</strong></h5>
+              <p class="card-text">Indica el token que se envio a tu <strong>correo.</strong></p>
+       
+               <label>Email.:</label><input type="email" class="form-control" id="tremail" aria-describedby="emailHelp" placeholder="Ingresa tu correo">
+               <label>Token.:</label><input type="text" class="form-control" id="txtoken" aria-describedby="emailHelp" placeholder="Ingresa el Token">
+
+               <div id="iderrortoken"></div>
+                <a href="#" onclick="tokenreset()" class="btn btn-primary" >Verificar</a>
+
+
+ 
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= App Features Section ======= -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <?php include("../frames/footerindex.php"); ?>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="idbuscartrabajo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Filtro de Busqueda</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+
+                <label for="inputState">Buscas un?</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Especialista...</option>
+                  <option selected>Trabajo...</option>
+
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputState">De ?</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Informatica...</option>
+                  <option selected>Trabajo...</option>
+
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Ubicación : Departamento,Provincia,Distrito</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Lima,Lima,San Luis">
+            </div>
+
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</a>
+          <a type="button" class="btn btn-primary">Buscar!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+      <!--Content-->
+      <div class="modal-content">
+
+        <!--Modal cascading tabs-->
+        <div class="modal-c-tabs">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                Iniciar Sesión</a>
+            </li>
+
+          </ul>
+
+          <!-- Tab panels -->
+          <div class="tab-content">
+            <!--Panel 7-->
+            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+              <!--Body-->
+              <div class="modal-body mb-1">
+                <div class="md-form form-sm">
+                  <i class="fas fa-envelope prefix"></i>
+                  <input type="text" id="txtemail" class="form-control">
+                  <label for="txtemail">Ingresa tu Email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                  <i class="fas fa-lock prefix"></i>
+                  <input type="password" id="txtpassword" class="form-control">
+                  <label for="txtpassword">Ingresa tu contraseña</label>
+
+                  <div id="alertsesion">
+
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                  <button class="btn btn-info" onclick="iniciarsesion()">Ingresar <i class="fas fa-sign-in-alt ml-1"></i></button>
+                </div>
+
+              </div>
+              <!--Footer-->
+              <div class="modal-footer">
+                <div class="options text-center text-md-right mt-1">
+                  <p>No estas registrado? <a href="registrate.php" class="blue-text">Registrate</a></p>
+                  <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
+              </div>
+
+            </div>
+            <!--/.Panel 7-->
+
+
+          </div>
+
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Modal: Login / Register Form-->
+
+  <script src="../utils/js/loadcomponentsfront.js"></script>
+  <script src="../utils/js/verifysesiones.js"></script>
+  <script src="../utils/js/utils.js"></script>
+  <script src="../utils/js/menudesing.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      // Handler for .ready() called.
+      menuregistergo();
+      loadbuttons();
+      loadinitialespec();
+      buscarserv();
+      borrarsesiones();
+      buscardep();
+      loadmenub();
+
+    });
+  </script>
+
+  <script src="../utils/js/initialsesionintra.js"></script>
+  <script src="../utils/js/frontbusqueda.js"></script>
+  <script src="../utils/js/seachfront.js"></script>
+  <script src="../utils/js/validatesessionfront.js"></script>
+  <script src="../utils/js/registerservicefront.js"></script>
+  <script src="../utils/js/datospersonales.js"></script>
+  <script src="../utils/js/resetuser.js"></script>
+
+  <!-- Script de página register -->
+  <script src="../utils/js/tipuser.js"></script>
+  <!-- FIN Script de página register -->
+
+  <script>
+    function apmodalbus() {
+      $("#idbuscartrabajo").modal("show");
+    }
+  </script>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="frontend/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="frontend/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+
+  <script src="frontend/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="frontend/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="frontend/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="frontend/assets/js/main.js"></script>
+
+</body>
+
+</html>

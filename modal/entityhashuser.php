@@ -48,6 +48,28 @@ class userhash{
         }
         return $msmr;
     }
+
+    function searchtoken($token,$email){
+        require("../utils/config/conex.php");
+        $querytoken = mysqli_query($enlacego,"SELECT * FROM resetuser where email='$email' and code='$token' and status = 1");
+        if($querytoken == false){
+            $respuesta = 0; // Error de consulta
+        }else{
+            $num = mysqli_num_rows($querytoken);
+            if ($num == 0) {
+                $respuesta = 1; // No existe el token o esta expirado    
+            } else if ($num == 1) {
+                
+                $updatetoken = mysqli_query($enlacego,"UPDATE resetuser SET STATUS='2' WHERE email='$email' AND CODE = '$token'");
+                if($updatetoken == false){
+                    $respuesta = 0;
+                }else{
+                    $respuesta = 2; // Procede
+                }
+            }
+            return $respuesta;
+        }
+    }
 }
 
 ?>

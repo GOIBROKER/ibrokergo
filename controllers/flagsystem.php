@@ -43,7 +43,7 @@ class flags{
     public $emailfrom = "tokenbrokergo@dapcontable.com";
     public $asunto = "Link Activar Usuario - BrokerGo!";
     public $urlsite = "http://testbrokergo.dapcontable.com";
-    public $bienvenida = "Estamos muy felices de que formes parte de la comunidad de <strong>BROKER GO!</strong>. Solo necesitas activar tu cuenta para terminar tu proceso de afiliacion. ¡Falta muy poco!";
+    public $bienvenida = "Estamos muy felices de que formes parte de la comunidad de <strong>BROKER GO!</strong>. Solo necesitas activar tu cuenta para terminar tu proceso de afiliacion.¡Falta muy poco!";
     public $buttonactivate = "Activar tu cuenta";
     public $emailtext1 = "Conoce los beneficios de ser Socio de <strong>BROKERGO*:</strong>";
     public $title1 = "100% Digital";
@@ -66,7 +66,7 @@ class flags{
 
     // Flags email reset
 
-     public $urlsitereset = "http://testbrokergo.dapcontable.com/activate/reset.php";
+     public $urlsitereset = "http://testbrokergo.dapcontable.com/bienvenido/resetoken.php";
      public $bienvenidareset = "Has solicitado el reseteo de tu password en IBROKERGO! , sigue el link indicado e ingresa el Token";
      public $buttonreseteo = "Link de Reseteo";
      public $emailtext1reset = "Tu Token es :";

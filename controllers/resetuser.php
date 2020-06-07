@@ -7,7 +7,9 @@ $utilreset = new utilsphp();
 $usermodal = new entityusersmodal();
 $userhashreset = new userhash();
 $emailreset = new email();
+session_start();
 if(!empty($_POST['postactivatereset'])){
+    
     /* Validar la existencia del email y el estado
     Si estuviera Existencia de Email
     Estado Activado
@@ -59,4 +61,43 @@ if(!empty($_POST['postactivatereset'])){
 
     }
 
+if (!empty($_POST['postactitoken'])) {
+    $posttremail = $_POST['posttremail'];
+    $posttxtoken = $_POST['posttxtoken'];
+
+    if (!empty($utilreset->email($posttremail))) {
+        echo $utilreset->email($posttremail);
+    } else {
+        $consultatoken = $userhashreset->searchtoken($posttxtoken, $posttremail);
+        if ($consultatoken == 0) {
+            echo "Ocurrio un error inesperado , volver mas tarde";
+        } else if ($consultatoken == 1) {
+            echo "Tu token no existe o esta <strong>expirado</strong> , volver a solicitar en <a href='reset.php'><code>Resetear password</code></a>";
+        } else if ($consultatoken == 2) {
+            $_SESSION['emailtoken'] = $posttremail;
+            echo 2;
+        } else {
+            echo "Ocurrio un error inesperado , volver mas tarde";
+        }
+    }
+}
+
+if(!empty($_POST['postactpass'])){
+    if(empty($_POST['postmypass1']) || empty($_POST['postmypass2'])){
+        echo "Una de las contraseñas esta vacia";
+    }else if(strlen($_POST['postmypass1'])<=6 || strlen($_POST['postmypass2'])<=6){
+        echo "Las contraseñas deben de ser mayor a 6 letras";
+    }else if($_POST['postmypass1'] != $_POST['postmypass2']){
+        echo "Las contraseñas tienen que ser iguales";
+    }else{
+        $passen = $utilreset->Encryptarpass($_POST['postmypass2']);
+        $updatepass = $usermodal->updatepass($_SESSION['emailtoken'],$passen);
+        echo $updatepass;
+    }
+    // echo $_SESSION['emailtoken'];
+}
+
+// postactpass:actpass,
+// postmypass1:mypass1,
+// postmypass2:mypass2
 ?>

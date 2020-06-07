@@ -135,6 +135,17 @@ class entityusersmodal{
             return $arraylistarxiduser2;
             mysqli_close($enlacego);
         }
+        function updatepass($email,$pass){
+            require("../utils/config/conex.php");
+            $qryupdatepass = mysqli_query($enlacego,"UPDATE gouser SET pass='$pass' where email ='$email'");
+            if($qryupdatepass == false){
+                $men = 0; // Error
+            }else{
+                $men = 1; // ok
+            }
+            return $men;
+            mysqli_close($enlacego);
+        }
         
         
         
