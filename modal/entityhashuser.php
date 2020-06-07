@@ -38,6 +38,16 @@ class userhash{
 
         mysqli_close($enlacego);
     }
+    function insertreset($emailhash,$code,$status,$fechahash){
+        require("../utils/config/conex.php");
+        $insertquery = mysqli_query($enlacego,"INSERT INTO resetuser VALUES (NULL,'$emailhash','$code','$status','$fechahash')");
+        if($insertquery == false){
+            $msmr = 0; // ERROR INSERT
+        }else{
+            $msmr = 1; // OK INSERT
+        }
+        return $msmr;
+    }
 }
 
 ?>

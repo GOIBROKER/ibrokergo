@@ -2,8 +2,26 @@
 
 class utilsphp
 {
+    function email($email_a){
+
+        if (filter_var($email_a, FILTER_VALIDATE_EMAIL)) {
+            $msm = "";
+        }else{
+            $msm = "la Dirección de correo es invalida";
+        }
+        return  $msm;
+    }
 
     //Funcion para encryptar contraseña y lo devuelve cifrado
+    function numaleatorio(){
+        srand(time()); //Introducimos la "inicial"
+        $aleat = rand(111182,999947); //rand(mínimo y el máximo);
+       
+        return $aleat;
+    }
+    
+    
+    
     function passaleatorio(){
         srand(time()); //Introducimos la "inicial"
         $aleat = rand(9111,9999); //rand(mínimo y el máximo);

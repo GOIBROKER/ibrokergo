@@ -63,5 +63,14 @@ class flags{
     public $userbloqueado = 2;
     public $userdelete = 3;
     public $useractivandouser = 4;
-}
+
+    // Flags email reset
+
+     public $urlsitereset = "http://testbrokergo.dapcontable.com/activate/reset.php";
+     public $bienvenidareset = "Has solicitado el reseteo de tu password en IBROKERGO! , sigue el link indicado e ingresa el Token";
+     public $buttonreseteo = "Link de Reseteo";
+     public $emailtext1reset = "Tu Token es :";
+     public $titlesubt1reset = "Sigue el link e ingresa el token , gracias";
+     public $asuntoreset = "Link de Reseteo de Usuario - BrokerGo!";
+    }
 ?>
