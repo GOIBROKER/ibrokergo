@@ -1,11 +1,24 @@
 <?php
 require_once("../controllers/flagsystem.php");
-
+require_once("../utils/utils.php");
+require_once("../modal/entityhashuser.php");
 class email {
 
-    function emailregister($emailto,$nombres){
-        
+    function emailregister($emailto,$nombres,$iduser,$ta,$passaleatorio,$fecha){
         $flagsemail = new flags();
+        /* variable $ta , es para verificar si la acción sera de insert o update en caso de recuperar contraseña
+        1 = Insert 2 = Update
+        */
+       $userhash = new userhash();
+       $userhash->registerhash($emailto,$passaleatorio,$fecha);
+        // Vamos a crear un número aleatorio y convertirlo a encryptarlo e insertarlo en la tabla SQL
+
+
+        /// Vamos a insertar en la base de datos de contraseñas como previa actualización
+            
+         
+            
+        
    
                     // Vamos a enviar un correo con los datos del usuario
                
@@ -40,7 +53,7 @@ class email {
                                         </tr>
                                         <tr>
                                             <td style='width:100%;height:auto;padding:10px 50px;text-align:center'>
-                                                <a style='font-size:18px;color:#fff;display:inline-block;padding:15px 20px;border-radius:25px;text-decoration:none;background:#cc0066;text-align:center' href=''>
+                                                <a style='font-size:18px;color:#fff;display:inline-block;padding:15px 20px;border-radius:25px;text-decoration:none;background:#cc0066;text-align:center' href='".$flagsemail->urlsite.$flagsemail->urlwebaactivate."?iduser=".$iduser."&token=".$passaleatorio." target='_blank'>
                                                     ".$flagsemail->buttonactivate."
                                                 </a>
                                             </td>

@@ -56,7 +56,8 @@ class flags{
     public $titlesubt4 = "Lleguen a acuerdos para terminar un servicio cumpliendo con calidad y precio.";
     public $ftittle = "Para poder acceder a todas las funcionalidades , no te olvides de registrar tus datos personales.";
 
-
+    // Flags activate usuario
+    public $urlwebaactivate = "/activate/usertoken.php";
     // Estados de usuarios 1: Activado 2 : Bloqueado 3: Eliminado 4:Activando Usuario
     public $useractivado = 1;
     public $userbloqueado = 2;

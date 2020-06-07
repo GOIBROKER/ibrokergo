@@ -4,6 +4,12 @@ class utilsphp
 {
 
     //Funcion para encryptar contraseña y lo devuelve cifrado
+    function passaleatorio(){
+        srand(time()); //Introducimos la "inicial"
+        $aleat = rand(9111,9999); //rand(mínimo y el máximo);
+        $PASSENCRYPTE2 = password_hash($aleat, PASSWORD_DEFAULT);
+        return $PASSENCRYPTE2;
+    }
     function Encryptarpass($password)
     {
 

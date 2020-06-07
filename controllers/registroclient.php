@@ -50,10 +50,12 @@ if (!empty($_POST['requestactivate'])) {
         // Se realizar el registro del usuario --------------- nuevo cambio
         $registrado = $insertuser->registrarusers($tipodeuser,$fechaactual, $email, $passencryptado, $checkcontrato,$requestnamecompleto,4);
         if($registrado === 4){
+            // Vamos a crear una contraseña aleatoria , para usarlo despues
+
            // Vamos a enviar un correo con los datos del usuario
             // Vamos a enviar un correo con los datos del usuario
            $emailutil = new email();
-           $emailutil->emailregister($email,$requestnamecompleto);
+           $emailutil->emailregister($email,$requestnamecompleto,$email,1,$validatepass->passaleatorio(),$validatepass->fecha());
            echo $registrado;
         }
         //
