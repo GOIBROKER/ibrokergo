@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once("../controllers/validatesesion.php")?>
 
 <?php
 require_once("../frames/headndesing.php");
+if(!empty($_SESSION['useractivadotemp'])){
+
+}else{
+  header("location:index.php");
+}
 ?>
 
 <body>
-
+<?php require_once("../controllers/validatesesion.php")?>
   <!-- ======= Header ======= -->
   <?php
   require_once("../frames/menundesing.php");
-  if(!empty($_SESSION['useractivadotemp'])){
-    $_SESSION['useractivadotemp'] = "";
-  }
   ?>
 
   </header><!-- End Header -->
@@ -22,35 +23,22 @@ require_once("../frames/headndesing.php");
   <section id="hero" class="d-flex align-items-center">
 
   <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-    <form class="form-signin">
-      <img class="mb-4" src="frontend/assets/img/logobig.png" alt="" width="110" height="110">
-      <h1 class="h3 mb-3 font-weight-normal">Inicia Sesión</h1>
-      <label for="txtemail" class="sr-only">Email</label>
-      <input type="email" id="txtemail" class="form-control" placeholder="Email" required="" autofocus="">
-      <label for="txtpassword" class="sr-only">Contraseña</label>
-      <input type="password" id="txtpassword" class="form-control" placeholder="Contraseña" required="">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recuerdame
-        </label>
+
+  <div class="col">
+    <div class="card">
+    <img class="card-img-top" src="frontend/assets/img/especialistaregister.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Gracias por Activar tu cuenta <strong>Inicia sesión y comienza a disfrutar!</strong></h5>
+        <p class="card-text">¡Broker Go! - Conectamos con el cliente.</p>
+        <a href="logingo.php" class="btn btn-primary" >Iniciar Sesión</a>
       </div>
-      <div id="alertsesion"></div>
-      <button class="btn btn-lg btn-primary btn-block" type="button" onclick="iniciarsesion()">Iniciar Sesión</button>
-      <p class="mt-5 mb-3 text-muted">© 2020-2020</p>
-    </form>
-    </div>
-    <div class="col-sm">
-      
     </div>
   </div>
+ 
 </div>
 
-
+  </div>
+</div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -158,7 +146,7 @@ require_once("../frames/headndesing.php");
               <!--Footer-->
               <div class="modal-footer">
                 <div class="options text-center text-md-right mt-1">
-                  <p>No estas registrado? <a href="registergo.php" class="blue-text">Registrate</a></p>
+                  <p>No estas registrado? <a href="registrate.php" class="blue-text">Registrate</a></p>
                   <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
                 </div>
                 <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
@@ -177,23 +165,22 @@ require_once("../frames/headndesing.php");
   </div>
   <!--Modal: Login / Register Form-->
 
-
+  <script src="../utils/js/loadcomponentsfront.js"></script>
   <script src="../utils/js/verifysesiones.js"></script>
   <script src="../utils/js/utils.js"></script>
   <script src="../utils/js/menudesing.js"></script>
   <script>
     $(document).ready(function() {
-      // val menu
-      
+
       // Handler for .ready() called.
-      menulogingo();
+      menuregistergo();
       loadbuttons();
       loadinitialespec();
       buscarserv();
       borrarsesiones();
       buscardep();
       loadmenub();
-      
+
     });
   </script>
 
@@ -205,9 +192,9 @@ require_once("../frames/headndesing.php");
   <script src="../utils/js/datospersonales.js"></script>
 
 
-  <!-- Script de página register -->
-  <script src="../utils/js/tipuser.js"></script>
-  <!-- FIN Script de página register -->
+<!-- Script de página register -->
+<script src="../utils/js/tipuser.js"></script>
+<!-- FIN Script de página register -->
 
   <script>
     function apmodalbus() {
