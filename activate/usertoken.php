@@ -8,8 +8,5 @@ $passurl = $_GET['token'];
 
 echo $userhash->validarhash($userid,$passurl);
 
-echo $userid;
-echo "</br>";
-echo $passurl;
 
 ?>
