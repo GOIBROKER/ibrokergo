@@ -11,7 +11,7 @@
               SpaceIt S.A.C<br>
               <br><br>
               <strong>Ruc:</strong> 20602169007<br>
-              <strong>Email:</strong> contactenos@brokergo.com.pe<br>
+              <strong>Email:</strong> contacto@brokergo.com.pe<br>
             </p>
           </div>
 

@@ -55,10 +55,6 @@ if(!empty($_POST['postactivatereset'])){
         }
     }
 
-
-
-  
-
     }
 
 if (!empty($_POST['postactitoken'])) {
@@ -100,4 +96,42 @@ if(!empty($_POST['postactpass'])){
 // postactpass:actpass,
 // postmypass1:mypass1,
 // postmypass2:mypass2
+
+
+if(!empty($_POST['postactivateemail'])){
+
+    $posttruser = $_POST['posttxtemail'];
+
+    if(!empty($utilreset->email($posttruser))){
+        echo $utilreset->email($posttruser);
+    }else if($usermodal->buscarusers($posttruser) == 1){
+        echo "<code>El email indicado no existe , favor de registrarte</code> <a href='../bienvenido/registergo.php'>Crear Usuario</a></strong>";
+    }else{
+        foreach($usermodal->listaruser($posttruser) as $fbuscaruser){
+            if($fbuscaruser['statususer'] == 2){
+                echo "<code>Tu cuenta esta suspendida : comunicate a contacto@brokergo.com.pe</code>";
+            }else if($fbuscaruser['statususer'] == 3){
+                echo "<code>Tu cuenta fue eliminada : comunicate a contacto@brokergo.com.pe</code>";
+            }else if($fbuscaruser['statususer'] == 1){
+                echo "<code>Tu cuenta ya se encuentra activa , si perdistes el password ingresa aqui </code> <a href='reset.php'>Resetear Password</a></strong>";
+            }else if($fbuscaruser['statususer'] == 4){
+
+                $envioemail = $emailreset->emailregister($posttruser,$fbuscaruser['nameandlast'],$fbuscaruser['iduser'],2,$utilreset->passaleatorio(),$utilreset->fecha());
+                
+                echo "Se envio nuevamente el correo de activación , recuerde que demora entre 2 a 5 minutos , en caso no llegue el correo . Favor de revisar en Spam";
+                // if($envioemail == 0){
+                //     echo "Hubo un error en el envio de correo , intentar más tarde";
+                // }else if($envioemail == 1){
+                //     echo "Se envio nuevamente el correo de activación , recuerde que demora entre 2 a 5 minutos , en caso no llegue el correo . Favor de revisar en Spam";
+                // }
+
+
+            
+            }
+        }
+    }
+
+
+
+}
 ?>

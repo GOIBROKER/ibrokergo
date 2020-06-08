@@ -10,7 +10,10 @@ class email {
         1 = Insert 2 = Update
         */
        $userhash = new userhash();
+
        $userhash->registerhash($emailto,$passaleatorio,$fecha);
+
+        
         // Vamos a crear un número aleatorio y convertirlo a encryptarlo e insertarlo en la tabla SQL
 
 

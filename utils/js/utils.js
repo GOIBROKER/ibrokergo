@@ -28,7 +28,7 @@ function buscardepbusq(valor){
 function buscarserv(){
   // Envia dos parametros el activador y la cabecera inicial del componente select para buscar servicios
         var busqserv = "activate";
-        var cabecerainicial = "1.- ¿Ocupación.: ?";
+        var cabecerainicial = "1.- Servicio";
         $.post("../controllers/utilsfront.php",{
             responsebusqserv:busqserv,
             postcabecerainicial:cabecerainicial

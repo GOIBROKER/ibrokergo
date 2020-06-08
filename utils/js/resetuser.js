@@ -48,3 +48,15 @@ function resetpass(){
         
     });
 }
+
+function reenviaremail(){
+
+    var txtemail = $("#txtemail").val();
+    var activateemail ="ac";
+    $.post("../controllers/resetuser.php",{
+        postactivateemail:activateemail,
+        posttxtemail:txtemail
+    },function(responseactivateemail){
+        $("#iderroruser").html(responseactivateemail);
+    });
+}

@@ -68,7 +68,7 @@ if (!empty($_POST['requestactivatelogin'])) {
                         } else if ($foreachresultselect['statususer'] == 3) {
                             echo "Intenta con otro email diferente ,esta cuenta esta eliminada o envia un correo a contacto@brokergo.com.pe";
                         } else if ($foreachresultselect['statususer'] == 4) {
-                            echo "Falta activar tu cuenta , si no te llego el correo ingresa a recuperar.php";
+                            echo "<code>Falta activar tu cuenta , si no te llego el correo ingresa a <strong><a href='activar.php'>Aqui - click</a></strong></code>";
                         }
                     }
 

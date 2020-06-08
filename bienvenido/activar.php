@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  body {
-    padding: 100px 0;
-    background-color: #efefef
-  }
 
-  a,
-  a:hover {
-    color: #333
-  }
-</style>
 <?php
 require_once("../frames/headndesing.php");
 // if(!empty($_SESSION['useractivadotemp'])){
@@ -21,7 +11,7 @@ require_once("../frames/headndesing.php");
 ?>
 
 <body>
-  <?php require_once("../controllers/validatesesion.php") ?>
+<?php require_once("../controllers/validatesesion.php")?>
   <!-- ======= Header ======= -->
   <?php
   require_once("../frames/menundesing.php");
@@ -32,31 +22,25 @@ require_once("../frames/headndesing.php");
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="col">
-        <div class="card">
-          <img class="card-img-top" src="frontend/assets/img/especialistaregister.jpg" alt="Card image cap">
-          <div class="card-body" id="divtoken">
-              <h5 class="card-title">Hola <strong>Ingresa Tu Clave Token!</strong></h5>
-              <p class="card-text">Indica el token que se envio a tu <strong>correo.</strong></p>
-       
-               <label>Email.:</label><input type="email" class="form-control" id="tremail" aria-describedby="emailHelp" placeholder="Ingresa tu correo">
-               <label>Token.:</label><input type="text" class="form-control" id="txtoken" aria-describedby="emailHelp" placeholder="Ingresa el Token">
-
-               <div id="iderrortoken"></div>
-                <a href="#" onclick="tokenreset()" class="btn btn-primary" >Verificar</a>
-
-
- 
-          </div>
-        </div>
+  <div class="col">
+    <div class="card">
+    <img class="card-img-top" src="frontend/assets/img/especialistaregister.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">¿No te llego el correo de  <strong>activación?</strong></h5>
+        <p class="card-text">Indica el Email , con la cual te has registrado <strong>(Se volverá a reenviar el Email)</strong>.</p>
+        <input type="email" class="form-control" id="txtemail" aria-describedby="emailHelp" placeholder="Ingresa tu correo">
+        <div id="iderroruser"></div>
+        <a href="#" onclick="reenviaremail()" class="btn btn-primary" >Resetear Contraseña</a>
       </div>
+    </div>
+  </div>
+ 
+</div>
 
-    </div>
-
-    </div>
-    </div>
+  </div>
+</div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -67,7 +51,7 @@ require_once("../frames/headndesing.php");
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <?php include("../frames/footerindex.php"); ?>
+  <?php include("../frames/footerindex.php");?>
 
 
   <!-- Modal -->
@@ -152,7 +136,6 @@ require_once("../frames/headndesing.php");
                   <i class="fas fa-lock prefix"></i>
                   <input type="password" id="txtpassword" class="form-control">
                   <label for="txtpassword">Ingresa tu contraseña</label>
-
                   <div id="alertsesion">
 
                   </div>
@@ -211,9 +194,9 @@ require_once("../frames/headndesing.php");
   <script src="../utils/js/datospersonales.js"></script>
   <script src="../utils/js/resetuser.js"></script>
 
-  <!-- Script de página register -->
-  <script src="../utils/js/tipuser.js"></script>
-  <!-- FIN Script de página register -->
+<!-- Script de página register -->
+<script src="../utils/js/tipuser.js"></script>
+<!-- FIN Script de página register -->
 
   <script>
     function apmodalbus() {

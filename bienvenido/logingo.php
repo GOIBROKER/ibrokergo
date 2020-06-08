@@ -36,9 +36,11 @@ require_once("../frames/headndesing.php");
       <input type="password" id="txtpassword" class="form-control" placeholder="Contraseña" required="">
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me"> Recuerdame
+          <input type="checkbox" value="remember-me"> Recuerdame 
+          <p><a href='reset.php'>¿No Puedes ingresar? - Click aqui</a></p>
         </label>
       </div>
+
       <div id="alertsesion"></div>
       <button class="btn btn-lg btn-primary btn-block" type="button" onclick="iniciarsesion()">Iniciar Sesión</button>
       <p class="mt-5 mb-3 text-muted">© 2020-2020</p>
@@ -159,7 +161,7 @@ require_once("../frames/headndesing.php");
               <div class="modal-footer">
                 <div class="options text-center text-md-right mt-1">
                   <p>No estas registrado? <a href="registergo.php" class="blue-text">Registrate</a></p>
-                  <p>Olvidastes tu <a href="#" class="blue-text">Contraseña?</a></p>
+                  <p><a href='reset.php'>¿No Puedes ingresar? - Click aqui</a></p>
                 </div>
                 <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
               </div>
